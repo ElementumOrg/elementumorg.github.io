@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elementum Documentation on Elementum</title>
@@ -17,7 +17,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/burst/create/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <description></description>
     </item>
     
     <item>
@@ -26,8 +26,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/getting-started/installation/</guid>
-      <description>&lt;p&gt;Installation instructions.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Installation instructions.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,8 +35,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/getting-started/configuration/</guid>
-      <description>&lt;p&gt;TODO
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;TODO&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -46,7 +44,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contribute/request-feature/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <description></description>
     </item>
     
     <item>
@@ -55,7 +53,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/burst/override/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <description></description>
     </item>
     
     <item>
@@ -64,7 +62,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contribute/report-issue/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <description></description>
     </item>
     
     <item>
@@ -73,7 +71,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/getting-started/platforms-page/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <description></description>
     </item>
     
     <item>
@@ -82,7 +80,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/contribute/log/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <description></description>
     </item>
     
     <item>
@@ -91,8 +89,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/getting-started/updating/</guid>
-      <description>&lt;p&gt;Update instructions.
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Update instructions.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -119,7 +116,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/credits/</guid>
-      <description>github contributors .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @scakemyer 411 commits   @elgatito 336 commits   @steeve 90 commits   @meijin007 39 commits   @i96751414 23 commits   @KillerJoeBR 14 commits   @penzinho 14 commits   @m4xc4v413r4 13 commits   @Greenbaburu 12 commits   @jellespijker 12 commits   @muzena 12 commits   @ramiro 10 commits   @zorg1977 9 commits   @roliverosc 7 commits   @lrrosa 6 commits   @Filosofos 5 commits   @abuisine 4 commits   @razer1s 4 commits   @johnnyslt 4 commits   @Lam4hound 3 commits   @dmartinpro 3 commits   @sonics007 2 commits   @trisk 1 commits   @benjamintillman 1 commits   @candrews 1 commits   @MrDini123 1 commits   @MrLegendary 1 commits   @susobaco 1 commits   @Pilson66 1 commits   @achaw 1 commits   @guidosarducci 1 commits   @a1ex4 1 commits   @tobiasvandriessel 1 commits   Other contributors  @scakemyer Quasar development   Packages and libraries  Torrent - Torrent library, used in plugin.</description>
+      <description>github contributors .ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start } .ghContributors  div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors  div label{ padding-left: 4px ; } .ghContributors  div span{ font-size: x-small; padding-left: 4px ; }   @scakemyer 411 commits   @elgatito 387 commits   @steeve 90 commits   @assapir 39 commits   @i96751414 23 commits   @KillerJoeBR 14 commits   @penzinho 14 commits   @ramiro 13 commits   @m4xc4v413r4 13 commits   @Greenbaburu 12 commits   @jellespijker 12 commits   @muzena 12 commits   @roliverosc 9 commits   @zorg1977 9 commits   @lrrosa 6 commits   @Filosofos 5 commits   @abuisine 4 commits   @razer1s 4 commits   @johnnyslt 4 commits   @Lam4hound 3 commits   @dmartinpro 3 commits   @sonics007 2 commits   @trisk 1 commits   @benjamintillman 1 commits   @candrews 1 commits   @iz8mbw 1 commits   @MrDini123 1 commits   @MrLegendary 1 commits   @Nemiroff 1 commits   @susobaco 1 commits   @Pilson66 1 commits   @achaw 1 commits   @guidosarducci 1 commits   @a1ex4 1 commits   @tobiasvandriessel 1 commits   Other contributors  @scakemyer Quasar development   Packages and libraries  Torrent - Torrent library, used in plugin.</description>
     </item>
     
   </channel>

@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.33-DEV" />
+<meta name="generator" content="Hugo 0.67.0-DEV" />
 <meta name="flattr:id" content="yj6gd6">
 
 <title>Making a log file :: Elementum</title>
@@ -41,7 +41,7 @@
       
 	
   
-    <p><a href="/" target="_blank">Elementum Documentation</a></p>
+    <p><a href="/">Elementum Documentation</a></p>
 
   
 
@@ -216,19 +216,17 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#preparation">Preparation</a></li>
-<li><a href="#what-we-have">What we have</a></li>
-<li><a href="#two-ways-of-taking-a-log-file">Two ways of taking a log file:</a>
-<ul>
-<li><a href="#easy-one">Easy one</a></li>
-<li><a href="#hard-one">Hard one</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#preparation">Preparation</a></li>
+    <li><a href="#what-we-have">What we have</a></li>
+    <li><a href="#two-ways-of-taking-a-log-file">Two ways of taking a log file:</a>
+      <ul>
+        <li><a href="#easy-one">Easy one</a></li>
+        <li><a href="#hard-one">Hard one</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -247,80 +245,64 @@
     
 
     
-    <p></p>
-
-<h2 id="about">About</h2>
-
+    <h2 id="about">About</h2>
 <p>Log file in Kodi is a <em>kodi.log</em> file, located in temporary directory.
 Location of that directory depends on the platform, and even on the same platform it can differ.
-Locations can be discovered here: <a href="https://kodi.wiki/view/Log_file/Advanced#Location" target="_blank">https://kodi.wiki/view/Log_file/Advanced#Location</a></p>
-
+Locations can be discovered here: <a href="https://kodi.wiki/view/Log_file/Advanced#Location">https://kodi.wiki/view/Log_file/Advanced#Location</a></p>
 <h2 id="preparation">Preparation</h2>
-
 <p>First of all, log file, by default, contains only limited records, only errors or some notable actions, but, to understand the cause of an issue, we need full log.
 So we need to enable debugging in Kodi.</p>
-
 <ul>
 <li>Enter Kodi System settings
-<img src="/screenshots/log4.png" alt="Enter Kodi System settings" /></li>
+<img src="/screenshots/log4.png" alt="Enter Kodi System settings"></li>
 <li>Enable Expert level of settings
-<img src="/screenshots/log6.png" alt="Enable Expert level of settings" /></li>
+<img src="/screenshots/log6.png" alt="Enable Expert level of settings"></li>
 <li>Enable event logging
-<img src="/screenshots/log5.png" alt="Enable event logging" /></li>
-
-<li><p>That is it! But you probably won&rsquo;t like the onscreen information about CPU usage and so on. So you can create an <em>advancedsettings.xml</em> file in Kodi&rsquo;s Userdata folder (<a href="https://kodi.wiki/view/Userdata" target="_blank">https://kodi.wiki/view/Userdata</a>), which this content:</p>
-
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; ?&gt;
-&lt;advancedsettings&gt;
-&lt;loglevel&gt;2&lt;/loglevel&gt;
-&lt;debug&gt;
-    &lt;extralogging&gt;true&lt;/extralogging&gt;
-    &lt;showloginfo&gt;false&lt;/showloginfo&gt;
-&lt;/debug&gt;
-&lt;/advancedsettings&gt;
-</code></pre>
-
-<p>It will enable logging and hide onscreen information.</p></li>
-
-<li><p>Now your Kodi records everything into the log file!</p></li>
+<img src="/screenshots/log5.png" alt="Enable event logging"></li>
+<li>That is it! But you probably won&rsquo;t like the onscreen information about CPU usage and so on. So you can create an <em>advancedsettings.xml</em> file in Kodi&rsquo;s Userdata folder (<a href="https://kodi.wiki/view/Userdata),">https://kodi.wiki/view/Userdata),</a> which this content:</li>
 </ul>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; ?&gt;</span>
+<span style="color:#f92672">&lt;advancedsettings&gt;</span>
+    <span style="color:#f92672">&lt;loglevel&gt;</span>2<span style="color:#f92672">&lt;/loglevel&gt;</span>
+    <span style="color:#f92672">&lt;debug&gt;</span>
+        <span style="color:#f92672">&lt;extralogging&gt;</span>true<span style="color:#f92672">&lt;/extralogging&gt;</span>
+        <span style="color:#f92672">&lt;showloginfo&gt;</span>false<span style="color:#f92672">&lt;/showloginfo&gt;</span>
+    <span style="color:#f92672">&lt;/debug&gt;</span>
+<span style="color:#f92672">&lt;/advancedsettings&gt;</span>
+</code></pre></div><pre><code>It will enable logging and hide onscreen information.
+</code></pre>
+<ul>
+<li>Now your Kodi records everything into the log file!</li>
+</ul>
 <h2 id="what-we-have">What we have</h2>
-
-<p>Elementum has few HTTP links which can give you more information about torrenting status, system information, some timers of common operations (which are way too useful for developers!):
-- <em>/debug/bundle</em> will give you all the debug information + <em>kodi.log</em> file included. So it&rsquo;s the fullest log file, and is what we&rsquo;d expect from you to find the problem.
-- <em>/debug/all</em> contains all the debug information, <em>without</em> <em>kodi.log</em>, so it&rsquo;s all about the system and torrent engine, but not Kodi.</p>
-
-<p>To find proper link:
-- Enter Elementum addon, open Status
-    <img src="/screenshots/log1.png" alt="Enter Elementum addon, open Status" />
-- In the table you can see the address, that can be opened from other devices (in case you Kodi runs on a separate device in the network)
-    <img src="/screenshots/log2.png" alt="Status output" /></p>
-
+<p>Elementum has few HTTP links which can give you more information about torrenting status, system information, some timers of common operations (which are way too useful for developers!):</p>
+<ul>
+<li><em>/debug/bundle</em> will give you all the debug information + <em>kodi.log</em> file included. So it&rsquo;s the fullest log file, and is what we&rsquo;d expect from you to find the problem.</li>
+<li><em>/debug/all</em> contains all the debug information, <em>without</em> <em>kodi.log</em>, so it&rsquo;s all about the system and torrent engine, but not Kodi.</li>
+</ul>
+<p>To find proper link:</p>
+<ul>
+<li>Enter Elementum addon, open Status
+<img src="/screenshots/log1.png" alt="Enter Elementum addon, open Status"></li>
+<li>In the table you can see the address, that can be opened from other devices (in case you Kodi runs on a separate device in the network)
+<img src="/screenshots/log2.png" alt="Status output"></li>
+</ul>
 <h2 id="two-ways-of-taking-a-log-file">Two ways of taking a log file:</h2>
-
 <h3 id="easy-one">Easy one</h3>
-
 <p>If your Elementum starts fine, so you can enter it, browse for something, then you can try this way, if not, please, browse for the Hard one.</p>
-
 <p>There is bundled functionality to upload your <em>/debug/bundle</em> or <em>/debug/all</em> logs to pastebin services.
 All you need is to enter settings and start an upload:</p>
-
 <ul>
 <li>Enter Elementum settings, open Advanced tab, browse to Logging section and you can see there are Upload options.
-<img src="/screenshots/log3.png" alt="Enter Elementum settings, open Advanced" /></li>
+<img src="/screenshots/log3.png" alt="Enter Elementum settings, open Advanced"></li>
 <li>Now you get an url of a paste. Write it down and share in your issues!</li>
 </ul>
-
 <p>Easy enough?!</p>
-
 <h3 id="hard-one">Hard one</h3>
-
 <p>Still not so hard, but, sadly, more manual and needs some effords, at least, for the first time.
-So you can follow the manual here: <a href="https://kodi.wiki/view/Log_file/Easy" target="_blank">https://kodi.wiki/view/Log_file/Easy</a></p>
-
+So you can follow the manual here: <a href="https://kodi.wiki/view/Log_file/Easy">https://kodi.wiki/view/Log_file/Easy</a></p>
 <p>Shortly, you can install log uploader plugin, and run it to get pastebin link of an uploaded log file.
-Or you can find your log location here: <a href="https://kodi.wiki/view/Log_file/Advanced#Location" target="_blank">https://kodi.wiki/view/Log_file/Advanced#Location</a> and use it manually.</p>
+Or you can find your log location here: <a href="https://kodi.wiki/view/Log_file/Advanced#Location">https://kodi.wiki/view/Log_file/Advanced#Location</a> and use it manually.</p>
 
 
     

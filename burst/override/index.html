@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.33-DEV" />
+<meta name="generator" content="Hugo 0.67.0-DEV" />
 <meta name="flattr:id" content="yj6gd6">
 
 <title>How to override provider :: Elementum</title>
@@ -41,7 +41,7 @@
       
 	
   
-    <p><a href="/" target="_blank">Elementum Documentation</a></p>
+    <p><a href="/">Elementum Documentation</a></p>
 
   
 
@@ -216,17 +216,15 @@
     <div class="progress">
         <div class="wrapper">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#ways">Ways</a>
-<ul>
-<li><a href="#adding-custom-provider-from-json-file">Adding custom provider from json file</a></li>
-<li><a href="#overriding-provider-definition-with-python-script">Overriding provider definition with Python script</a></li>
-<li><a href="#overriding-provider-definition-with-json-file">Overriding provider definition with JSON file</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#ways">Ways</a>
+      <ul>
+        <li><a href="#adding-custom-provider-from-json-file">Adding custom provider from json file</a></li>
+        <li><a href="#overriding-provider-definition-with-python-script">Overriding provider definition with Python script</a></li>
+        <li><a href="#overriding-provider-definition-with-json-file">Overriding provider definition with JSON file</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
         </div>
     </div>
@@ -245,64 +243,43 @@
     
 
     
-    <p></p>
-
-<h2 id="ways">Ways</h2>
-
+    <h2 id="ways">Ways</h2>
 <p>There are few ways to override some provider or add one locally.</p>
-
-<p>Locations can be discovered here: <a href="https://kodi.wiki/view/Log_file/Advanced#Location" target="_blank">https://kodi.wiki/view/Log_file/Advanced#Location</a></p>
-
+<p>Locations can be discovered here: <a href="https://kodi.wiki/view/Log_file/Advanced#Location">https://kodi.wiki/view/Log_file/Advanced#Location</a></p>
 <h3 id="adding-custom-provider-from-json-file">Adding custom provider from json file</h3>
-
 <p>You can add json files into <em>USERDATA/addon_data/script.elementum.burst/providers/</em>, each of them should contains provider description.</p>
-
-<p><em>USERDATA</em> directory can be discovered here: <a href="https://kodi.wiki/view/Log_file/Advanced#Location" target="_blank">https://kodi.wiki/view/Log_file/Advanced#Location</a>
-Provider description syntax can be found here: <a href="/burst/create/" target="_blank">How to add provider</a></p>
-
+<p><em>USERDATA</em> directory can be discovered here: <a href="https://kodi.wiki/view/Log_file/Advanced#Location">https://kodi.wiki/view/Log_file/Advanced#Location</a>
+Provider description syntax can be found here: <a href="/burst/create/">How to add provider</a></p>
 <p>Be aware, that those providers are <em>enabled by default</em>! Kodi does not let making flexible addon settings, they are static.</p>
-
 <h3 id="overriding-provider-definition-with-python-script">Overriding provider definition with Python script</h3>
-
 <p>Another way to override provider definition is the Python script.
 It should be an <em>overrides.py</em> file in your <em>USERDATA/addon_data/script.elementum.burst/</em> directory.</p>
-
 <p>And it should look like this:</p>
-
-<pre><code class="language-python">overrides = {
-    'torlock': {
-        'name': 'MyTorLock'
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">overrides <span style="color:#f92672">=</span> {
+    <span style="color:#e6db74">&#39;torlock&#39;</span>: {
+        <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;MyTorLock&#39;</span>
     },
-    'freshon.tv': {
-        'tv_keywords': '{title} s{season:2}e{episode:2}'
+    <span style="color:#e6db74">&#39;freshon.tv&#39;</span>: {
+        <span style="color:#e6db74">&#39;tv_keywords&#39;</span>: <span style="color:#e6db74">&#39;{title} s{season:2}e{episode:2}&#39;</span>
     }
 }
-</code></pre>
-
-<h3 id="overriding-provider-definition-with-json-file">Overriding provider definition with JSON file</h3>
-
+</code></pre></div><h3 id="overriding-provider-definition-with-json-file">Overriding provider definition with JSON file</h3>
 <p>The simpliest way to override provider definitions is the unified Json file.
 It is the <em>overrides.json</em> file in <em>USERDATA/addon_data/script.elementum.burst/</em> directory.</p>
-
 <p>Should look like this:</p>
-
-<pre><code class="language-json">{
-    &quot;rutor&quot;: {
-        &quot;name&quot;: &quot;Bla-bla&quot;,
-        &quot;color&quot;: &quot;red&quot;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;rutor&#34;</span>: {
+        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Bla-bla&#34;</span>,
+        <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;red&#34;</span>
     },
-    &quot;yts&quot;: {
-        &quot;parser&quot;: {
-            &quot;name&quot;: &quot;item('a', order=2)&quot;
+    <span style="color:#f92672">&#34;yts&#34;</span>: {
+        <span style="color:#f92672">&#34;parser&#34;</span>: {
+            <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;item(&#39;a&#39;, order=2)&#34;</span>
         }
     }
 }
-</code></pre>
-
-<p>You can open actual definitions, located here: <a href="https://raw.githubusercontent.com/elgatito/script.elementum.burst/master/burst/providers/providers.json" target="_blank">https://raw.githubusercontent.com/elgatito/script.elementum.burst/master/burst/providers/providers.json</a></p>
-
+</code></pre></div><p>You can open actual definitions, located here: <a href="https://raw.githubusercontent.com/elgatito/script.elementum.burst/master/burst/providers/providers.json">https://raw.githubusercontent.com/elgatito/script.elementum.burst/master/burst/providers/providers.json</a></p>
 <p>Find the one you need, copy into <em>overrides.json</em> file, and make you modifications.</p>
-
 <p>Or leave only modified columns, to see what you change.</p>
 
 
