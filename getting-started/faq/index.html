@@ -8,7 +8,7 @@
 <meta name="generator" content="Hugo 0.70.0-DEV" />
 <meta name="flattr:id" content="yj6gd6">
 
-<title>Installation :: Elementum</title>
+<title>F.A.Q. :: Elementum</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/nucleus.css" rel="stylesheet">
 <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
     
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
   </head>
-  <body data-url="/getting-started/installation/">
+  <body data-url="/getting-started/faq/">
     
       <div id="headermain"></div>
 <nav id="sidebar" class="showVisitedLinks">
@@ -71,7 +71,7 @@
             <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/getting-started/installation/" class="dd-item active">
+      <li data-nav-id="/getting-started/installation/" class="dd-item">
         <a href="/getting-started/installation/">
           <span>Installation</span><i class="fas fa-circle read-icon"></i>
         </a>
@@ -91,7 +91,7 @@
           <span>Updating</span><i class="fas fa-circle read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/getting-started/faq/" class="dd-item">
+      <li data-nav-id="/getting-started/faq/" class="dd-item active">
         <a href="/getting-started/faq/">
           <span>F.A.Q.</span><i class="fas fa-circle read-icon"></i>
         </a>
@@ -187,7 +187,7 @@
       
       
     <div id="top-github-link">
-      <a class="github-link" href="https://github.com/elgatito/elementum-surge/edit/master/src/content/getting-started/installation.md" target="blank">
+      <a class="github-link" href="https://github.com/elgatito/elementum-surge/edit/master/src/content/getting-started/faq.md" target="blank">
         <i class="fab fa-github"></i>
         Edit page
       </a>
@@ -207,7 +207,7 @@
 
 
 
- <a href='/'>Elementum Documentation</a> > <a href='/getting-started/'>Getting started</a> > Installation
+ <a href='/'>Elementum Documentation</a> > <a href='/getting-started/'>Getting started</a> > F.A.Q.
 
  
 
@@ -222,8 +222,16 @@
         <div class="wrapper">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#installation">Installation</a></li>
-    <li><a href="#configuration">Configuration</a></li>
+    <li>
+      <ul>
+        <li><a href="#watched-status-from-trakt-does-not-show-resume-n-seconds-earlier-does-not-work-etc">&ldquo;watched&rdquo; status from Trakt does not show, &ldquo;resume N seconds earlier&rdquo; does not work, etc</a></li>
+        <li><a href="#how-to-use-files-storage-in-android">How to use &ldquo;files&rdquo; storage in Android</a></li>
+        <li><a href="#slow-speed-on-download-start-in-android-with-files-storage">Slow speed on download start in Android with files storage</a></li>
+        <li><a href="#what-exactly-all-these-limits-mean">What exactly all these limits mean</a></li>
+        <li><a href="#slow-download-speed">Slow download speed</a></li>
+        <li><a href="#how-to-use-elementum-integration-with-kodi-library">How to use Elementum integration with Kodi library</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </div>
@@ -235,7 +243,7 @@
 
 <div id="body-inner">
   
-    <h1>Installation</h1>
+    <h1>F.A.Q.</h1>
   
 
 
@@ -243,36 +251,49 @@
     
 
     
-    <p>Installation instructions.</p>
-<h2 id="installation">Installation</h2>
-<p>Installation is simple!</p>
-<ol>
-<li>
-<p>Enable remote controls in Kodi.</p>
+    <h3 id="watched-status-from-trakt-does-not-show-resume-n-seconds-earlier-does-not-work-etc">&ldquo;watched&rdquo; status from Trakt does not show, &ldquo;resume N seconds earlier&rdquo; does not work, etc</h3>
+<p>Enable these options in elementum (you don&rsquo;t need to set up library in Kodi, unless you want to):</p>
 <ul>
-<li>Enter Kodi Service settings
-<img src="/screenshots/install1.png" alt="Enter Kodi Service settings"></li>
-<li>Enable both remote controls
-<img src="/screenshots/install2.png" alt="Enable both remote controls"></li>
-<li>It is needed to operate properly, to run library update, for example, or sync the library or add repository, and other usefull things.</li>
+<li>&ldquo;Enable library integration with Kodi&rdquo;</li>
+<li>&ldquo;Enable Kodi library synchronization&rdquo;</li>
+<li>&ldquo;Enable synchronization while playback&rdquo;</li>
+</ul>
+<h3 id="how-to-use-files-storage-in-android">How to use &ldquo;files&rdquo; storage in Android</h3>
+<p>&ldquo;Download path&rdquo; have to be inside Kodi data directory, e.g. <code>Android/data/org.xbmc.kodi/files/downloads</code>.</p>
+<h3 id="slow-speed-on-download-start-in-android-with-files-storage">Slow speed on download start in Android with files storage</h3>
+<p>If you use external HDD - you need to format it as internal storage.
+With NTFS it will take decent amount of time to create new big file, that&rsquo;s why you will see slow speed in the beggining.</p>
+<h3 id="what-exactly-all-these-limits-mean">What exactly all these limits mean</h3>
+<ul>
+<li><a href="https://www.libtorrent.org/reference-Settings.html#share_ratio_limit">https://www.libtorrent.org/reference-Settings.html#share_ratio_limit</a></li>
+<li><a href="https://www.libtorrent.org/reference-Settings.html#seed_time_ratio_limit">https://www.libtorrent.org/reference-Settings.html#seed_time_ratio_limit</a></li>
+<li><a href="https://www.libtorrent.org/reference-Settings.html#seed_time_limit">https://www.libtorrent.org/reference-Settings.html#seed_time_limit</a></li>
+</ul>
+<h3 id="slow-download-speed">Slow download speed</h3>
+<ul>
+<li>
+<p>Read this guide: <a href="https://help.bittorrent.com/support/solutions/articles/29000033439-optimizing-your-internet-connection-connection-guide-">https://help.bittorrent.com/support/solutions/articles/29000033439-optimizing-your-internet-connection-connection-guide-</a></p>
+</li>
+<li>
+<p>Check UPNP table on your router to see if elementum ports are there (deafault range is 6891-6899)</p>
+</li>
+<li>
+<p>Play with settings on &ldquo;BitTorrent&rdquo; tab</p>
+</li>
+</ul>
+<h3 id="how-to-use-elementum-integration-with-kodi-library">How to use Elementum integration with Kodi library</h3>
+<ul>
+<li>Enable these options in elementum:
+<ul>
+<li>&ldquo;Enable library integration with Kodi&rdquo;</li>
+<li>&ldquo;Enable Kodi library synchronization&rdquo;</li>
+<li>&ldquo;Enable synchronization while playback&rdquo;</li>
 </ul>
 </li>
-<li>
-<ul>
-<li>Download zip file for your platform here: <a href="/getting-started/platforms-page/">Platforms</a>.</li>
-<li>It is highly recommended to use the &ldquo;All-in-one&rdquo; package, it will detect your platform automatically.</li>
+<li>Add <code>elementum_library/Movies/</code> as a Movies source in the library</li>
+<li>Add <code>elementum_library/Shows/</code> as a Shows source in the library</li>
+<li>You might find <a href="/getting-started/platforms-page/">&ldquo;context.elementum&rdquo;</a> useful as well</li>
 </ul>
-</li>
-<li>
-<p>Install addon from zip.</p>
-</li>
-<li>
-<p>Plugin will be ready to use.
-<img src="/screenshots/install3.png" alt="Enable both remote controls"></p>
-</li>
-</ol>
-<h2 id="configuration">Configuration</h2>
-<p><a href="/getting-started/configuration/">Follow instructions here</a></p>
 
 
     
@@ -283,8 +304,8 @@
 </div>
 
 <div id="navigation">
-<a class="nav nav-prev" href="/getting-started/" title="Getting started"> <i class="fa fa-chevron-left"></i></a>
-    <a class="nav nav-next" href="/getting-started/configuration/" title="Configuration" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/getting-started/updating/" title="Updating"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/contribute/" title="Contribute" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

@@ -91,6 +91,11 @@
           <span>Updating</span><i class="fas fa-circle read-icon"></i>
         </a>
     </li>
+      <li data-nav-id="/getting-started/faq/" class="dd-item">
+        <a href="/getting-started/faq/">
+          <span>F.A.Q.</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/contribute/" class="dd-item parent alwaysopen">
@@ -251,15 +256,15 @@ Location of that directory depends on the platform, and even on the same platfor
 Locations can be discovered here: <a href="https://kodi.wiki/view/Log_file/Advanced#Location">https://kodi.wiki/view/Log_file/Advanced#Location</a></p>
 <h2 id="preparation">Preparation</h2>
 <p>First of all, log file, by default, contains only limited records, only errors or some notable actions, but, to understand the cause of an issue, we need full log.
-So we need to enable debugging in Kodi.</p>
+So we need to enable debugging in Kodi and in Elementum.</p>
 <ul>
 <li>Enter Kodi System settings
 <img src="/screenshots/log4.png" alt="Enter Kodi System settings"></li>
 <li>Enable Expert level of settings
 <img src="/screenshots/log6.png" alt="Enable Expert level of settings"></li>
-<li>Enable event logging
-<img src="/screenshots/log5.png" alt="Enable event logging"></li>
-<li>That is it! But you probably won&rsquo;t like the onscreen information about CPU usage and so on. So you can create an <em>advancedsettings.xml</em> file in Kodi&rsquo;s Userdata folder (<a href="https://kodi.wiki/view/Userdata),">https://kodi.wiki/view/Userdata),</a> which this content:</li>
+<li>Enable debug logging
+<img src="/screenshots/log5.png" alt="Enable debug logging"></li>
+<li>That is it for Kodi! But you probably won&rsquo;t like the onscreen information about CPU usage and so on. So you can create an <em>advancedsettings.xml</em> file in Kodi&rsquo;s Userdata folder (<a href="https://kodi.wiki/view/Userdata),">https://kodi.wiki/view/Userdata),</a> which this content:</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; ?&gt;</span>
 <span style="color:#f92672">&lt;advancedsettings&gt;</span>
@@ -269,10 +274,15 @@ So we need to enable debugging in Kodi.</p>
         <span style="color:#f92672">&lt;showloginfo&gt;</span>false<span style="color:#f92672">&lt;/showloginfo&gt;</span>
     <span style="color:#f92672">&lt;/debug&gt;</span>
 <span style="color:#f92672">&lt;/advancedsettings&gt;</span>
-</code></pre></div><pre><code>It will enable logging and hide onscreen information.
-</code></pre>
+</code></pre></div><p>It will enable logging and hide onscreen information.</p>
 <ul>
-<li>Now your Kodi records everything into the log file!</li>
+<li>
+<p>For Elementum: open addon settings, go to &ldquo;Advanced&rdquo; tab, set &ldquo;Log level&rdquo; to &ldquo;Debug&rdquo;
+<img src="/screenshots/log7.png" alt="Enable debug logging in elementum"></p>
+</li>
+<li>
+<p>Now your Kodi records everything into the log file!</p>
+</li>
 </ul>
 <h2 id="what-we-have">What we have</h2>
 <p>Elementum has few HTTP links which can give you more information about torrenting status, system information, some timers of common operations (which are way too useful for developers!):</p>
