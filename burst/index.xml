@@ -5,7 +5,11 @@
     <link>/burst/</link>
     <description>Recent content in Burst addon on Elementum</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/burst/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    
+	<atom:link href="/burst/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>How to add provider</title>
       <link>/burst/create/</link>
