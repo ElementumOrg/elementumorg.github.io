@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.68.3" />
+<meta name="generator" content="Hugo 0.92.2" />
 <meta name="flattr:id" content="yj6gd6">
 
 <title>How to override provider :: Elementum</title>
@@ -260,19 +260,19 @@ Provider description syntax can be found here: <a href="/burst/create/">How to a
 <p>Another way to override provider definition is the Python script.
 It should be an <em>overrides.py</em> file in your <em>USERDATA/addon_data/script.elementum.burst/</em> directory.</p>
 <p>And it should look like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">overrides <span style="color:#f92672">=</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">overrides <span style="color:#f92672">=</span> {
     <span style="color:#e6db74">&#39;torlock&#39;</span>: {
         <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;MyTorLock&#39;</span>
     },
     <span style="color:#e6db74">&#39;freshon.tv&#39;</span>: {
-        <span style="color:#e6db74">&#39;tv_keywords&#39;</span>: <span style="color:#e6db74">&#39;{title} s{season:2}e{episode:2}&#39;</span>
+        <span style="color:#e6db74">&#39;tv_keywords&#39;</span>: <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{title}</span><span style="color:#e6db74"> s</span><span style="color:#e6db74">{season:2}</span><span style="color:#e6db74">e</span><span style="color:#e6db74">{episode:2}</span><span style="color:#e6db74">&#39;</span>
     }
 }
 </code></pre></div><h3 id="overriding-provider-definition-with-json-file">Overriding provider definition with JSON file</h3>
 <p>The simpliest way to override provider definitions is the unified Json file.
 It is the <em>overrides.json</em> file in <em>USERDATA/addon_data/script.elementum.burst/</em> directory.</p>
 <p>Should look like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#f92672">&#34;rutor&#34;</span>: {
         <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Bla-bla&#34;</span>,
         <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;red&#34;</span>
