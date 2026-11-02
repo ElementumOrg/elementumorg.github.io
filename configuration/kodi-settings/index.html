@@ -19,7 +19,7 @@
     <meta property="article:section" content="Configuration">
     <meta itemprop="name" content="Kodi add-on settings :: Elementum">
     <meta itemprop="description" content="Every setting in Add-ons → Elementum → Configure">
-    <meta itemprop="wordCount" content="2807">
+    <meta itemprop="wordCount" content="2865">
     <title>Kodi add-on settings :: Elementum</title>
     <link href="/images/favicon.7cb76684cc9cddb96694b4fb17112ab6822f5da3ecef44bd93470d2938a66ab7.png" rel="icon" type="image/png">
     <link href="/css/auto-complete/auto-complete.min.19b8eb7faa53e727a407aa2d781e21185a35cfc9330628acc11df190f919f003.css" rel="stylesheet">
@@ -27,7 +27,7 @@
     <script src="/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
     <script src="/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
     <script type="application/json" id="R-search-config">{
-      "indexFile": "searchindex.en.min.f04ec3ba264576837cdd7b95d68c1c2691e815909970a68583033f50466112fc.js"
+      "indexFile": "searchindex.en.min.8c495ad480b15e0e911a8647085e7339aef0219049034f2411de0e6379eb2d0b.js"
     }</script>
     <script src="/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
     <script src="/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
@@ -249,7 +249,7 @@ The list is generated from the add-on&rsquo;s <code>settings.xml</code> of the l
 <li>Rows in <em>italics</em> are hints Kodi shows inside the settings dialog.</li>
 </ul>
 <p>Some settings are only visible when another one is enabled (for example, memory size only for the Memory storage).</p>
-<p><em>From plugin.video.elementum v0.1.116.</em></p>
+<p><em>From plugin.video.elementum v0.1.117.</em></p>
 <h2>General</h2>
 <table>
 <thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
@@ -298,6 +298,7 @@ The list is generated from the add-on&rsquo;s <code>settings.xml</code> of the l
 <tr><td>Move finished downloads to separate folders</td><td><code>completed_move</code></td><td>bool</td><td>false</td><td></td></tr>
 <tr><td>Movies</td><td><code>completed_movies_path</code></td><td>folder</td><td></td><td></td></tr>
 <tr><td>TV Shows</td><td><code>completed_shows_path</code></td><td>folder</td><td></td><td></td></tr>
+<tr><td>Rename moved files to Kodi naming (Title (Year), Show S01E01)</td><td><code>completed_rename</code></td><td>bool</td><td>false</td><td></td></tr>
 <tr><td colspan="5"><em>Files will only be moved after seeding is finished (see - BitTorrent settings), and will wait if currently playing</em></td></tr>
 <tr><td>Do not ask questions before playback</td><td><code>silent_stream_start</code></td><td>bool</td><td>false</td><td></td></tr>
 <tr><td>Automatically answer Yes after timeout</td><td><code>autoyes_enabled</code></td><td>bool</td><td>true</td><td></td></tr>
@@ -335,6 +336,7 @@ The list is generated from the add-on&rsquo;s <code>settings.xml</code> of the l
 <tr><td>Show episodes on release day (w/o delay)</td><td><code>show_episodes_on_release_day</code></td><td>bool</td><td>false</td><td></td></tr>
 <tr><td>Percents of playback to mark as watched</td><td><code>playback_percent</code></td><td>slider</td><td>85</td><td>1 – 100</td></tr>
 <tr><td>Run Kodi library update after add/delete</td><td><code>library_update</code></td><td>enum</td><td>Automatically</td><td>Automatically / Ask / No</td></tr>
+<tr><td>Remove from Elementum library, when item is deleted from Kodi library</td><td><code>library_sync_kodi_removals</code></td><td>bool</td><td>false</td><td></td></tr>
 <tr><td>Strm files language</td><td><code>strm_language</code></td><td>action</td><td></td><td></td></tr>
 <tr><td>Create NFO files for Movie scrapers</td><td><code>library_nfo_movies</code></td><td>bool</td><td>true</td><td></td></tr>
 <tr><td>Create NFO files for TV Show scrapers</td><td><code>library_nfo_shows</code></td><td>bool</td><td>true</td><td></td></tr>
@@ -465,6 +467,8 @@ The list is generated from the add-on&rsquo;s <code>settings.xml</code> of the l
 <tr><td>Sync items from collections into Kodi library</td><td><code>trakt_sync_collections</code></td><td>bool</td><td>true</td><td></td></tr>
 <tr><td>Sync items from watchlist into Kodi library</td><td><code>trakt_sync_watchlist</code></td><td>bool</td><td>true</td><td></td></tr>
 <tr><td>Sync items from user lists into Kodi library</td><td><code>trakt_sync_userlists</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Select userlists to sync</td><td><code>action_trakt_select_sync_userlists</code></td><td>action</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>Selected userlists (all, if empty)</em></td></tr>
 <tr><td>Sync watched states from tracking service into Kodi library</td><td><code>trakt_sync_watched</code></td><td>bool</td><td>true</td><td></td></tr>
 <tr><td>Sync back Kodi watched states into tracking service</td><td><code>trakt_sync_watchedback</code></td><td>bool</td><td>true</td><td></td></tr>
 <tr><td>Sync playback progress into Kodi library</td><td><code>trakt_sync_playback_progress</code></td><td>bool</td><td>true</td><td></td></tr>
@@ -521,8 +525,8 @@ The list is generated from the add-on&rsquo;s <code>settings.xml</code> of the l
 <tr><th colspan="5">Stream sorting</th></tr>
 <tr><td>Sorting mode for Movies</td><td><code>sorting_mode_movies</code></td><td>enum</td><td>Balanced</td><td>By seeders / By resolution / Balanced / By size</td></tr>
 <tr><td>Sorting mode for TV Shows</td><td><code>sorting_mode_shows</code></td><td>enum</td><td>Balanced</td><td>By seeders / By resolution / Balanced / By size</td></tr>
-<tr><td>Resolution preference for Movies</td><td><code>resolution_preference_movies</code></td><td>enum</td><td>1080p / 720p / 480p</td><td>1080p / 720p / 480p / 720p / 1080p / 480p / 720p / 480p / 1080p / 480p / 720p / 1080p</td></tr>
-<tr><td>Resolution preference for TV Shows</td><td><code>resolution_preference_shows</code></td><td>enum</td><td>1080p / 720p / 480p</td><td>1080p / 720p / 480p / 720p / 1080p / 480p / 720p / 480p / 1080p / 480p / 720p / 1080p</td></tr>
+<tr><td>Resolution preference for Movies</td><td><code>resolution_preference_movies</code></td><td>enum</td><td>4K / 1080p / 720p / 480p</td><td>4K / 1080p / 720p / 480p / 720p / 1080p / 480p / 4K / 720p / 480p / 1080p / 4K / 480p / 720p / 1080p / 4K</td></tr>
+<tr><td>Resolution preference for TV Shows</td><td><code>resolution_preference_shows</code></td><td>enum</td><td>4K / 1080p / 720p / 480p</td><td>4K / 1080p / 720p / 480p / 720p / 1080p / 480p / 4K / 720p / 480p / 1080p / 4K / 480p / 720p / 1080p / 4K</td></tr>
 <tr><td>Percentage of additional seeders required before choosing next resolution</td><td><code>percentage_additional_seeders</code></td><td>number</td><td>25</td><td></td></tr>
 <tr><th colspan="5">Caching</th></tr>
 <tr><td>Cache stream selection</td><td><code>use_cache_selection</code></td><td>bool</td><td>true</td><td></td></tr>
