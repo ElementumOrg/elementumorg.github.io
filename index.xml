@@ -43,6 +43,13 @@
       <description>Play any movie or episode in Kodi with Elementum</description>
     </item>
     <item>
+      <title>LT2http</title>
+      <link>/lt2http/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/lt2http/index.html</guid>
+      <description>LibTorrent-to-HTTP: torrent download and streaming engine with a REST API</description>
+    </item>
+    <item>
       <title>Release notes</title>
       <link>/release-notes/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

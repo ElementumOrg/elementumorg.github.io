@@ -55,6 +55,9 @@
     <loc>/burst/cookie-sync/index.html</loc>
   </url>
   <url>
+    <loc>/release-notes/lt2http/index.html</loc>
+  </url>
+  <url>
     <loc>/help/request-feature/index.html</loc>
   </url>
   <url>
@@ -62,6 +65,9 @@
   </url>
   <url>
     <loc>/context/index.html</loc>
+  </url>
+  <url>
+    <loc>/lt2http/index.html</loc>
   </url>
   <url>
     <loc>/release-notes/index.html</loc>

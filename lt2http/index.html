@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.169.0">
+    <meta name="generator" content="Relearn 9.4.0">
+    <meta name="description" content="LibTorrent-to-HTTP: torrent download and streaming engine with a REST API">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="LT2http :: Elementum">
+    <meta name="twitter:description" content="LibTorrent-to-HTTP: torrent download and streaming engine with a REST API">
+    <meta property="og:url" content="/lt2http/index.html">
+    <meta property="og:site_name" content="Elementum">
+    <meta property="og:title" content="LT2http :: Elementum">
+    <meta property="og:description" content="LibTorrent-to-HTTP: torrent download and streaming engine with a REST API">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="LT2http :: Elementum">
+    <meta itemprop="description" content="LibTorrent-to-HTTP: torrent download and streaming engine with a REST API">
+    <meta itemprop="wordCount" content="620">
+    <title>LT2http :: Elementum</title>
+    <link href="/lt2http/index.xml" rel="alternate" type="application/rss&#43;xml" title="LT2http :: Elementum">
+    <link href="/images/favicon.c2efc3e6cb9e4f191ec433a8866d7b1b7b2d72db35528dfa5dbbb2d15ede411e.png" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.19b8eb7faa53e727a407aa2d781e21185a35cfc9330628acc11df190f919f003.css" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.ee095762d0ba22fe9c154ccbc9a1d92d5eae5ebaf7cedfbc9b9991710d739d05.js" defer></script>
+    <script src="/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
+    <script src="/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
+    <script type="application/json" id="R-search-config">{
+      "indexFile": "searchindex.en.min.d1cb2a0afb06ae765c38dfc65262ea3d71074c90684f28b2cc68f9b4a8dc6446.js"
+    }</script>
+    <script src="/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
+    <script src="/js/lunr/lunr.multi.min.ffaee7f1e07179595fe8a4b7c469761f90999470e1f04dcb0a94dc2c1cb44f9c.js" defer></script>
+    <script src="/js/lunr/lunr.en.min.94d0a7cb1f111200e2f5be9dc32699cf266aaa29011e414bdcd36a18ea0fd5ee.js" defer></script>
+    <script type="application/json" id="R-search-lunr-config">{
+      "contentLangs": [
+        "en"
+      ]
+    }</script>
+    <link href="/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet" media="print" class="R-async-style"><noscript><link href="/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet"></noscript>
+    <link href="/css/theme.min.d32ff7f02dc6208f580465aef1e044e05474c6385ef25978e4655da573a0d7c0.css" rel="stylesheet">
+    <link href="/css/format-html.min.42c8d219b2661a532b243104920ce1fd3c0b36d907a1df2e04361a7957399674.css" rel="stylesheet" id="R-format-style">
+    <script type="application/json" id="R-theme-config">{
+      "disableInlineCopyToClipboard": false,
+      "enableBlockCodeWrap": true,
+      "path": "/lt2http/index.html",
+      "relBasePath": "..",
+      "relBaseUri": "..",
+      "themevariants": [
+        "auto",
+        "elementum-light",
+        "elementum-dark"
+      ],
+      "translations": {
+        "Browser_unsupported_feature": "This browser doesn't support this feature",
+        "Change_sorting": "Change sorting",
+        "Close_graph": "Close enlarged graph",
+        "Copied_to_clipboard": "Text copied to clipboard!",
+        "Copy_to_clipboard": "Copy text to clipboard",
+        "Deleted_text_end": "End of deleted text",
+        "Deleted_text_start": "Start of deleted text",
+        "Enlarge_graph": "Enlarge graph",
+        "History_cleared": "History cleared",
+        "Inserted_text_end": "End of inserted text",
+        "Inserted_text_start": "Start of inserted text",
+        "Link_copied_to_clipboard": "Link copied to clipboard!",
+        "N_matches_on_page": "{1} matches for \"{0}\" on this page",
+        "N_results_found": "{1} results found for \"{0}\"",
+        "No_results_found": "No results found for \"{0}\"",
+        "Reset_sorting": "Reset sorting",
+        "Reset_view": "Reset view",
+        "Sort_key_ascending": "sorted at position {0}, ascending",
+        "Sort_key_descending": "sorted at position {0}, descending",
+        "Sortable_columns": "Column headers with buttons are sortable.",
+        "Sorted_by_ascending": "Sorted by \"{0}\", ascending",
+        "Sorted_by_descending": "Sorted by \"{0}\", descending",
+        "Sorting_reset": "Sorting reset!",
+        "Unsorted_by": "No longer sorted by \"{0}\"",
+        "View_reset": "View reset!"
+      }
+    }</script>
+    <script src="/js/theme-head.min.f7e473c3e5d5d7ea4c1ad508c6ae60b8d3c54f1c5f68e660f71087333cc95e5a.js"></script>
+  </head>
+  <body class="mobile-support html" data-origin="/lt2http/index.html">
+    <a id="R-skip-link" href="#R-body-inner">Skip to main content</a>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default layout-sidebar-row" href="/index.html">
+          <span class="logo-image default-animation" data-r-logo-variant="elementum-dark elementum-light relearn-light">
+<img alt="" class="lazy rounded figure-image" height="285" loading="lazy" src="/images/logo.png" width="285">
+          </span>
+          <span class="logo-title default-animation">Elementum</span>
+        </a>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Open search page" aria-label="Open search page"><i class="fas fa-fw fa-search" aria-hidden="true"></i></button>
+            <input data-search-input name="search-by" class="search-by" type="search" aria-label="Search" placeholder="Search..." title="Search (CTRL+ALT+f)">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search" aria-label="Clear search"><i class="fas fa-fw fa-times" aria-hidden="true" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <nav id="R-content-wrapper" class="highlightable" aria-label="Menu" tabindex="-1">
+        <div id="R-scrollbar" aria-hidden="true"><div id="R-scrollbar-thumb"></div></div>
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/getting-started/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Getting started</span></label><a class="padding default-animation" href="/getting-started/index.html"><i class='fas fa-fw fa-rocket'></i> Getting started</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/getting-started/installation/index.html"><a class="padding" href="/getting-started/installation/index.html">Installation</a></li>
+            <li class="" data-nav-id="/getting-started/platforms-page/index.html"><a class="padding" href="/getting-started/platforms-page/index.html">Downloads</a></li>
+            <li class="" data-nav-id="/getting-started/updating/index.html"><a class="padding" href="/getting-started/updating/index.html">Updating</a></li></ul></li>
+            <li class="" data-nav-id="/configuration/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Configuration</span></label><a class="padding default-animation" href="/configuration/index.html"><i class='fas fa-fw fa-sliders'></i> Configuration</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/configuration/kodi-settings/index.html"><a class="padding" href="/configuration/kodi-settings/index.html">Kodi add-on settings</a></li>
+            <li class="" data-nav-id="/configuration/command-line/index.html"><a class="padding" href="/configuration/command-line/index.html">Command-line options</a></li></ul></li>
+            <li class="" data-nav-id="/help/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Help &amp; support</span></label><a class="padding default-animation" href="/help/index.html"><i class='fas fa-fw fa-life-ring'></i> Help &amp; support</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/help/faq/index.html"><a class="padding" href="/help/faq/index.html">FAQ</a></li>
+            <li class="" data-nav-id="/help/log/index.html"><a class="padding" href="/help/log/index.html">Making a log file</a></li>
+            <li class="" data-nav-id="/help/report-issue/index.html"><a class="padding" href="/help/report-issue/index.html">Report an issue</a></li>
+            <li class="" data-nav-id="/help/request-feature/index.html"><a class="padding" href="/help/request-feature/index.html">Request a feature</a></li></ul></li>
+            <li class="" data-nav-id="/burst/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Burst add-on</span></label><a class="padding default-animation" href="/burst/index.html"><i class='fas fa-fw fa-magnifying-glass'></i> Burst add-on</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/burst/create/index.html"><a class="padding" href="/burst/create/index.html">How to add a provider</a></li>
+            <li class="" data-nav-id="/burst/definition/index.html"><a class="padding" href="/burst/definition/index.html">Provider definition reference</a></li>
+            <li class="" data-nav-id="/burst/override/index.html"><a class="padding" href="/burst/override/index.html">How to override a provider</a></li>
+            <li class="" data-nav-id="/burst/cookie-sync/index.html"><a class="padding" href="/burst/cookie-sync/index.html">Cookie sync</a></li></ul></li>
+            <li class="" data-nav-id="/context/index.html"><a class="padding" href="/context/index.html"><i class='fas fa-fw fa-list'></i> Context add-on</a></li>
+            <li class="active " data-nav-id="/lt2http/index.html"><a class="padding" href="/lt2http/index.html" aria-current="page"><i class='fas fa-fw fa-server'></i> LT2http</a></li>
+            <li class="" data-nav-id="/release-notes/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Release notes</span></label><a class="padding default-animation" href="/release-notes/index.html"><i class='fas fa-fw fa-bullhorn'></i> Release notes</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/release-notes/elementum/index.html"><a class="padding" href="/release-notes/elementum/index.html">Elementum</a></li>
+            <li class="" data-nav-id="/release-notes/burst/index.html"><a class="padding" href="/release-notes/burst/index.html">Burst</a></li>
+            <li class="" data-nav-id="/release-notes/context/index.html"><a class="padding" href="/release-notes/context/index.html">Context</a></li>
+            <li class="" data-nav-id="/release-notes/lt2http/index.html"><a class="padding" href="/release-notes/lt2http/index.html">LT2http</a></li></ul></li>
+            <li class="" data-nav-id="/contribute/index.html"><a class="padding" href="/contribute/index.html"><i class='fas fa-fw fa-code-branch'></i> Contribute</a></li>
+            <li class="" data-nav-id="/donate/index.html"><a class="padding" href="/donate/index.html"><i class='fas fa-fw fa-mug-hot'></i> Donate</a></li>
+            <li class="" data-nav-id="/credits/index.html"><a class="padding" href="/credits/index.html">Credits</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/elgatito/plugin.video.elementum"><a class="padding" href="https://github.com/elgatito/plugin.video.elementum" rel="external"><i class='fab fa-fw fa-github'></i> Elementum on GitHub</a></li>
+            <li class="" data-nav-id="/help/report-issue/index.html"><a class="padding" href="/help/report-issue/index.html"><i class='fas fa-fw fa-bug'></i> Report an issue</a></li>
+            <li class="" data-nav-id="/credits/index.html"><a class="padding" href="/credits/index.html"><i class='fas fa-fw fa-heart'></i> Credits</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush" aria-hidden="true"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <select aria-label="Theme" autocomplete="off">
+                    <option value="auto" selected>Auto</option>
+                    <option value="elementum-light">Elementum Light</option>
+                    <option value="elementum-dark">Elementum Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart" aria-hidden="true"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </nav>
+    </aside>
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <header id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-nav" type="button" title="Menu (CTRL&#43;ALT&#43;n)" aria-label="Menu (CTRL&#43;ALT&#43;n)" aria-expanded="false"><i class="fa-fw fas fa-bars" aria-hidden="true"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)" aria-label="Table of Contents (CTRL&#43;ALT&#43;t)" aria-expanded="false"><i class="fa-fw fas fa-table-list" aria-hidden="true"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper" tabindex="-1">
+<nav class="TableOfContents" aria-label="Table of Contents">
+  <ul>
+    <li><a href="#parts">Parts</a></li>
+    <li><a href="#in-kodi">In Kodi</a></li>
+    <li><a href="#storage">Storage</a></li>
+    <li><a href="#running-it-yourself">Running it yourself</a></li>
+    <li><a href="#http-api">HTTP API</a></li>
+    <li><a href="#source-and-building">Source and building</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="topbar-area topbar-area-middle" data-area="middle">
+            <nav class="topbar-breadcrumbs breadcrumbs highlightable" aria-label="Breadcrumbs" data-overflow-title="Elementum &gt;  LT2http">
+              <ol itemscope itemtype="http://schema.org/BreadcrumbList"><li class="topbar-breadcrumbs-divider" aria-hidden="true">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Elementum</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="" aria-current="page"><span itemprop="name">LT2http</span><meta itemprop="position" content="2"></li>
+              </ol>
+            </nav>
+          </div>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Edit (CTRL&#43;ALT&#43;w)" href="https://github.com/elgatito/elementum-surge/edit/master/src/content/lt2http/_index.md" rel="external" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen" aria-hidden="true"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Context add-on (🡐)" href="/context/index.html" title="Context add-on (🡐)"><i class="fa-fw fas fa-chevron-left" aria-hidden="true"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Release notes (🡒)" href="/release-notes/index.html" title="Release notes (🡒)"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="More" aria-label="More" aria-expanded="false"><i class="fa-fw fas fa-ellipsis-v" aria-hidden="true"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper" tabindex="-1">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable lt2http" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="lt2http">LT2http</h1>
+
+<p><strong>LT2http</strong> (<a href="https://github.com/ElementumOrg/lt2http" rel="external">lt2http</a>) is a torrent download and streaming engine with an HTTP API.
+It downloads torrents with <a href="https://www.libtorrent.org/" rel="external">libtorrent</a>, can keep the data in memory instead of on disk,
+and streams any file of a torrent over HTTP while it downloads, to Kodi, a browser or any media player.</p>
+<p>It&rsquo;s a separate project from Elementum: Elementum has its own engine and does not need LT2http.
+Use LT2http when you want a lightweight torrent streaming backend for your own scripts, add-ons or players.
+Latest release: <strong>v0.0.16</strong>.</p>
+<h2 id="parts">Parts<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<table>
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>What it is</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/ElementumOrg/lt2http" rel="external">lt2http</a></td>
+      <td>The engine: a C++ web server built on libtorrent, Boost and Oat++.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/ElementumOrg/lt2http-binaries" rel="external">lt2http-binaries</a></td>
+      <td>Prebuilt <code>lt2http</code> binaries for every platform.</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/ElementumOrg/service.lt2http" rel="external">service.lt2http</a></td>
+      <td>Kodi add-on that runs the binary as a Kodi service and passes your Kodi settings to it.</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="in-kodi">In Kodi<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>Install <strong>LT2http</strong> from the ElementumOrg repository, or download the zip from <a href="/getting-started/platforms-page/index.html#lt2http-downloads">Downloads</a>.
+As with Elementum, enable both <em>Application control</em> options in <em>Settings → Services → Control</em> first.</p>
+<p>The add-on has no browsing interface yet: it starts <code>lt2http</code> when Kodi starts, stops it when Kodi exits,
+downloads the right binary for your platform after an update, and restarts the engine when you change settings.
+Other add-ons use it through the API at <code>http://127.0.0.1:65225</code>.</p>
+<p>Settings are in <em>Add-ons → Services → LT2http → Configure</em>:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Tab</th>
+      <th>What you set there</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>General</td>
+      <td>Pre-play buffer size and timeout, speed limits, connection limits, seeding, trackers, libtorrent options.</td>
+    </tr>
+    <tr>
+      <td>Storage</td>
+      <td>Storage type (memory or files), memory size, download and <code>.torrent</code> folders, disk cache.</td>
+    </tr>
+    <tr>
+      <td>Network</td>
+      <td>DHT, LSD, TCP, uTP, UPnP/NAT-PMP, listen and outgoing interfaces, listen ports.</td>
+    </tr>
+    <tr>
+      <td>Proxy</td>
+      <td>SOCKS4, SOCKS5, HTTP or I2P proxy for trackers, downloads and <code>.torrent</code> files.</td>
+    </tr>
+    <tr>
+      <td>Advanced</td>
+      <td>Local port, remote host and port, API login and password.</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="storage">Storage<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<ul>
+<li><strong>Memory</strong>: only the part around the playback position is kept in memory, the disk stores just the <code>.torrent</code> file.
+That&rsquo;s what makes LT2http work on devices with little or slow storage. 100 MB is enough on devices with 1 GB of RAM, 200-250 MB on bigger ones.
+By default the size is chosen from the physical memory and grows for heavy torrents.</li>
+<li><strong>File</strong>: usual files on disk, the selected file&rsquo;s full size must be free.</li>
+</ul>
+<h2 id="running-it-yourself">Running it yourself<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p><code>lt2http</code> is a single static binary, take it for your platform from <a href="https://github.com/ElementumOrg/lt2http-binaries" rel="external">lt2http-binaries</a>.
+By default it listens on port <code>65225</code> on all interfaces.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>lt2http --config lt2http.json --update    <span style="color:#75715e"># load settings from lt2http.json and write back the full config</span>
+</span></span><span style="display:flex;"><span>lt2http --web_port <span style="color:#ae81ff">8080</span> --download_storage file --download_path /data/downloads
+</span></span><span style="display:flex;"><span>lt2http --help                            <span style="color:#75715e"># every option with its default value</span></span></span></code></pre></div>
+<p>Every setting is a command-line option and a key in the JSON config file, with the same name
+(<code>web_port</code>, <code>download_storage</code>, <code>memory_size</code>, <code>download_path</code>, <code>buffer_size</code>, <code>max_download_rate</code>, <code>proxy_host</code>, …).
+Set <code>web_login</code> and <code>web_password</code> to protect the API when it listens on a network interface.</p>
+<h2 id="http-api">HTTP API<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>The API answers in JSON, except the browser pages. Interactive docs (Swagger) are on <code>http://localhost:65225/swagger/ui</code>
+and the OpenAPI spec on <code>/api-docs/oas-3.0.0.json</code>. The main endpoints:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Endpoint</th>
+      <th>What it does</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>GET /status</code></td>
+      <td>Session status: speeds and torrents.</td>
+    </tr>
+    <tr>
+      <td><code>GET /info</code></td>
+      <td>Status page for a browser: torrents, files, trackers and pieces.</td>
+    </tr>
+    <tr>
+      <td><code>GET /service/add/uri?uri=…</code></td>
+      <td>Add a torrent by magnet link, <code>.torrent</code> URL or local path.</td>
+    </tr>
+    <tr>
+      <td><code>POST /service/add/file</code></td>
+      <td>Add a <code>.torrent</code> file.</td>
+    </tr>
+    <tr>
+      <td><code>GET /torrents</code></td>
+      <td>List torrents.</td>
+    </tr>
+    <tr>
+      <td><code>GET /torrents/{infoHash}/files</code></td>
+      <td>List files of a torrent.</td>
+    </tr>
+    <tr>
+      <td><code>GET /torrents/{infoHash}/files/{index}/status</code></td>
+      <td>Download and buffering progress of a file.</td>
+    </tr>
+    <tr>
+      <td><code>GET /torrents/{infoHash}/files/{index}/stream/{file_name}</code></td>
+      <td>Stream a file, with range requests for seeking. Give this URL to the player.</td>
+    </tr>
+    <tr>
+      <td><code>GET /torrents/{infoHash}/pause</code>, <code>/resume</code>, <code>/remove</code></td>
+      <td>Control a torrent.</td>
+    </tr>
+    <tr>
+      <td><code>GET /settings/get</code>, <code>POST /settings/set</code></td>
+      <td>Read or change settings at runtime.</td>
+    </tr>
+    <tr>
+      <td><code>GET /changelog</code></td>
+      <td>Changes in each release.</td>
+    </tr>
+    <tr>
+      <td><code>GET /shutdown</code></td>
+      <td>Stop the engine.</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="source-and-building">Source and building<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>LT2http is open source. Build instructions, dependencies and Docker cross-compilation are in the
+<a href="https://github.com/ElementumOrg/lt2http#readme" rel="external">lt2http README</a>. Report problems with the engine in
+<a href="https://github.com/ElementumOrg/lt2http/issues" rel="external">lt2http issues</a> and with the Kodi add-on in
+<a href="https://github.com/ElementumOrg/service.lt2http/issues" rel="external">service.lt2http issues</a>.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/theme.min.96b966188f27166ddab5db2863a58101dd099db40ab5513f97556f286504ff8a.js" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>
