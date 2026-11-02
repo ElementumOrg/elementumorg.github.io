@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.169.0">
+    <meta name="generator" content="Relearn 9.4.0">
+    <meta name="description" content="Syntax of provider definitions in JSON, every key with its values and examples">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Provider definition reference :: Elementum">
+    <meta name="twitter:description" content="Syntax of provider definitions in JSON, every key with its values and examples">
+    <meta property="og:url" content="/burst/definition/index.html">
+    <meta property="og:site_name" content="Elementum">
+    <meta property="og:title" content="Provider definition reference :: Elementum">
+    <meta property="og:description" content="Syntax of provider definitions in JSON, every key with its values and examples">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Burst add-on">
+    <meta itemprop="name" content="Provider definition reference :: Elementum">
+    <meta itemprop="description" content="Syntax of provider definitions in JSON, every key with its values and examples">
+    <meta itemprop="wordCount" content="2064">
+    <title>Provider definition reference :: Elementum</title>
+    <link href="/images/favicon.c2efc3e6cb9e4f191ec433a8866d7b1b7b2d72db35528dfa5dbbb2d15ede411e.png" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.19b8eb7faa53e727a407aa2d781e21185a35cfc9330628acc11df190f919f003.css" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.ee095762d0ba22fe9c154ccbc9a1d92d5eae5ebaf7cedfbc9b9991710d739d05.js" defer></script>
+    <script src="/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
+    <script src="/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
+    <script type="application/json" id="R-search-config">{
+      "indexFile": "searchindex.en.min.6e3ef94beefd374b2e66c5fa4712327a1845f2a63b3d3e96fa80b5a02927d37e.js"
+    }</script>
+    <script src="/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
+    <script src="/js/lunr/lunr.multi.min.ffaee7f1e07179595fe8a4b7c469761f90999470e1f04dcb0a94dc2c1cb44f9c.js" defer></script>
+    <script src="/js/lunr/lunr.en.min.94d0a7cb1f111200e2f5be9dc32699cf266aaa29011e414bdcd36a18ea0fd5ee.js" defer></script>
+    <script type="application/json" id="R-search-lunr-config">{
+      "contentLangs": [
+        "en"
+      ]
+    }</script>
+    <link href="/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet" media="print" class="R-async-style"><noscript><link href="/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet"></noscript>
+    <link href="/css/theme.min.d32ff7f02dc6208f580465aef1e044e05474c6385ef25978e4655da573a0d7c0.css" rel="stylesheet">
+    <link href="/css/format-html.min.42c8d219b2661a532b243104920ce1fd3c0b36d907a1df2e04361a7957399674.css" rel="stylesheet" id="R-format-style">
+    <script type="application/json" id="R-theme-config">{
+      "disableInlineCopyToClipboard": false,
+      "enableBlockCodeWrap": true,
+      "path": "/burst/definition/index.html",
+      "relBasePath": "../..",
+      "relBaseUri": "../..",
+      "themevariants": [
+        "auto",
+        "elementum-light",
+        "elementum-dark"
+      ],
+      "translations": {
+        "Browser_unsupported_feature": "This browser doesn't support this feature",
+        "Change_sorting": "Change sorting",
+        "Close_graph": "Close enlarged graph",
+        "Copied_to_clipboard": "Text copied to clipboard!",
+        "Copy_to_clipboard": "Copy text to clipboard",
+        "Deleted_text_end": "End of deleted text",
+        "Deleted_text_start": "Start of deleted text",
+        "Enlarge_graph": "Enlarge graph",
+        "History_cleared": "History cleared",
+        "Inserted_text_end": "End of inserted text",
+        "Inserted_text_start": "Start of inserted text",
+        "Link_copied_to_clipboard": "Link copied to clipboard!",
+        "N_matches_on_page": "{1} matches for \"{0}\" on this page",
+        "N_results_found": "{1} results found for \"{0}\"",
+        "No_results_found": "No results found for \"{0}\"",
+        "Reset_sorting": "Reset sorting",
+        "Reset_view": "Reset view",
+        "Sort_key_ascending": "sorted at position {0}, ascending",
+        "Sort_key_descending": "sorted at position {0}, descending",
+        "Sortable_columns": "Column headers with buttons are sortable.",
+        "Sorted_by_ascending": "Sorted by \"{0}\", ascending",
+        "Sorted_by_descending": "Sorted by \"{0}\", descending",
+        "Sorting_reset": "Sorting reset!",
+        "Unsorted_by": "No longer sorted by \"{0}\"",
+        "View_reset": "View reset!"
+      }
+    }</script>
+    <script src="/js/theme-head.min.f7e473c3e5d5d7ea4c1ad508c6ae60b8d3c54f1c5f68e660f71087333cc95e5a.js"></script>
+  </head>
+  <body class="mobile-support html" data-origin="/burst/definition/index.html">
+    <a id="R-skip-link" href="#R-body-inner">Skip to main content</a>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default layout-sidebar-row" href="/index.html">
+          <span class="logo-image default-animation" data-r-logo-variant="elementum-dark elementum-light relearn-light">
+<img alt="" class="lazy rounded figure-image" height="285" loading="lazy" src="/images/logo.png" width="285">
+          </span>
+          <span class="logo-title default-animation">Elementum</span>
+        </a>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Open search page" aria-label="Open search page"><i class="fas fa-fw fa-search" aria-hidden="true"></i></button>
+            <input data-search-input name="search-by" class="search-by" type="search" aria-label="Search" placeholder="Search..." title="Search (CTRL+ALT+f)">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search" aria-label="Clear search"><i class="fas fa-fw fa-times" aria-hidden="true" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <nav id="R-content-wrapper" class="highlightable" aria-label="Menu" tabindex="-1">
+        <div id="R-scrollbar" aria-hidden="true"><div id="R-scrollbar-thumb"></div></div>
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/getting-started/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Getting started</span></label><a class="padding default-animation" href="/getting-started/index.html"><i class='fas fa-fw fa-rocket'></i> Getting started</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/getting-started/installation/index.html"><a class="padding" href="/getting-started/installation/index.html">Installation</a></li>
+            <li class="" data-nav-id="/getting-started/platforms-page/index.html"><a class="padding" href="/getting-started/platforms-page/index.html">Downloads</a></li>
+            <li class="" data-nav-id="/getting-started/updating/index.html"><a class="padding" href="/getting-started/updating/index.html">Updating</a></li></ul></li>
+            <li class="" data-nav-id="/configuration/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Configuration</span></label><a class="padding default-animation" href="/configuration/index.html"><i class='fas fa-fw fa-sliders'></i> Configuration</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/configuration/kodi-settings/index.html"><a class="padding" href="/configuration/kodi-settings/index.html">Kodi add-on settings</a></li>
+            <li class="" data-nav-id="/configuration/command-line/index.html"><a class="padding" href="/configuration/command-line/index.html">Command-line options</a></li></ul></li>
+            <li class="" data-nav-id="/help/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Help &amp; support</span></label><a class="padding default-animation" href="/help/index.html"><i class='fas fa-fw fa-life-ring'></i> Help &amp; support</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/help/faq/index.html"><a class="padding" href="/help/faq/index.html">FAQ</a></li>
+            <li class="" data-nav-id="/help/log/index.html"><a class="padding" href="/help/log/index.html">Making a log file</a></li>
+            <li class="" data-nav-id="/help/report-issue/index.html"><a class="padding" href="/help/report-issue/index.html">Report an issue</a></li>
+            <li class="" data-nav-id="/help/request-feature/index.html"><a class="padding" href="/help/request-feature/index.html">Request a feature</a></li></ul></li>
+            <li class="parent " data-nav-id="/burst/index.html"><label><input type="checkbox" checked><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Burst add-on</span></label><a class="padding default-animation" href="/burst/index.html"><i class='fas fa-fw fa-magnifying-glass'></i> Burst add-on</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/burst/create/index.html"><a class="padding" href="/burst/create/index.html">How to add a provider</a></li>
+            <li class="active " data-nav-id="/burst/definition/index.html"><a class="padding" href="/burst/definition/index.html" aria-current="page">Provider definition reference</a></li>
+            <li class="" data-nav-id="/burst/override/index.html"><a class="padding" href="/burst/override/index.html">How to override a provider</a></li>
+            <li class="" data-nav-id="/burst/cookie-sync/index.html"><a class="padding" href="/burst/cookie-sync/index.html">Cookie sync</a></li></ul></li>
+            <li class="" data-nav-id="/context/index.html"><a class="padding" href="/context/index.html"><i class='fas fa-fw fa-list'></i> Context add-on</a></li>
+            <li class="" data-nav-id="/release-notes/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Release notes</span></label><a class="padding default-animation" href="/release-notes/index.html"><i class='fas fa-fw fa-bullhorn'></i> Release notes</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/release-notes/elementum/index.html"><a class="padding" href="/release-notes/elementum/index.html">Elementum</a></li>
+            <li class="" data-nav-id="/release-notes/burst/index.html"><a class="padding" href="/release-notes/burst/index.html">Burst</a></li>
+            <li class="" data-nav-id="/release-notes/context/index.html"><a class="padding" href="/release-notes/context/index.html">Context</a></li></ul></li>
+            <li class="" data-nav-id="/contribute/index.html"><a class="padding" href="/contribute/index.html"><i class='fas fa-fw fa-code-branch'></i> Contribute</a></li>
+            <li class="" data-nav-id="/donate/index.html"><a class="padding" href="/donate/index.html"><i class='fas fa-fw fa-mug-hot'></i> Donate</a></li>
+            <li class="" data-nav-id="/credits/index.html"><a class="padding" href="/credits/index.html">Credits</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/elgatito/plugin.video.elementum"><a class="padding" href="https://github.com/elgatito/plugin.video.elementum" rel="external"><i class='fab fa-fw fa-github'></i> Elementum on GitHub</a></li>
+            <li class="" data-nav-id="/help/report-issue/index.html"><a class="padding" href="/help/report-issue/index.html"><i class='fas fa-fw fa-bug'></i> Report an issue</a></li>
+            <li class="" data-nav-id="/credits/index.html"><a class="padding" href="/credits/index.html"><i class='fas fa-fw fa-heart'></i> Credits</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush" aria-hidden="true"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <select aria-label="Theme" autocomplete="off">
+                    <option value="auto" selected>Auto</option>
+                    <option value="elementum-light">Elementum Light</option>
+                    <option value="elementum-dark">Elementum Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart" aria-hidden="true"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </nav>
+    </aside>
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <header id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-nav" type="button" title="Menu (CTRL&#43;ALT&#43;n)" aria-label="Menu (CTRL&#43;ALT&#43;n)" aria-expanded="false"><i class="fa-fw fas fa-bars" aria-hidden="true"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)" aria-label="Table of Contents (CTRL&#43;ALT&#43;t)" aria-expanded="false"><i class="fa-fw fas fa-table-list" aria-hidden="true"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper" tabindex="-1">
+<nav class="TableOfContents" aria-label="Table of Contents">
+  <ul>
+    <li><a href="#file-format">File format</a></li>
+    <li><a href="#how-a-search-works">How a search works</a></li>
+    <li><a href="#general-keys">General keys</a></li>
+    <li><a href="#search-url">Search URL</a>
+      <ul>
+        <li><a href="#url-placeholders">URL placeholders</a></li>
+      </ul>
+    </li>
+    <li><a href="#search-queries">Search queries</a>
+      <ul>
+        <li><a href="#keyword-placeholders">Keyword placeholders</a></li>
+      </ul>
+    </li>
+    <li><a href="#html-parser">HTML parser</a>
+      <ul>
+        <li><a href="#parser-functions">Parser functions</a></li>
+        <li><a href="#subpages">Subpages</a></li>
+      </ul>
+    </li>
+    <li><a href="#api-providers">API providers</a></li>
+    <li><a href="#login-private-trackers">Login (private trackers)</a></li>
+    <li><a href="#network-and-encoding">Network and encoding</a></li>
+    <li><a href="#complete-example">Complete example</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="topbar-area topbar-area-middle" data-area="middle">
+            <nav class="topbar-breadcrumbs breadcrumbs highlightable" aria-label="Breadcrumbs" data-overflow-title="Elementum &gt;  Burst add-on &gt;  Provider definition reference">
+              <ol itemscope itemtype="http://schema.org/BreadcrumbList"><li class="topbar-breadcrumbs-divider" aria-hidden="true">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Elementum</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/burst/index.html"><span itemprop="name">Burst add-on</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="" aria-current="page"><span itemprop="name">Provider definition reference</span><meta itemprop="position" content="3"></li>
+              </ol>
+            </nav>
+          </div>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Edit (CTRL&#43;ALT&#43;w)" href="https://github.com/elgatito/elementum-surge/edit/master/src/content/burst/definition.md" rel="external" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen" aria-hidden="true"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="How to add a provider (🡐)" href="/burst/create/index.html" title="How to add a provider (🡐)"><i class="fa-fw fas fa-chevron-left" aria-hidden="true"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="How to override a provider (🡒)" href="/burst/override/index.html" title="How to override a provider (🡒)"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="More" aria-label="More" aria-expanded="false"><i class="fa-fw fas fa-ellipsis-v" aria-hidden="true"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper" tabindex="-1">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable burst" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="provider-definition-reference">Provider definition reference</h1>
+
+<p>A provider definition tells Burst how to search a site and how to read the results.
+This page describes every key Burst understands. To create and test a provider, see <a href="/burst/create/index.html">How to add a provider</a>.</p>
+<h2 id="file-format">File format<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>Definitions are a JSON object. Each key is the <strong>provider ID</strong>, and its value is the provider definition:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;my_tracker&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;My Tracker&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;base_url&#34;</span>: <span style="color:#e6db74">&#34;https://my-tracker.example/search?q=QUERYEXTRA&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;...&#34;</span>: <span style="color:#e6db74">&#34;...&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>The provider ID is used in Kodi setting IDs (<code>use_my_tracker</code>, <code>my_tracker_username</code>, &hellip;) and in the icon file name (<code>my_tracker.png</code>).
+Use lowercase letters, digits, <code>-</code> and <code>_</code>.</p>
+<p>Definitions are read from these places, in this order. Later files are merged into earlier ones key by key, so an override only needs the keys it changes:</p>
+<table>
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>burst/providers/providers.json</code> in the add-on</td>
+      <td>Providers shipped with Burst.</td>
+    </tr>
+    <tr>
+      <td><code>USERDATA/addon_data/script.elementum.burst/providers/*.json</code></td>
+      <td>Your own providers, always enabled.</td>
+    </tr>
+    <tr>
+      <td><code>USERDATA/addon_data/script.elementum.burst/overrides.py</code></td>
+      <td>Overrides in Python, see <a href="/burst/override/index.html">How to override a provider</a>.</td>
+    </tr>
+    <tr>
+      <td><code>USERDATA/addon_data/script.elementum.burst/overrides.json</code></td>
+      <td>Overrides in JSON.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div role="note" aria-labelledby="R-box-label-68ce17a2448d8c29f96e277f8fd1bde1" class="box cstyle callout note">
+  <div id="R-box-label-68ce17a2448d8c29f96e277f8fd1bde1" class="box-label">
+    <i class="fa-fw fas fa-exclamation-circle" aria-hidden="true"></i> 
+    Note
+  </div>
+  <div class="box-content">
+<p>There are no inherited settings: apart from the few defaults listed below, a key that is missing is simply not used.</p>
+  </div>
+</div>
+<h2 id="how-a-search-works">How a search works<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<ol>
+<li>Elementum asks Burst for a <strong>movie</strong>, <strong>episode</strong>, <strong>season</strong>, <strong>anime</strong> episode, or a <strong>general</strong> (typed) search.</li>
+<li>For each enabled provider, Burst takes <code>base_url</code> and appends the query part for that search type (for example <code>movie_query</code>).</li>
+<li>It builds one or more queries from the keywords for that type (for example <code>movie_keywords</code>), filling in <a href="/burst/definition/index.html#keyword-placeholders">placeholders</a> like <code>{title}</code> and <code>{year}</code>.</li>
+<li><code>QUERY</code> in the URL is replaced with the query, and <code>EXTRA</code> with the extra text for that type (for example <code>movie_extra</code>). Spaces become <code>separator</code>.</li>
+<li>Burst logs in if needed, opens the URL and reads the results with the <a href="/burst/definition/index.html#html-parser"><code>parser</code></a> rules, or with <a href="/burst/definition/index.html#api-providers"><code>api_format</code></a> for JSON APIs.</li>
+<li>Results go through Burst&rsquo;s filters (resolution, size, release type) and are sent to Elementum.</li>
+</ol>
+<h2 id="general-keys">General keys<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>name</code></td>
+      <td>string</td>
+      <td><code>&quot;&quot;</code></td>
+      <td>Name shown in Kodi settings and search results. No special characters.</td>
+    </tr>
+    <tr>
+      <td><code>enabled</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+      <td><code>false</code> hides the provider completely: no setting and no searches.</td>
+    </tr>
+    <tr>
+      <td><code>predefined</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+      <td>Whether the provider is switched on by default after Burst is installed.</td>
+    </tr>
+    <tr>
+      <td><code>private</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+      <td>Whether the site needs a login, see <a href="/burst/definition/index.html#login-private-trackers">Login</a>.</td>
+    </tr>
+    <tr>
+      <td><code>color</code></td>
+      <td>string</td>
+      <td></td>
+      <td>Color of the provider name in results: Kodi <code>AARRGGBB</code> hex (e.g. <code>FFF14E13</code>) or a color name (e.g. <code>red</code>).</td>
+    </tr>
+    <tr>
+      <td><code>language</code></td>
+      <td>string or <code>null</code></td>
+      <td><code>null</code></td>
+      <td>2-letter language of the site, e.g. <code>ru</code>. Used for <code>{title}</code> (see <a href="/burst/definition/index.html#keyword-placeholders">keyword placeholders</a>) and as the language of results (<code>en</code> if not set).</td>
+    </tr>
+    <tr>
+      <td><code>languages</code></td>
+      <td>string</td>
+      <td><code>&quot;&quot;</code></td>
+      <td>Comma-separated 2-letter languages of the site, e.g. <code>it, fr, en</code>. Titles in other languages get their accents removed.</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="search-url">Search URL<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>base_url</code></td>
+      <td>string</td>
+      <td>Search URL with the <code>QUERY</code> and <code>EXTRA</code> <a href="/burst/definition/index.html#url-placeholders">URL placeholders</a>. Its scheme and host become <code>root_url</code>.</td>
+    </tr>
+    <tr>
+      <td><code>movie_query</code></td>
+      <td>string</td>
+      <td>Appended to <code>base_url</code> for movie searches.</td>
+    </tr>
+    <tr>
+      <td><code>show_query</code></td>
+      <td>string</td>
+      <td>Appended to <code>base_url</code> for episode searches.</td>
+    </tr>
+    <tr>
+      <td><code>season_query</code></td>
+      <td>string</td>
+      <td>Appended to <code>base_url</code> for season searches.</td>
+    </tr>
+    <tr>
+      <td><code>anime_query</code></td>
+      <td>string</td>
+      <td>Appended to <code>base_url</code> for anime searches.</td>
+    </tr>
+    <tr>
+      <td><code>general_query</code></td>
+      <td>string</td>
+      <td>Appended to <code>base_url</code> for general searches.</td>
+    </tr>
+    <tr>
+      <td><code>separator</code></td>
+      <td>string</td>
+      <td>Replaces spaces in the URL. Common values: <code>+</code>, <code>%20</code>, <code>-</code>, <code>_</code>.</td>
+    </tr>
+    <tr>
+      <td><code>post_data</code></td>
+      <td>string</td>
+      <td>Python dict: send the search as a POST request with these fields. <code>QUERY</code> and <code>EXTRA</code> in values are replaced, e.g. <code>&quot;{'story': 'QUERY', 'do': 'search'}&quot;</code>.</td>
+    </tr>
+    <tr>
+      <td><code>headers</code></td>
+      <td>string</td>
+      <td>Python dict of extra HTTP headers for search requests, e.g. <code>&quot;{'upgrade-insecure-requests': '1'}&quot;</code>.</td>
+    </tr>
+    <tr>
+      <td><code>initial_url</code></td>
+      <td>string</td>
+      <td>Page opened once before searching, to get cookies. Relative paths are added to <code>root_url</code>.</td>
+    </tr>
+    <tr>
+      <td><code>filter_title</code></td>
+      <td>boolean</td>
+      <td>Drop results whose name doesn&rsquo;t contain every word of the query.</td>
+    </tr>
+  </tbody>
+</table>
+<p><code>root_url</code> is always set by Burst from <code>base_url</code>, so don&rsquo;t set it yourself. You can use it in other values, for example in <code>login_headers</code>.</p>
+<h3 id="url-placeholders">URL placeholders<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
+<p>Replaced in <code>base_url</code>, the <code>*_query</code> keys and <code>post_data</code>:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Placeholder</th>
+      <th>Replaced with</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>QUERY</code></td>
+      <td>The search query, URL-encoded (in <code>charset</code> if it isn&rsquo;t UTF-8).</td>
+    </tr>
+    <tr>
+      <td><code>EXTRA</code></td>
+      <td>The extra text for the search type (<code>movie_extra</code>, <code>tv_extra</code>, &hellip;), URL-encoded.</td>
+    </tr>
+    <tr>
+      <td><code>FIRSTLETTER</code></td>
+      <td>First letter of the query.</td>
+    </tr>
+    <tr>
+      <td><code>TOKEN</code></td>
+      <td>API token, see <a href="/burst/definition/index.html#network-and-encoding"><code>token</code></a>.</td>
+    </tr>
+    <tr>
+      <td><code>USERNAME</code></td>
+      <td>Username from Burst settings (private trackers).</td>
+    </tr>
+    <tr>
+      <td><code>PASSKEY</code></td>
+      <td>Passkey from Burst settings (private trackers). Also replaced in torrent links.</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="search-queries">Search queries<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>Each search type has its own set of keys. Replace <code>&lt;type&gt;</code> with:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Search</th>
+      <th><code>&lt;type&gt;</code></th>
+      <th>Query part of the URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Movie</td>
+      <td><code>movie</code></td>
+      <td><code>movie_query</code></td>
+    </tr>
+    <tr>
+      <td>Episode</td>
+      <td><code>tv</code></td>
+      <td><code>show_query</code></td>
+    </tr>
+    <tr>
+      <td>Season</td>
+      <td><code>season</code></td>
+      <td><code>season_query</code></td>
+    </tr>
+    <tr>
+      <td>Anime episode</td>
+      <td><code>anime</code></td>
+      <td><code>anime_query</code></td>
+    </tr>
+    <tr>
+      <td>General (typed text)</td>
+      <td><code>general</code></td>
+      <td><code>general_query</code></td>
+    </tr>
+  </tbody>
+</table>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>&lt;type&gt;_keywords</code></td>
+      <td>Query, with <a href="/burst/definition/index.html#keyword-placeholders">keyword placeholders</a>. An empty or missing value means the provider isn&rsquo;t searched for this type.</td>
+    </tr>
+    <tr>
+      <td><code>&lt;type&gt;_keywords2</code> … <code>&lt;type&gt;_keywords4</code></td>
+      <td>More queries. All of them are searched.</td>
+    </tr>
+    <tr>
+      <td><code>&lt;type&gt;_extra</code>, <code>&lt;type&gt;_extra2</code> … <code>&lt;type&gt;_extra4</code></td>
+      <td>Text for <code>EXTRA</code> in the URL, for the query with the same number.</td>
+    </tr>
+    <tr>
+      <td><code>&lt;type&gt;_keywords_fallback</code> … <code>&lt;type&gt;_keywords_fallback4</code></td>
+      <td>Fallback queries, searched one by one, <strong>only while there are no results yet</strong>.</td>
+    </tr>
+    <tr>
+      <td><code>&lt;type&gt;_extra_fallback</code> … <code>&lt;type&gt;_extra_fallback4</code></td>
+      <td><code>EXTRA</code> text for the fallback query with the same number.</td>
+    </tr>
+    <tr>
+      <td><code>remove_special_characters</code></td>
+      <td>Characters removed from titles, e.g. <code>&quot;'&quot;</code> turns <code>Grey's Anatomy</code> into <code>Greys Anatomy</code>.</td>
+    </tr>
+  </tbody>
+</table>
+<p>Identical queries are searched only once, and Burst stops starting new queries 3 seconds before the search timeout.</p>
+<p>Example from 1337x: an episode is searched as <code>s01e02</code>, then, without results, as the whole season:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;tv_keywords&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;{title:original:en} s{season:2}e{episode:2}&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;tv_keywords_fallback&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;{title:original:en} s{season:2}&#34;</span></span></span></code></pre></div>
+<h3 id="keyword-placeholders">Keyword placeholders<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
+<table>
+  <thead>
+    <tr>
+      <th>Placeholder</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>{title}</code></td>
+      <td>The title. If <em>Use language preference from Kodi</em> is on in Burst settings, the title in Kodi&rsquo;s language; otherwise in the provider&rsquo;s <code>language</code>; otherwise the original title. In general searches it&rsquo;s the typed text.</td>
+    </tr>
+    <tr>
+      <td><code>{title:xx}</code></td>
+      <td>The title in language or country <code>xx</code>: a 2-letter language (<code>en</code>, <code>ru</code>, <code>fr</code>, &hellip;), a country code, <code>original</code>, or <code>jp</code> (romaji, for anime). Falls back to the original title.</td>
+    </tr>
+    <tr>
+      <td><code>{title:xx:yy:...}</code></td>
+      <td>One query for each listed language, plus one with <code>{title}</code>. E.g. <code>{title:en:ru:original}</code>.</td>
+    </tr>
+    <tr>
+      <td><code>{year}</code></td>
+      <td>Release year. If countries have different release years, the query is searched with each of them.</td>
+    </tr>
+    <tr>
+      <td><code>{year:xx}</code></td>
+      <td>Release year in country <code>xx</code>, or <code>original</code>.</td>
+    </tr>
+    <tr>
+      <td><code>{season}</code>, <code>{episode}</code></td>
+      <td>Season and episode number.</td>
+    </tr>
+    <tr>
+      <td><code>{season:N}</code>, <code>{episode:N}</code></td>
+      <td>Number padded to N digits: <code>{season:2}</code> → <code>01</code>.</td>
+    </tr>
+    <tr>
+      <td><code>{season+N}</code>, <code>{episode+N}</code></td>
+      <td>Number plus N: <code>{season+1}</code>.</td>
+    </tr>
+    <tr>
+      <td><code>{absolute_episode}</code></td>
+      <td>Absolute episode number (anime), also with <code>:N</code> and <code>+N</code>. Queries are skipped when it is unknown.</td>
+    </tr>
+    <tr>
+      <td><code>{imdb_id}</code>, <code>{tmdb_id}</code>, <code>{tvdb_id}</code>, <code>{show_tmdb_id}</code></td>
+      <td>IDs of the item, e.g. <code>tt0111161</code>.</td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="html-parser">HTML parser<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>For sites returning HTML, <code>parser</code> describes where to find the results.
+Each value is a Python expression for the <a href="https://github.com/iogf/ehp" rel="external">ehp</a> HTML parser:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Required</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>row</code></td>
+      <td>yes</td>
+      <td>Finds the result rows on the page. Starts from the page (<code>dom</code>), e.g. <code>find_once(tag='tbody').find_all('tr')</code>.</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>yes</td>
+      <td>Torrent name.</td>
+    </tr>
+    <tr>
+      <td><code>torrent</code></td>
+      <td>yes</td>
+      <td>Magnet link, torrent file link, or the link to a <a href="/burst/definition/index.html#subpages">subpage</a>. Relative links get <code>root_url</code> added.</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td></td>
+      <td>Size, e.g. <code>1.4 GB</code>.</td>
+    </tr>
+    <tr>
+      <td><code>seeds</code></td>
+      <td></td>
+      <td>Seeds count. Thousand separators are fine.</td>
+    </tr>
+    <tr>
+      <td><code>peers</code></td>
+      <td></td>
+      <td>Peers count.</td>
+    </tr>
+    <tr>
+      <td><code>infohash</code></td>
+      <td></td>
+      <td>Info hash of the torrent.</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td></td>
+      <td>Extra text, added to the name as <code>name (description)</code>.</td>
+    </tr>
+    <tr>
+      <td><code>referer</code></td>
+      <td></td>
+      <td>Referer header for the subpage request.</td>
+    </tr>
+    <tr>
+      <td><code>key</code></td>
+      <td></td>
+      <td>Evaluated once per page, starting from <code>dom</code>. Its value is available as <code>key</code> in the other expressions.</td>
+    </tr>
+  </tbody>
+</table>
+<p>In all keys except <code>row</code> and <code>key</code>, <code>item</code> is the current row. <code>re</code> (Python regular expressions) is also available.</p>
+<h3 id="parser-functions">Parser functions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
+<table>
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Returns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>item(tag, order=1, select=None, attribute='text', divider=('', 1))</code></td>
+      <td>Text or attribute of a tag inside the row.</td>
+    </tr>
+    <tr>
+      <td><code>find_once(tag, select=None, order=1)</code></td>
+      <td>One tag. Call it on <code>dom</code>, <code>item</code> or another tag.</td>
+    </tr>
+    <tr>
+      <td><code>find_all(tag, select=None, every=1, start=1)</code></td>
+      <td>List of tags.</td>
+    </tr>
+  </tbody>
+</table>
+<p>Parameters:</p>
+<ul>
+<li><code>tag</code>: tag name, e.g. <code>'td'</code>, <code>'a'</code>.</li>
+<li><code>order</code>: which match to take, counting from <code>1</code>. <code>0</code> is the last match, <code>-1</code> the one before last.</li>
+<li><code>select</code>: attribute filter as a tuple, e.g. <code>('class', 'seedmed')</code>. The value matches one of the space-separated words of the attribute. A list matches any of its values: <code>('class', ['torrent', 'name'])</code>.</li>
+<li><code>attribute</code>: <code>'text'</code> (the default) for the text, or an attribute name like <code>'href'</code> or <code>'title'</code>.</li>
+<li><code>divider</code>: <code>(separator, index)</code> splits the value and takes one part, e.g. <code>('&amp;', 0)</code> keeps everything before the first <code>&amp;</code>.</li>
+<li><code>start</code>: first match to return, e.g. <code>start=2</code> skips a header row.</li>
+<li><code>every</code>: return every Nth match.</li>
+</ul>
+<p>Since values are Python, you can combine and transform them:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;torrent&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;&#39;https://www.1337x.to%s&#39; % item(tag=&#39;a&#39;, attribute=&#39;href&#39;, order=2)&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;name&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;item(tag=&#39;a&#39;, order=2) + &#39; [&#39; + item(tag=&#39;img&#39;, attribute=&#39;title&#39;, order=1) + &#39;]&#39;&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;size&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;re.search(r&#39;Size: (.*?)\\n&#39;, item(tag=&#39;td&#39;, select=(&#39;class&#39;, &#39;descr&#39;))).group(1)&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;infohash&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;item(tag=&#39;a&#39;, attribute=&#39;href&#39;, order=3, divider=(&#39;&amp;&#39;, 0)).replace(&#39;magnet:?xt=urn:btih:&#39;, &#39;&#39;)&#34;</span></span></span></code></pre></div>
+<h3 id="subpages">Subpages<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
+<p>Some sites only list links to torrent pages, with the magnet or download link on the page itself.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>subpage</code></td>
+      <td>boolean</td>
+      <td><code>torrent</code> points to a page. Burst opens it and finds a magnet link, a <code>.torrent</code> link, an info hash or a known download link on it.</td>
+    </tr>
+    <tr>
+      <td><code>subpage_mode</code></td>
+      <td>string</td>
+      <td><code>xhr</code>: request subpages like a browser script does (<code>X-Requested-With</code> header).</td>
+    </tr>
+  </tbody>
+</table>
+<p>Subpages are opened in parallel and cached during the search.</p>
+<h2 id="api-providers">API providers<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>For sites with a JSON API, set <code>is_api</code> and describe the response with <code>api_format</code> instead of <code>parser</code>:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>is_api</code></td>
+      <td>boolean</td>
+      <td><code>true</code> for JSON APIs.</td>
+    </tr>
+    <tr>
+      <td><code>api_format</code></td>
+      <td>object</td>
+      <td>Where to find the values in the response, see below.</td>
+    </tr>
+    <tr>
+      <td><code>download_path</code></td>
+      <td>string</td>
+      <td>Added in front of the <code>torrent</code> value, e.g. <code>magnet:?xt=urn:btih:</code> when the API returns only info hashes.</td>
+    </tr>
+  </tbody>
+</table>
+<p><code>api_format</code> keys:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>results</code></td>
+      <td>Dotted path to the list of results, e.g. <code>data.movies</code>. Empty if the response itself is the list.</td>
+    </tr>
+    <tr>
+      <td><code>subresults</code></td>
+      <td>Key of a nested list in each result, e.g. several torrents of one movie. Each item becomes a result, with the fields of its parent.</td>
+    </tr>
+    <tr>
+      <td><code>name</code></td>
+      <td>Name. Dotted paths are supported.</td>
+    </tr>
+    <tr>
+      <td><code>description</code></td>
+      <td>Added to the name. Dotted paths are supported.</td>
+    </tr>
+    <tr>
+      <td><code>quality</code></td>
+      <td>Added to the name as <code>name - quality</code>. Dotted paths are supported.</td>
+    </tr>
+    <tr>
+      <td><code>torrent</code></td>
+      <td>Key of the magnet or torrent link.</td>
+    </tr>
+    <tr>
+      <td><code>info_hash</code></td>
+      <td>Key of the info hash.</td>
+    </tr>
+    <tr>
+      <td><code>size</code></td>
+      <td>Key of the size. Numbers are taken as bytes.</td>
+    </tr>
+    <tr>
+      <td><code>seeds</code>, <code>peers</code></td>
+      <td>Keys of the counters.</td>
+    </tr>
+  </tbody>
+</table>
+<p>Example, YTS:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;yts&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;YTS&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;predefined&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;private&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;FF6AC045&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;language&#34;</span>: <span style="color:#e6db74">&#34;en&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;languages&#34;</span>: <span style="color:#e6db74">&#34;en&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;is_api&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;base_url&#34;</span>: <span style="color:#e6db74">&#34;https://movies-api.accel.li/api/v2/list_movies.json?query_term=QUERY&amp;sort_by=seeds&amp;order_by=desc&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;movie_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:en:original}&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;general_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title}&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;api_format&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;results&#34;</span>: <span style="color:#e6db74">&#34;data.movies&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;subresults&#34;</span>: <span style="color:#e6db74">&#34;torrents&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;title_long&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;type&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;quality&#34;</span>: <span style="color:#e6db74">&#34;quality&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;torrent&#34;</span>: <span style="color:#e6db74">&#34;url&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;info_hash&#34;</span>: <span style="color:#e6db74">&#34;hash&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;size&#34;</span>: <span style="color:#e6db74">&#34;size&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;seeds&#34;</span>: <span style="color:#e6db74">&#34;seeds&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;peers&#34;</span>: <span style="color:#e6db74">&#34;peers&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h2 id="login-private-trackers">Login (private trackers)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>With <code>&quot;private&quot;: true</code>, Burst shows <em>username</em> and <em>password</em> settings for the provider (for providers shipped with Burst), and logs in before searching:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>login_path</code></td>
+      <td>string</td>
+      <td>Login form URL, relative to <code>root_url</code> or absolute.</td>
+    </tr>
+    <tr>
+      <td><code>login_object</code></td>
+      <td>string</td>
+      <td>Python dict with the form fields. <code>USERNAME</code> and <code>PASSWORD</code> are replaced with the credentials, <strong>without quotes</strong> around them: <code>&quot;{'login_username': USERNAME, 'login_password': PASSWORD}&quot;</code>.</td>
+    </tr>
+    <tr>
+      <td><code>login_failed</code></td>
+      <td>string</td>
+      <td>Regular expression found on the page only when <strong>not</strong> logged in, e.g. the registration link.</td>
+    </tr>
+    <tr>
+      <td><code>login_headers</code></td>
+      <td>string</td>
+      <td>Python dict of headers for the login request. Can use <code>definition</code>, e.g. <code>&quot;{'Referer': definition['root_url']}&quot;</code>.</td>
+    </tr>
+    <tr>
+      <td><code>login_prerequest</code></td>
+      <td>string</td>
+      <td>Page opened before logging in, to get session cookies.</td>
+    </tr>
+    <tr>
+      <td><code>csrf_token</code></td>
+      <td>boolean</td>
+      <td>Read <code>csrf_token</code> from the login page and use it for <code>CSRF_TOKEN</code> in <code>login_object</code>.</td>
+    </tr>
+    <tr>
+      <td><code>login_passkey</code></td>
+      <td>boolean</td>
+      <td>Settings show a <em>passkey</em> field instead of <em>password</em>, for trackers that use passkeys.</td>
+    </tr>
+    <tr>
+      <td><code>login_cookie</code></td>
+      <td>string</td>
+      <td>Name of the session cookie. If <a href="/burst/cookie-sync/index.html">Cookie sync</a> provides it, Burst skips the login form.</td>
+    </tr>
+  </tbody>
+</table>
+<p>If a passkey is set, Burst doesn&rsquo;t log in: it puts the passkey into <code>PASSKEY</code> in the search URL and torrent links instead.</p>
+<p>The session cookies are saved and sent with torrent downloads, so Elementum can download the torrent files.</p>
+<p>Example, RuTracker (with cookie sync):</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;private&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">true</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;login_path&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;/forum/login.php&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;login_object&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;{&#39;login_username&#39;: USERNAME, &#39;login_password&#39;: PASSWORD, &#39;login&#39;: &#39;Login&#39;}&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;login_failed&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;Регистрация&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;login_cookie&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;bb_session&#34;</span></span></span></code></pre></div>
+<h2 id="network-and-encoding">Network and encoding<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>charset</code></td>
+      <td>string</td>
+      <td>Encoding of the query in the URL, for sites that aren&rsquo;t UTF-8, e.g. <code>windows-1251</code>. Default <code>utf8</code>.</td>
+    </tr>
+    <tr>
+      <td><code>response_charset</code></td>
+      <td>string</td>
+      <td>Encoding of the site&rsquo;s pages, when it can&rsquo;t be detected.</td>
+    </tr>
+    <tr>
+      <td><code>opennic_dns_alias</code></td>
+      <td>string</td>
+      <td>Address used instead of the site&rsquo;s domain when <em>OpenNIC DNS</em> is on in Burst settings, e.g. <code>http://rutor.lib</code>.</td>
+    </tr>
+    <tr>
+      <td><code>tor_dns_alias</code></td>
+      <td>string</td>
+      <td><code>.onion</code> address used when <em>Tor DNS</em> is on in Burst settings.</td>
+    </tr>
+    <tr>
+      <td><code>token</code></td>
+      <td>string</td>
+      <td>Path added to <code>base_url</code> to get an API token. The JSON response must have a <code>token</code> field, used for <code>TOKEN</code> in the URL.</td>
+    </tr>
+  </tbody>
+</table>
+<p>Users can also set an <em>alias</em> (another domain) for each provider in Burst settings. Burst then replaces the domain in every value of the definition.</p>
+<h2 id="complete-example">Complete example<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>A public HTML tracker, 1337x (some fallback queries left out):</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;1337x&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;1337x&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;predefined&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;private&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;FFF14E13&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;language&#34;</span>: <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;languages&#34;</span>: <span style="color:#e6db74">&#34;en&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;base_url&#34;</span>: <span style="color:#e6db74">&#34;https://www.1337x.to/search/QUERYEXTRA/1/&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;separator&#34;</span>: <span style="color:#e6db74">&#34;+&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;general_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;general_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;general_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;movie_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;movie_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original:en} {year}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;movie_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;show_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;tv_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original:en} s{season:2}e{episode:2}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;tv_keywords_fallback&#34;</span>: <span style="color:#e6db74">&#34;{title:original:en} s{season:2}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;tv_keywords_fallback2&#34;</span>: <span style="color:#e6db74">&#34;{title:original:en} season {season}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;tv_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;season_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;season_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original:en} s{season:2}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;season_keywords2&#34;</span>: <span style="color:#e6db74">&#34;{title:original:en} season {season}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;season_keywords_fallback&#34;</span>: <span style="color:#e6db74">&#34;{title:original:en} {season:2}x01&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;season_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;anime_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;anime_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original:en} s{season:2}e{episode:2}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;anime_keywords_fallback&#34;</span>: <span style="color:#e6db74">&#34;{title:original:en} s{season:2}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;anime_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;subpage&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;parser&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;row&#34;</span>: <span style="color:#e6db74">&#34;find_once(tag=&#39;tbody&#39;).find_all(&#39;tr&#39;)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;item(&#39;a&#39;, order=2)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;torrent&#34;</span>: <span style="color:#e6db74">&#34;&#39;https://www.1337x.to%s&#39; % item(tag=&#39;a&#39;, attribute=&#39;href&#39;, order=2)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;size&#34;</span>: <span style="color:#e6db74">&#34;item(tag=&#39;td&#39;, order=5)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;seeds&#34;</span>: <span style="color:#e6db74">&#34;item(tag=&#39;td&#39;, order=2)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;peers&#34;</span>: <span style="color:#e6db74">&#34;item(tag=&#39;td&#39;, order=3)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;infohash&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p>A search for <em>The Matrix (1999)</em> opens <code>https://www.1337x.to/search/The+Matrix+1999/1/</code>. Then Burst reads the rows and opens each result page (<code>subpage</code>) to find the magnet link.</p>
+<p>See <a href="https://github.com/elgatito/script.elementum.burst/blob/master/burst/providers/providers.json" rel="external"><code>providers.json</code></a> for many more examples.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/theme.min.96b966188f27166ddab5db2863a58101dd099db40ab5513f97556f286504ff8a.js" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>
