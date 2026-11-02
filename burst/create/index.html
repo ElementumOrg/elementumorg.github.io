@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.169.0">
 <meta name="flattr:id" content="yj6gd6">
 
 <title>How to add provider :: Elementum</title>
@@ -38,13 +38,10 @@
 <div class="highlightable">
   <div id="header-wrapper">
     <div id="header">
-      
-	
-  
+        
     <p><a href="/">Elementum Documentation</a></p>
 
   
-
     </div>
         <div class="searchbox">
 		    <label for="search-by"><i class="fa fa-search"></i></label>
@@ -76,11 +73,6 @@
           <span>Installation</span><i class="fas fa-circle read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/getting-started/configuration/" class="dd-item">
-        <a href="/getting-started/configuration/">
-          <span>Configuration</span><i class="fas fa-circle read-icon"></i>
-        </a>
-    </li>
       <li data-nav-id="/getting-started/platforms-page/" class="dd-item">
         <a href="/getting-started/platforms-page/">
           <span>Downloads</span><i class="fas fa-circle read-icon"></i>
@@ -94,6 +86,75 @@
       <li data-nav-id="/getting-started/faq/" class="dd-item">
         <a href="/getting-started/faq/">
           <span>F.A.Q.</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/configuration/" class="dd-item alwaysopen">
+      <a href="/configuration/">
+        <span>Configuration</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/configuration/kodi-settings/" class="dd-item">
+        <a href="/configuration/kodi-settings/">
+          <span>Kodi addon settings</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/configuration/command-line/" class="dd-item">
+        <a href="/configuration/command-line/">
+          <span>Command-line options</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/burst/" class="dd-item parent alwaysopen">
+      <a href="/burst/">
+        <span>Burst addon</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/burst/create/" class="dd-item active">
+        <a href="/burst/create/">
+          <span>How to add provider</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/burst/override/" class="dd-item">
+        <a href="/burst/override/">
+          <span>How to override provider</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/burst/cookie-sync/" class="dd-item">
+        <a href="/burst/cookie-sync/">
+          <span>Cookie sync</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/context/" class="dd-item alwaysopen">
+      <a href="/context/">
+        <span>Context addon</span><i class="fas fa-circle read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/release-notes/" class="dd-item alwaysopen">
+      <a href="/release-notes/">
+        <span>Release notes</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/release-notes/elementum/" class="dd-item">
+        <a href="/release-notes/elementum/">
+          <span>Elementum</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/release-notes/burst/" class="dd-item">
+        <a href="/release-notes/burst/">
+          <span>Burst</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/release-notes/context/" class="dd-item">
+        <a href="/release-notes/context/">
+          <span>Context</span><i class="fas fa-circle read-icon"></i>
         </a>
     </li>
         </ul>
@@ -120,29 +181,6 @@
         </a>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/burst/" class="dd-item parent alwaysopen">
-      <a href="/burst/">
-        <span>Burst addon</span>
-            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
-      </a>
-        <ul>
-      <li data-nav-id="/burst/create/" class="dd-item active">
-        <a href="/burst/create/">
-          <span>How to add provider</span><i class="fas fa-circle read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/burst/override/" class="dd-item">
-        <a href="/burst/override/">
-          <span>How to override provider</span><i class="fas fa-circle read-icon"></i>
-        </a>
-    </li>
-        </ul>
-    </li>
-    <li data-nav-id="/context/" class="dd-item alwaysopen">
-      <a href="/context/">
-        <span>Context addon</span><i class="fas fa-circle read-icon"></i>
-      </a>
     </li>
     <li data-nav-id="/donate/" class="dd-item">
       <a href="/donate/">
@@ -225,6 +263,9 @@
     <li><a href="#preparation">Preparation</a>
       <ul>
         <li><a href="#definition">Definition</a></li>
+        <li><a href="#search-queries-and-fallbacks">Search queries and fallbacks</a></li>
+        <li><a href="#other-keys">Other keys</a></li>
+        <li><a href="#api-providers">API providers</a></li>
         <li><a href="#icon">Icon</a></li>
       </ul>
     </li>
@@ -256,14 +297,14 @@
 
     
     <h2 id="preparation">Preparation</h2>
-<p>Each provider consists of a definition in <em>definitions.json</em> file in <em>/burst/providers/</em> folder and an icon in <em>/burst/providers/icons/</em> folder.</p>
+<p>Each provider consists of a definition in <em>providers.json</em> file in <em>/burst/providers/</em> folder and an icon in <em>/burst/providers/icons/</em> folder.</p>
 <p>Icon is optional, but very much desired. It is easier to quickly find relevant search result, when you visually differ providers.</p>
 <p>If you want to try adding new provider, the workflow is about that:</p>
 <ul>
 <li>Fork Github repository from <a href="https://github.com/elgatito/script.elementum.burst">https://github.com/elgatito/script.elementum.burst</a></li>
 <li>Clone the Github repository: <code>git clone git@github.com:yourusername/script.elementum.burst.git</code></li>
 <li>Change the branch from <em>master</em> to anything else like <code>git checkout -b my_provider</code></li>
-<li>Do your changes to <em>definitions.json</em></li>
+<li>Do your changes to <em>providers.json</em></li>
 <li>Push changes to Github with <code>git push origin my_provider</code></li>
 <li>Github will give you a note that you can make a Pull Request, so your changes are included in the Burst code.</li>
 <li>Done!</li>
@@ -278,58 +319,58 @@
 <p>It will do basic syntax and code checks. Should run without errors.</p>
 </blockquote>
 <h3 id="definition">Definition</h3>
-<p>Definitions are a JSON list of a smaller parts, each of them describes separate providers.
+<p>Definitions are a JSON object of a smaller parts, each of them describes separate providers.
 There are no inherited settings, or default settings, each provider&rsquo;s setting should be explicitly setted.</p>
 <p>Example of provider definition:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#e6db74">&#34;ilcorsaroblu&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
-        <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
-        <span style="color:#f92672">&#34;predefined&#34;</span>: <span style="color:#66d9ef">false</span>,
-        <span style="color:#f92672">&#34;private&#34;</span>: <span style="color:#66d9ef">false</span>,
-        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Il Corsaro Blu&#34;</span>,
-        <span style="color:#f92672">&#34;languages&#34;</span>: <span style="color:#e6db74">&#34;it&#34;</span>,
-        <span style="color:#f92672">&#34;anime_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;anime_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original} {episode}&#34;</span>,
-        <span style="color:#f92672">&#34;anime_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;base_url&#34;</span>: <span style="color:#e6db74">&#34;https://www.ilcorsaroblu.org/index.php?page=torrents&amp;search=QUERYEXTRA&amp;x=0&amp;y=0&#34;</span>,
-        <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;FFFFFFFF&#34;</span>,
-        <span style="color:#f92672">&#34;general_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;general_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original}&#34;</span>,
-        <span style="color:#f92672">&#34;general_query&#34;</span>: <span style="color:#e6db74">&#34;0&#34;</span>,
-        <span style="color:#f92672">&#34;language&#34;</span>: <span style="color:#66d9ef">null</span>,
-        <span style="color:#f92672">&#34;login_failed&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;login_object&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;login_path&#34;</span>: <span style="color:#66d9ef">null</span>,
-        <span style="color:#f92672">&#34;movie_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;movie_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original} {year}&#34;</span>,
-        <span style="color:#f92672">&#34;movie_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;parser&#34;</span>: {
-            <span style="color:#f92672">&#34;row&#34;</span>: <span style="color:#e6db74">&#34;find_once(tag=&#39;table&#39;, select=(&#39;class&#39;, &#39;lista&#39;), order=4).find_all(&#39;tr&#39;)&#34;</span>,
-            <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;item(tag=&#39;td&#39;, order=2)&#34;</span>,
-            <span style="color:#f92672">&#34;seeds&#34;</span>: <span style="color:#e6db74">&#34;item(tag=&#39;td&#39;, order=7)&#34;</span>,
-            <span style="color:#f92672">&#34;peers&#34;</span>: <span style="color:#e6db74">&#34;item(tag=&#39;td&#39;, order=6)&#34;</span>,
-            <span style="color:#f92672">&#34;size&#34;</span>: <span style="color:#e6db74">&#34;item(tag=&#39;td&#39;, order=9)&#34;</span>,
-            <span style="color:#f92672">&#34;torrent&#34;</span>: <span style="color:#e6db74">&#34;&#39;https://www.ilcorsaroblu.org/%s&#39; % item(tag=&#39;a&#39;, attribute=&#39;href&#39;, order=3)&#34;</span>
-        },
-        <span style="color:#f92672">&#34;season_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;season_extra2&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;season_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original} Season_{season}&#34;</span>,
-        <span style="color:#f92672">&#34;season_keywords2&#34;</span>: <span style="color:#e6db74">&#34;{title:original} Season{season}&#34;</span>,
-        <span style="color:#f92672">&#34;season_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;separator&#34;</span>: <span style="color:#e6db74">&#34;%20&#34;</span>,
-        <span style="color:#f92672">&#34;show_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;subpage&#34;</span>: <span style="color:#66d9ef">true</span>,
-        <span style="color:#f92672">&#34;tv_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;tv_extra2&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-        <span style="color:#f92672">&#34;tv_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original} s{season:2}e{episode:2}&#34;</span>,
-        <span style="color:#f92672">&#34;tv_keywords2&#34;</span>: <span style="color:#e6db74">&#34;{title:original} s{season:2}&#34;</span>
-    }
-</code></pre></div><p>This part is very important:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">    <span style="color:#e6db74">&#34;enabled&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">true</span><span style="color:#960050;background-color:#1e0010">,</span>
-    <span style="color:#e6db74">&#34;predefined&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">false</span><span style="color:#960050;background-color:#1e0010">,</span>
-    <span style="color:#e6db74">&#34;private&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">false</span><span style="color:#960050;background-color:#1e0010">,</span>
-    <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;Il Corsaro Blu&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
-    <span style="color:#e6db74">&#34;languages&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;it&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
-</code></pre></div><p>Where columns mean:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;ilcorsaroblu&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;enabled&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;predefined&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;private&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Il Corsaro Blu&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;languages&#34;</span>: <span style="color:#e6db74">&#34;it&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;anime_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;anime_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original} {episode}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;anime_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;base_url&#34;</span>: <span style="color:#e6db74">&#34;https://www.ilcorsaroblu.org/index.php?page=torrents&amp;search=QUERYEXTRA&amp;x=0&amp;y=0&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;FFFFFFFF&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;general_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;general_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;general_query&#34;</span>: <span style="color:#e6db74">&#34;0&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;language&#34;</span>: <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;login_failed&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;login_object&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;login_path&#34;</span>: <span style="color:#66d9ef">null</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;movie_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;movie_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original} {year}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;movie_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;parser&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;row&#34;</span>: <span style="color:#e6db74">&#34;find_once(tag=&#39;table&#39;, select=(&#39;class&#39;, &#39;lista&#39;), order=4).find_all(&#39;tr&#39;)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;item(tag=&#39;td&#39;, order=2)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;seeds&#34;</span>: <span style="color:#e6db74">&#34;item(tag=&#39;td&#39;, order=7)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;peers&#34;</span>: <span style="color:#e6db74">&#34;item(tag=&#39;td&#39;, order=6)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;size&#34;</span>: <span style="color:#e6db74">&#34;item(tag=&#39;td&#39;, order=9)&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;torrent&#34;</span>: <span style="color:#e6db74">&#34;&#39;https://www.ilcorsaroblu.org/%s&#39; % item(tag=&#39;a&#39;, attribute=&#39;href&#39;, order=3)&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;season_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;season_extra2&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;season_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original} Season_{season}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;season_keywords2&#34;</span>: <span style="color:#e6db74">&#34;{title:original} Season{season}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;season_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;separator&#34;</span>: <span style="color:#e6db74">&#34;%20&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;show_query&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;subpage&#34;</span>: <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;tv_extra&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;tv_extra2&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;tv_keywords&#34;</span>: <span style="color:#e6db74">&#34;{title:original} s{season:2}e{episode:2}&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;tv_keywords2&#34;</span>: <span style="color:#e6db74">&#34;{title:original} s{season:2}&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>This part is very important:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;enabled&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">true</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;predefined&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">false</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;private&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">false</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;Il Corsaro Blu&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;languages&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;it&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span></code></pre></div><p>Where columns mean:</p>
 <ul>
 <li><code>enabled</code>: <em>boolean</em>, defines if provider is available (not selected to search, but available for selection).</li>
 <li><code>predefined</code>: <em>boolean</em>, defines if provider is enabled by default upon installation of Burst (default providers).</li>
@@ -373,6 +414,54 @@ There are no inherited settings, or default settings, each provider&rsquo;s sett
 <li><code>tv_extra2</code>: <em>string</em>, text, later replaced into EXTRA keyword in search url.</li>
 <li><code>tv_keywords</code>: <em>string</em>, query for episode searches.</li>
 <li><code>tv_keywords2</code>: <em>string</em>, query for episode searches.</li>
+</ul>
+<h3 id="search-queries-and-fallbacks">Search queries and fallbacks</h3>
+<p>Each search type (<code>movie</code>, <code>season</code>, <code>tv</code>, <code>anime</code>, <code>general</code>) can have several queries:</p>
+<ul>
+<li><code>&lt;type&gt;_keywords</code>, <code>&lt;type&gt;_keywords2</code>, <code>&lt;type&gt;_keywords3</code>, <code>&lt;type&gt;_keywords4</code>: all of them are searched.</li>
+<li><code>&lt;type&gt;_keywords_fallback</code>, <code>&lt;type&gt;_keywords_fallback2</code>, &hellip; <code>_fallback4</code>: searched one by one, only while there are no results yet.</li>
+<li><code>&lt;type&gt;_extra2</code>, <code>&lt;type&gt;_extra_fallback</code>, &hellip; : the <code>EXTRA</code> text for the query with the same suffix.</li>
+</ul>
+<p>Keywords such as <code>{title}</code>, <code>{title:original}</code>, <code>{title:en}</code>, <code>{year}</code>, <code>{season:2}</code>, <code>{episode:2}</code> are replaced with the item&rsquo;s data
+(<code>:2</code> pads the number to two digits, <code>:en</code>/<code>:original</code> pick the title language).</p>
+<h3 id="other-keys">Other keys</h3>
+<p>Optional keys used by some providers:</p>
+<ul>
+<li><code>root_url</code>: <em>string</em>, base address of the site, prepended to relative links and to <code>login_path</code>.</li>
+<li><code>charset</code>: <em>string</em>, encoding of the query in the search URL, for sites that are not UTF-8 (e.g. <code>windows-1251</code>).</li>
+<li><code>response_charset</code>: <em>string</em>, encoding of the site&rsquo;s pages, when it can&rsquo;t be detected.</li>
+<li><code>post_data</code>: <em>string</em>, Python dict, sends the search as a POST request. <code>QUERY</code> in values is replaced with the query.</li>
+<li><code>headers</code>: <em>string</em>, Python dict of extra HTTP headers for search requests.</li>
+<li><code>login_headers</code>: <em>string</em>, Python dict of extra HTTP headers for the login request.</li>
+<li><code>login_prerequest</code>: <em>string</em>, path to open before logging in (to get session cookies).</li>
+<li><code>login_cookie</code>: <em>string</em>, name of the cookie that means &ldquo;logged in&rdquo;. If it comes from <a href="/burst/cookie-sync/">Cookie sync</a>, Burst skips the login form.</li>
+<li><code>csrf_token</code>: <em>boolean</em>, take <code>csrf_token</code> from the login page and put it instead of <code>CSRF_TOKEN</code> in <code>login_object</code>.</li>
+<li><code>filter_title</code>: <em>boolean</em>, drop results whose name doesn&rsquo;t match the searched title.</li>
+<li><code>parser.infohash</code>: query for the info hash, lets Burst make a magnet link without opening the torrent.</li>
+<li><code>parser.description</code>: query for extra text, added to the result name.</li>
+<li><code>parser.referer</code>: query for the Referer header, used when opening the subpage.</li>
+</ul>
+<h3 id="api-providers">API providers</h3>
+<p>Some sites have a JSON API instead of HTML pages. For them set <code>&quot;is_api&quot;: true</code>, and instead of <code>parser</code> describe the JSON with <code>api_format</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;is_api&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">true</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;base_url&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;https://movies-api.example/api/v2/list_movies.json?query_term=QUERY&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;api_format&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;results&#34;</span>: <span style="color:#e6db74">&#34;data.movies&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;subresults&#34;</span>: <span style="color:#e6db74">&#34;torrents&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;title_long&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;type&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;quality&#34;</span>: <span style="color:#e6db74">&#34;quality&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;torrent&#34;</span>: <span style="color:#e6db74">&#34;url&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;info_hash&#34;</span>: <span style="color:#e6db74">&#34;hash&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;size&#34;</span>: <span style="color:#e6db74">&#34;size&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;seeds&#34;</span>: <span style="color:#e6db74">&#34;seeds&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;peers&#34;</span>: <span style="color:#e6db74">&#34;peers&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><ul>
+<li><code>results</code>: dotted path to the list of results in the response. Empty if the response itself is the list.</li>
+<li><code>subresults</code>: key of a nested list inside each result (e.g. several torrents of one movie), each of them becomes a separate result.</li>
+<li><code>name</code>, <code>description</code>, <code>quality</code>: name of the result, and texts added to the name. <code>name</code>, <code>description</code> and <code>quality</code> accept dotted paths.</li>
+<li><code>torrent</code>, <code>info_hash</code>, <code>size</code>, <code>seeds</code>, <code>peers</code>: keys of the torrent link, hash, size and counters.</li>
 </ul>
 <h3 id="icon">Icon</h3>
 <p>Icon requirements are pretty easy:</p>

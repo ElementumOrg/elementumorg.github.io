@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.169.0">
 <meta name="flattr:id" content="yj6gd6">
 
 <title>Making a log file :: Elementum</title>
@@ -38,13 +38,10 @@
 <div class="highlightable">
   <div id="header-wrapper">
     <div id="header">
-      
-	
-  
+        
     <p><a href="/">Elementum Documentation</a></p>
 
   
-
     </div>
         <div class="searchbox">
 		    <label for="search-by"><i class="fa fa-search"></i></label>
@@ -76,11 +73,6 @@
           <span>Installation</span><i class="fas fa-circle read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/getting-started/configuration/" class="dd-item">
-        <a href="/getting-started/configuration/">
-          <span>Configuration</span><i class="fas fa-circle read-icon"></i>
-        </a>
-    </li>
       <li data-nav-id="/getting-started/platforms-page/" class="dd-item">
         <a href="/getting-started/platforms-page/">
           <span>Downloads</span><i class="fas fa-circle read-icon"></i>
@@ -94,6 +86,75 @@
       <li data-nav-id="/getting-started/faq/" class="dd-item">
         <a href="/getting-started/faq/">
           <span>F.A.Q.</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/configuration/" class="dd-item alwaysopen">
+      <a href="/configuration/">
+        <span>Configuration</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/configuration/kodi-settings/" class="dd-item">
+        <a href="/configuration/kodi-settings/">
+          <span>Kodi addon settings</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/configuration/command-line/" class="dd-item">
+        <a href="/configuration/command-line/">
+          <span>Command-line options</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/burst/" class="dd-item alwaysopen">
+      <a href="/burst/">
+        <span>Burst addon</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/burst/create/" class="dd-item">
+        <a href="/burst/create/">
+          <span>How to add provider</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/burst/override/" class="dd-item">
+        <a href="/burst/override/">
+          <span>How to override provider</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/burst/cookie-sync/" class="dd-item">
+        <a href="/burst/cookie-sync/">
+          <span>Cookie sync</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/context/" class="dd-item alwaysopen">
+      <a href="/context/">
+        <span>Context addon</span><i class="fas fa-circle read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/release-notes/" class="dd-item alwaysopen">
+      <a href="/release-notes/">
+        <span>Release notes</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/release-notes/elementum/" class="dd-item">
+        <a href="/release-notes/elementum/">
+          <span>Elementum</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/release-notes/burst/" class="dd-item">
+        <a href="/release-notes/burst/">
+          <span>Burst</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/release-notes/context/" class="dd-item">
+        <a href="/release-notes/context/">
+          <span>Context</span><i class="fas fa-circle read-icon"></i>
         </a>
     </li>
         </ul>
@@ -120,29 +181,6 @@
         </a>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/burst/" class="dd-item alwaysopen">
-      <a href="/burst/">
-        <span>Burst addon</span>
-            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
-      </a>
-        <ul>
-      <li data-nav-id="/burst/create/" class="dd-item">
-        <a href="/burst/create/">
-          <span>How to add provider</span><i class="fas fa-circle read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/burst/override/" class="dd-item">
-        <a href="/burst/override/">
-          <span>How to override provider</span><i class="fas fa-circle read-icon"></i>
-        </a>
-    </li>
-        </ul>
-    </li>
-    <li data-nav-id="/context/" class="dd-item alwaysopen">
-      <a href="/context/">
-        <span>Context addon</span><i class="fas fa-circle read-icon"></i>
-      </a>
     </li>
     <li data-nav-id="/donate/" class="dd-item">
       <a href="/donate/">
@@ -259,26 +297,30 @@ Locations can be discovered here: <a href="https://kodi.wiki/view/Log_file/Advan
 So we need to enable debugging in Kodi and in Elementum.</p>
 <ul>
 <li>Enter Kodi System settings
-<img src="/screenshots/log4.png" alt="Enter Kodi System settings"></li>
+<img src="/screenshots/log4.png" alt="Enter Kodi System settings">
+</li>
 <li>Enable Expert level of settings
-<img src="/screenshots/log6.png" alt="Enable Expert level of settings"></li>
+<img src="/screenshots/log6.png" alt="Enable Expert level of settings">
+</li>
 <li>Enable debug logging
-<img src="/screenshots/log5.png" alt="Enable debug logging"></li>
-<li>That is it for Kodi! But you probably won&rsquo;t like the onscreen information about CPU usage and so on. So you can create an <em>advancedsettings.xml</em> file in Kodi&rsquo;s Userdata folder (<a href="https://kodi.wiki/view/Userdata)">https://kodi.wiki/view/Userdata)</a>, which this content:</li>
+<img src="/screenshots/log5.png" alt="Enable debug logging">
+</li>
+<li>That is it for Kodi! But you probably won&rsquo;t like the onscreen information about CPU usage and so on. So you can create an <em>advancedsettings.xml</em> file in Kodi&rsquo;s Userdata folder (<a href="https://kodi.wiki/view/Userdata">https://kodi.wiki/view/Userdata</a>), which this content:</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; ?&gt;</span>
-<span style="color:#f92672">&lt;advancedsettings&gt;</span>
-    <span style="color:#f92672">&lt;loglevel&gt;</span>2<span style="color:#f92672">&lt;/loglevel&gt;</span>
-    <span style="color:#f92672">&lt;debug&gt;</span>
-        <span style="color:#f92672">&lt;extralogging&gt;</span>true<span style="color:#f92672">&lt;/extralogging&gt;</span>
-        <span style="color:#f92672">&lt;showloginfo&gt;</span>false<span style="color:#f92672">&lt;/showloginfo&gt;</span>
-    <span style="color:#f92672">&lt;/debug&gt;</span>
-<span style="color:#f92672">&lt;/advancedsettings&gt;</span>
-</code></pre></div><p>It will enable logging and hide onscreen information.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; ?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;advancedsettings&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;loglevel&gt;</span>2<span style="color:#f92672">&lt;/loglevel&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;debug&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;extralogging&gt;</span>true<span style="color:#f92672">&lt;/extralogging&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;showloginfo&gt;</span>false<span style="color:#f92672">&lt;/showloginfo&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/debug&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/advancedsettings&gt;</span>
+</span></span></code></pre></div><p>It will enable logging and hide onscreen information.</p>
 <ul>
 <li>
 <p>For Elementum: open addon settings, go to &ldquo;Advanced&rdquo; tab, set &ldquo;Log level&rdquo; to &ldquo;Debug&rdquo;
-<img src="/screenshots/log7.png" alt="Enable debug logging in elementum"></p>
+<img src="/screenshots/log7.png" alt="Enable debug logging in elementum">
+</p>
 </li>
 <li>
 <p>Now your Kodi records everything into the log file!</p>
@@ -293,9 +335,11 @@ So we need to enable debugging in Kodi and in Elementum.</p>
 <p>To find proper link:</p>
 <ul>
 <li>Enter Elementum addon, open Status
-<img src="/screenshots/log1.png" alt="Enter Elementum addon, open Status"></li>
+<img src="/screenshots/log1.png" alt="Enter Elementum addon, open Status">
+</li>
 <li>In the table you can see the address, that can be opened from other devices (in case you Kodi runs on a separate device in the network)
-<img src="/screenshots/log2.png" alt="Status output"></li>
+<img src="/screenshots/log2.png" alt="Status output">
+</li>
 </ul>
 <h2 id="two-ways-of-taking-a-log-file">Two ways of taking a log file:</h2>
 <h3 id="easy-one">Easy one</h3>
@@ -304,7 +348,8 @@ So we need to enable debugging in Kodi and in Elementum.</p>
 All you need is to enter settings and start an upload:</p>
 <ul>
 <li>Enter Elementum settings, open Advanced tab, browse to Logging section and you can see there are Upload options.
-<img src="/screenshots/log3.png" alt="Enter Elementum settings, open Advanced"></li>
+<img src="/screenshots/log3.png" alt="Enter Elementum settings, open Advanced">
+</li>
 <li>Now you get an url of a paste. Write it down and share in your issues!</li>
 </ul>
 <p>Easy enough?!</p>
@@ -324,7 +369,7 @@ Or you can find your log location here: <a href="https://kodi.wiki/view/Log_file
 
 <div id="navigation">
 <a class="nav nav-prev" href="/contribute/report-issue/" title="Report an Issue"> <i class="fa fa-chevron-left"></i></a>
-    <a class="nav nav-next" href="/burst/" title="Burst addon" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/donate/" title="Donate" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

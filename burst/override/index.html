@@ -5,7 +5,7 @@
     
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="generator" content="Hugo 0.92.2" />
+<meta name="generator" content="Hugo 0.169.0">
 <meta name="flattr:id" content="yj6gd6">
 
 <title>How to override provider :: Elementum</title>
@@ -38,13 +38,10 @@
 <div class="highlightable">
   <div id="header-wrapper">
     <div id="header">
-      
-	
-  
+        
     <p><a href="/">Elementum Documentation</a></p>
 
   
-
     </div>
         <div class="searchbox">
 		    <label for="search-by"><i class="fa fa-search"></i></label>
@@ -76,11 +73,6 @@
           <span>Installation</span><i class="fas fa-circle read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/getting-started/configuration/" class="dd-item">
-        <a href="/getting-started/configuration/">
-          <span>Configuration</span><i class="fas fa-circle read-icon"></i>
-        </a>
-    </li>
       <li data-nav-id="/getting-started/platforms-page/" class="dd-item">
         <a href="/getting-started/platforms-page/">
           <span>Downloads</span><i class="fas fa-circle read-icon"></i>
@@ -94,6 +86,75 @@
       <li data-nav-id="/getting-started/faq/" class="dd-item">
         <a href="/getting-started/faq/">
           <span>F.A.Q.</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/configuration/" class="dd-item alwaysopen">
+      <a href="/configuration/">
+        <span>Configuration</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/configuration/kodi-settings/" class="dd-item">
+        <a href="/configuration/kodi-settings/">
+          <span>Kodi addon settings</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/configuration/command-line/" class="dd-item">
+        <a href="/configuration/command-line/">
+          <span>Command-line options</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/burst/" class="dd-item parent alwaysopen">
+      <a href="/burst/">
+        <span>Burst addon</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/burst/create/" class="dd-item">
+        <a href="/burst/create/">
+          <span>How to add provider</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/burst/override/" class="dd-item active">
+        <a href="/burst/override/">
+          <span>How to override provider</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/burst/cookie-sync/" class="dd-item">
+        <a href="/burst/cookie-sync/">
+          <span>Cookie sync</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/context/" class="dd-item alwaysopen">
+      <a href="/context/">
+        <span>Context addon</span><i class="fas fa-circle read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/release-notes/" class="dd-item alwaysopen">
+      <a href="/release-notes/">
+        <span>Release notes</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/release-notes/elementum/" class="dd-item">
+        <a href="/release-notes/elementum/">
+          <span>Elementum</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/release-notes/burst/" class="dd-item">
+        <a href="/release-notes/burst/">
+          <span>Burst</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/release-notes/context/" class="dd-item">
+        <a href="/release-notes/context/">
+          <span>Context</span><i class="fas fa-circle read-icon"></i>
         </a>
     </li>
         </ul>
@@ -120,29 +181,6 @@
         </a>
     </li>
         </ul>
-    </li>
-    <li data-nav-id="/burst/" class="dd-item parent alwaysopen">
-      <a href="/burst/">
-        <span>Burst addon</span>
-            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
-      </a>
-        <ul>
-      <li data-nav-id="/burst/create/" class="dd-item">
-        <a href="/burst/create/">
-          <span>How to add provider</span><i class="fas fa-circle read-icon"></i>
-        </a>
-    </li>
-      <li data-nav-id="/burst/override/" class="dd-item active">
-        <a href="/burst/override/">
-          <span>How to override provider</span><i class="fas fa-circle read-icon"></i>
-        </a>
-    </li>
-        </ul>
-    </li>
-    <li data-nav-id="/context/" class="dd-item alwaysopen">
-      <a href="/context/">
-        <span>Context addon</span><i class="fas fa-circle read-icon"></i>
-      </a>
     </li>
     <li data-nav-id="/donate/" class="dd-item">
       <a href="/donate/">
@@ -260,30 +298,30 @@ Provider description syntax can be found here: <a href="/burst/create/">How to a
 <p>Another way to override provider definition is the Python script.
 It should be an <em>overrides.py</em> file in your <em>USERDATA/addon_data/script.elementum.burst/</em> directory.</p>
 <p>And it should look like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">overrides <span style="color:#f92672">=</span> {
-    <span style="color:#e6db74">&#39;torlock&#39;</span>: {
-        <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;MyTorLock&#39;</span>
-    },
-    <span style="color:#e6db74">&#39;freshon.tv&#39;</span>: {
-        <span style="color:#e6db74">&#39;tv_keywords&#39;</span>: <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{title}</span><span style="color:#e6db74"> s</span><span style="color:#e6db74">{season:2}</span><span style="color:#e6db74">e</span><span style="color:#e6db74">{episode:2}</span><span style="color:#e6db74">&#39;</span>
-    }
-}
-</code></pre></div><h3 id="overriding-provider-definition-with-json-file">Overriding provider definition with JSON file</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>overrides <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;torlock&#39;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;name&#39;</span>: <span style="color:#e6db74">&#39;MyTorLock&#39;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;freshon.tv&#39;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#39;tv_keywords&#39;</span>: <span style="color:#e6db74">&#39;</span><span style="color:#e6db74">{title}</span><span style="color:#e6db74"> s</span><span style="color:#e6db74">{season:2}</span><span style="color:#e6db74">e</span><span style="color:#e6db74">{episode:2}</span><span style="color:#e6db74">&#39;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="overriding-provider-definition-with-json-file">Overriding provider definition with JSON file</h3>
 <p>The simpliest way to override provider definitions is the unified Json file.
 It is the <em>overrides.json</em> file in <em>USERDATA/addon_data/script.elementum.burst/</em> directory.</p>
 <p>Should look like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-    <span style="color:#f92672">&#34;rutor&#34;</span>: {
-        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Bla-bla&#34;</span>,
-        <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;red&#34;</span>
-    },
-    <span style="color:#f92672">&#34;yts&#34;</span>: {
-        <span style="color:#f92672">&#34;parser&#34;</span>: {
-            <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;item(&#39;a&#39;, order=2)&#34;</span>
-        }
-    }
-}
-</code></pre></div><p>You can open actual definitions, located here: <a href="https://raw.githubusercontent.com/elgatito/script.elementum.burst/master/burst/providers/providers.json">https://raw.githubusercontent.com/elgatito/script.elementum.burst/master/burst/providers/providers.json</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;rutor&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Bla-bla&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;color&#34;</span>: <span style="color:#e6db74">&#34;red&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;yts&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;parser&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;item(&#39;a&#39;, order=2)&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>You can open actual definitions, located here: <a href="https://raw.githubusercontent.com/elgatito/script.elementum.burst/master/burst/providers/providers.json">https://raw.githubusercontent.com/elgatito/script.elementum.burst/master/burst/providers/providers.json</a></p>
 <p>Find the one you need, copy into <em>overrides.json</em> file, and make you modifications.</p>
 <p>Or leave only modified columns, to see what you change.</p>
 
@@ -297,7 +335,7 @@ It is the <em>overrides.json</em> file in <em>USERDATA/addon_data/script.element
 
 <div id="navigation">
 <a class="nav nav-prev" href="/burst/create/" title="How to add provider"> <i class="fa fa-chevron-left"></i></a>
-    <a class="nav nav-next" href="/context/" title="Context addon" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/burst/cookie-sync/" title="Cookie sync" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
 
 </section>
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">

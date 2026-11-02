@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elementum</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.169.0">
+<meta name="flattr:id" content="yj6gd6">
+
+<title>Kodi addon settings :: Elementum</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/hybrid.css" rel="stylesheet">
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<link href="/css/auto-complete.css" rel="stylesheet">
+<link href="/theme-original/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<style type="text/css">
+  :root #header + #content > #left > #rlblock_left {
+    display:none !important;
+  }
+</style>
+
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+  </head>
+  <body data-url="/configuration/kodi-settings/">
+    
+      <div id="headermain"></div>
+<nav id="sidebar" class="showVisitedLinks">
+
+
+
+<div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header">
+        
+    <p><a href="/">Elementum Documentation</a></p>
+
+  
+    </div>
+        <div class="searchbox">
+		    <label for="search-by"><i class="fa fa-search"></i></label>
+		    <input data-search-input id="search-by" type="text" placeholder="Search...">
+		    <span data-search-clear=""><i class="fas fa-times"></i></span>
+		</div>
+		<script type="text/javascript" src="/js/lunr.min.js"></script>
+		<script type="text/javascript" src="/js/auto-complete.js"></script>
+		<script type="text/javascript">
+        
+            var baseurl = "\/";
+        
+		</script>
+		<script type="text/javascript" src="/js/search.js"></script>
+  </div>
+
+      <ul class="topics">
+            <li data-nav-id="/" class="dd-item">
+            <a href="/"><i class="fa fa-fw fa-home"></i></a>
+            </li>
+    <li data-nav-id="/getting-started/" class="dd-item alwaysopen">
+      <a href="/getting-started/">
+        <span>Getting started</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/getting-started/installation/" class="dd-item">
+        <a href="/getting-started/installation/">
+          <span>Installation</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/getting-started/platforms-page/" class="dd-item">
+        <a href="/getting-started/platforms-page/">
+          <span>Downloads</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/getting-started/updating/" class="dd-item">
+        <a href="/getting-started/updating/">
+          <span>Updating</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/getting-started/faq/" class="dd-item">
+        <a href="/getting-started/faq/">
+          <span>F.A.Q.</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/configuration/" class="dd-item parent alwaysopen">
+      <a href="/configuration/">
+        <span>Configuration</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/configuration/kodi-settings/" class="dd-item active">
+        <a href="/configuration/kodi-settings/">
+          <span>Kodi addon settings</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/configuration/command-line/" class="dd-item">
+        <a href="/configuration/command-line/">
+          <span>Command-line options</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/burst/" class="dd-item alwaysopen">
+      <a href="/burst/">
+        <span>Burst addon</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/burst/create/" class="dd-item">
+        <a href="/burst/create/">
+          <span>How to add provider</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/burst/override/" class="dd-item">
+        <a href="/burst/override/">
+          <span>How to override provider</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/burst/cookie-sync/" class="dd-item">
+        <a href="/burst/cookie-sync/">
+          <span>Cookie sync</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/context/" class="dd-item alwaysopen">
+      <a href="/context/">
+        <span>Context addon</span><i class="fas fa-circle read-icon"></i>
+      </a>
+    </li>
+    <li data-nav-id="/release-notes/" class="dd-item alwaysopen">
+      <a href="/release-notes/">
+        <span>Release notes</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/release-notes/elementum/" class="dd-item">
+        <a href="/release-notes/elementum/">
+          <span>Elementum</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/release-notes/burst/" class="dd-item">
+        <a href="/release-notes/burst/">
+          <span>Burst</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/release-notes/context/" class="dd-item">
+        <a href="/release-notes/context/">
+          <span>Context</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/contribute/" class="dd-item alwaysopen">
+      <a href="/contribute/">
+        <span>Contribute</span>
+            <i class="fas fa-angle-down fa-lg category-icon"></i><i class="fas fa-circle read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/contribute/request-feature/" class="dd-item">
+        <a href="/contribute/request-feature/">
+          <span>Feature Request</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/contribute/report-issue/" class="dd-item">
+        <a href="/contribute/report-issue/">
+          <span>Report an Issue</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/contribute/log/" class="dd-item">
+        <a href="/contribute/log/">
+          <span>Making a log file</span><i class="fas fa-circle read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/donate/" class="dd-item">
+      <a href="/donate/">
+        <span>Donate</span><i class="fas fa-circle read-icon"></i>
+      </a>
+    </li>
+
+
+
+        <section id="shortcuts">
+                <li class="" role=""><h3>More</h3><a href="https://github.com/elgatito/plugin.video.elementum" target="_blank" rel="noopener"><i class='fab fa-github'></i> Github repo</a></li>
+                <li class="" role=""><a href="/credits" target="_blank" rel="noopener"><i class='fa fa-bullhorn'></i> Credits</a></li>
+        </section>
+            <a id="clear-history" class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+
+    <hr />
+    <li></li>
+    
+    </ul>
+
+ <section id="footer"><center>
+  <a class="github-button" href="https://github.com/elgatito/plugin.video.elementum/releases" data-icon="octicon-cloud-download" aria-label="Download elgatito/plugin.video.elementum on GitHub">Download</a>
+  <a class="github-button" href="https://github.com/elgatito/plugin.video.elementum" data-icon="octicon-star" data-show-count="false" aria-label="Star elgatito/plugin.video.elementum on GitHub">Star</a>
+  <a class="github-button" href="https://github.com/elgatito/plugin.video.elementum/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork elgatito/plugin.video.elementum on GitHub">Fork</a>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+<section id="body">
+<div id="overlay"></div>
+<div class="padding highlightable">
+
+  <div id="top-bar">
+    
+      
+      
+      
+    <div id="top-github-link">
+      <a class="github-link" href="https://github.com/elgatito/elementum-surge/edit/master/src/content/configuration/kodi-settings.md" target="blank">
+        <i class="fab fa-github"></i>
+        Edit page
+      </a>
+    </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <span id="sidebar-toggle-span">
+          <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+            <i class="fa fa-bars"></i>
+          </a>
+        </span>
+        <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+        <span class="links">
+        
+
+
+
+
+
+
+
+ <a href='/'>Elementum Documentation</a> > <a href='/configuration/'>Configuration</a> > Kodi addon settings
+
+ 
+
+ 
+
+   
+        </span>
+    </div>
+    
+    
+    <div class="progress">
+        <div class="wrapper">
+    <nav id="TableOfContents"></nav>
+        </div>
+    </div>
+    
+
+  </div>
+
+
+<div id="body-inner">
+  
+    <h1>Kodi addon settings</h1>
+  
+
+
+
+    
+
+    
+    <p>These are the settings you see in Kodi, in <em>Add-ons → Elementum → Configure</em>.
+The list is generated from the addon&rsquo;s <code>settings.xml</code> of the latest release, so it is always in sync with the addon.</p>
+<ul>
+<li><strong>Setting</strong> is the name shown in Kodi (English).</li>
+<li><strong>ID</strong> is the key used in <code>settings.xml</code>, in <a href="/configuration/command-line/">exported config files</a> and in Kodi&rsquo;s <code>userdata/addon_data/plugin.video.elementum/settings.xml</code>.</li>
+<li><strong>Default</strong> and <strong>Values</strong> show the default and the allowed values (for sliders, the range).</li>
+<li>Rows in <em>italics</em> are hints Kodi shows inside the settings dialog.</li>
+</ul>
+<p>Some settings are only visible when another one is enabled (for example, memory size only for the Memory storage).</p>
+<p><em>From plugin.video.elementum v0.1.116.</em></p>
+<h2>General</h2>
+<table>
+<thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
+<tbody>
+<tr><th colspan="5">Addon Startup</th></tr>
+<tr><td>Show welcome message on start</td><td><code>greeting_enabled</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Skip searching for installed providers</td><td><code>skip_burst_search</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Skip searching for installed Elementum repository</td><td><code>skip_repository_search</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Delay addon startup, seconds</td><td><code>startup_delay</code></td><td>slider</td><td>0</td><td>0 – 180</td></tr>
+<tr><td>Retry requests to addon after timeout, seconds</td><td><code>preload_timeout</code></td><td>slider</td><td>1</td><td>1 – 120</td></tr>
+<tr><td>Application platform type</td><td><code>binary_platform</code></td><td>select</td><td>Auto</td><td>Auto / android_arm / android_arm64 / android_x86 / android_x64 / linux_armv6 / linux_armv7 / linux_armv7_softfp / linux_arm64 / linux_x86 / linux_x64 / darwin_x86 / darwin_x64 / darwin_arm64 / windows_x86 / windows_x64</td></tr>
+<tr><td>Restart Elementum addon</td><td><code>action_restart</code></td><td>action</td><td></td><td></td></tr>
+<tr><th colspan="5">Playback</th></tr>
+<tr><td>Force Resume options</td><td><code>play_resume_action</code></td><td>enum</td><td>by Elementum - Ask</td><td>by Kodi / by Elementum - Ask / by Elementum - Force</td></tr>
+<tr><td>... resume N seconds earlier</td><td><code>play_resume_back</code></td><td>slider</td><td>0</td><td>0 – 120</td></tr>
+<tr><th colspan="5">Storage</th></tr>
+<tr><td>Download storage type</td><td><code>download_storage</code></td><td>enum</td><td>Use memory</td><td>Use files / Use memory</td></tr>
+<tr><td>Choose memory size automatically</td><td><code>auto_memory_size</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td colspan="5"><em>Size is chosen automatically, based on physical amount of memory</em></td></tr>
+<tr><td>Allow memory usage</td><td><code>auto_memory_size_strategy</code></td><td>enum</td><td>Default</td><td>Minimum / Default / Maximum</td></tr>
+<tr><td colspan="5"><em>Minimum - 40MB, Default - 8%, Maximum - 15%</em></td></tr>
+<tr><td>Memory size to use for each torrent, Mb</td><td><code>memory_size</code></td><td>number</td><td>100</td><td></td></tr>
+<tr><td>Automatically adjust memory size for heavy torrents, if possible</td><td><code>auto_adjust_memory_size</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td colspan="5"><em>Create usual files on the file system and write to them. Needs selected file&#39;s full size to be available on the disk!</em></td></tr>
+<tr><td colspan="5"><em>Using device&#39;s memory to download parts of the torrent. Disk is used only to download and save .torrent file,</em></td></tr>
+<tr><td colspan="5"><em>so can be any storage. For 1gb memory devices 100mb is enough for memory storage, 200-250mb for bigger devices.</em></td></tr>
+<tr><td colspan="5"><em>Same as for usual file storage, but splits file into many small files. Should be used on FAT-32 file-systems.</em></td></tr>
+<tr><td colspan="5"><em>Same as for usual file storage, but using memory to lower filesystem operations. Experimental storage!</em></td></tr>
+<tr><td>Which files to download</td><td><code>download_file_strategy</code></td><td>enum</td><td>Only playback file</td><td>Only playback file / Season files / All files</td></tr>
+<tr><td>Download path</td><td><code>download_path</code></td><td>folder</td><td></td><td></td></tr>
+<tr><td>Reset this path to &#39;/&#39;</td><td><code>action_cmd_reset_path_download</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Open directory with Kodi file browser</td><td><code>action_cmd_open_path_download</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Library path</td><td><code>library_path</code></td><td>folder</td><td>special://temp/elementum_library/</td><td></td></tr>
+<tr><td>Reset this path to &#39;/&#39;</td><td><code>action_cmd_reset_path_library</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Open directory with Kodi file browser</td><td><code>action_cmd_open_path_library</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Torrent files path</td><td><code>torrents_path</code></td><td>folder</td><td>special://temp/elementum_torrents/</td><td></td></tr>
+<tr><td>Reset this path to &#39;/&#39;</td><td><code>action_cmd_reset_path_torrents</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Open directory with Kodi file browser</td><td><code>action_cmd_open_path_torrents</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Reset all paths</td><td><code>action_cmd_reset_path</code></td><td>action</td><td></td><td></td></tr>
+<tr><th colspan="5">Download</th></tr>
+<tr><td>Use torrents history?</td><td><code>use_torrent_history</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Store N torrents in history</td><td><code>torrent_history_size</code></td><td>slider</td><td>50</td><td>0 – 200</td></tr>
+<tr><td>Download after play was stopped</td><td><code>keep_downloading</code></td><td>enum</td><td>Ask to stop</td><td>Continue / Ask to stop / Stop</td></tr>
+<tr><td>Keep files for not finished video</td><td><code>keep_files_playing</code></td><td>enum</td><td>Ask to delete</td><td>Keep / Ask to delete / Delete</td></tr>
+<tr><td>Keep files for watched/downloaded video</td><td><code>keep_files_finished</code></td><td>enum</td><td>Ask to delete</td><td>Keep / Ask to delete / Delete</td></tr>
+<tr><td>Move finished downloads to separate folders</td><td><code>completed_move</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Movies</td><td><code>completed_movies_path</code></td><td>folder</td><td></td><td></td></tr>
+<tr><td>TV Shows</td><td><code>completed_shows_path</code></td><td>folder</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>Files will only be moved after seeding is finished (see - BitTorrent settings), and will wait if currently playing</em></td></tr>
+<tr><td>Do not ask questions before playback</td><td><code>silent_stream_start</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Automatically answer Yes after timeout</td><td><code>autoyes_enabled</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Timeout, seconds</td><td><code>autoyes_timeout</code></td><td>slider</td><td>5</td><td>1 – 120</td></tr>
+<tr><td>Force stream auto-selection from settings</td><td><code>force_link_type</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Try to find other episodes in the torrent</td><td><code>smart_episode_match</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Automatically start downloading next episode</td><td><code>smart_episode_start</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Automatically start next episode if available</td><td><code>smart_episode_choose</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Cache downloaded torrent files after search</td><td><code>use_cache_torrents</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Show watched state for torrent&#39;s files</td><td><code>show_files_watched</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><th colspan="5">Choose stream automatically</th></tr>
+<tr><td>... for movie</td><td><code>choose_stream_auto_movie</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>... for tv show</td><td><code>choose_stream_auto_show</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>... for search</td><td><code>choose_stream_auto_search</code></td><td>bool</td><td>false</td><td></td></tr>
+</tbody>
+</table>
+<h2>Kodi library</h2>
+<table>
+<thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
+<tbody>
+<tr><th colspan="5">General</th></tr>
+<tr><td>Enable library integration with Kodi</td><td><code>library_enabled</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td colspan="5"><em>If disabled - Elementum will not get/insert items to Kodi library  and skip watched management with Kodi.</em></td></tr>
+<tr><th colspan="5">Maintenance</th></tr>
+<tr><td>Update library</td><td><code>action_library_update</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Enable Kodi library synchronization</td><td><code>library_sync_enabled</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Enable synchronization while playback</td><td><code>library_sync_playback_enabled</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Library update delay on startup, seconds</td><td><code>library_update_delay</code></td><td>slider</td><td>300</td><td>10 – 900</td></tr>
+<tr><td>Library update frequency, hours</td><td><code>library_update_frequency</code></td><td>slider</td><td>6</td><td>0 – 24</td></tr>
+<tr><td>Remove Elementum duplicates from library</td><td><code>action_library_unduplicate</code></td><td>action</td><td></td><td></td></tr>
+<tr><th colspan="5">General</th></tr>
+<tr><td>Add Specials to library</td><td><code>add_specials</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Show unaired seasons</td><td><code>unaired_seasons</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Show unaired episodes</td><td><code>unaired_episodes</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Show episodes on release day (w/o delay)</td><td><code>show_episodes_on_release_day</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Percents of playback to mark as watched</td><td><code>playback_percent</code></td><td>slider</td><td>85</td><td>1 – 100</td></tr>
+<tr><td>Run Kodi library update after add/delete</td><td><code>library_update</code></td><td>enum</td><td>Automatically</td><td>Automatically / Ask / No</td></tr>
+<tr><td>Strm files language</td><td><code>strm_language</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Create NFO files for Movie scrapers</td><td><code>library_nfo_movies</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Create NFO files for TV Show scrapers</td><td><code>library_nfo_shows</code></td><td>bool</td><td>true</td><td></td></tr>
+</tbody>
+</table>
+<h2>Appearance</h2>
+<table>
+<thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
+<tbody>
+<tr><th colspan="5">Appearance</th></tr>
+<tr><td>Interface language</td><td><code>language</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Interface fallback language</td><td><code>second_language</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Disable notification sound</td><td><code>do_not_disturb</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Enable overlay status</td><td><code>enable_overlay_status</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Overlay status vertical offset</td><td><code>overlay_status_offset</code></td><td>number</td><td>150</td><td></td></tr>
+<tr><td>Disable background progress dialog</td><td><code>disable_bg_progress</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Disable background progress dialog on playback</td><td><code>disable_bg_progress_playback</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Add episode number to the title</td><td><code>add_episode_numbers</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><th colspan="5">Lists</th></tr>
+<tr><td>Elements per page</td><td><code>results_per_page</code></td><td>slider</td><td>20</td><td>3 – 50</td></tr>
+<tr><td>Use fallback fanart if fanart wasn&#39;t found</td><td><code>default_fanart</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Use Fanart.tv for posters/images</td><td><code>use_fanart_tv</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>TMDB images quality (affects Kodi performance)</td><td><code>tmdb_images_quality</code></td><td>enum</td><td>High</td><td>Original / High / Medium / Low</td></tr>
+<tr><td>Show &#34;All seasons&#34; in shows</td><td><code>seasons_all</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Seasons order</td><td><code>seasons_order</code></td><td>enum</td><td>Ascending</td><td>Ascending / Descending</td></tr>
+<tr><td>Show Specials in season listings</td><td><code>seasons_specials</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Use name of production company as Studio for shows</td><td><code>tmdb_show_use_prod_company_as_studio</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Calculate number of unwatched episodes in Shows/Seasons</td><td><code>show_unwatched_episodes_number</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Use the same view for all lists</td><td><code>viewmode_global_enabled</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Default view for all lists</td><td><code>viewmode_global_id</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Default view for Movies</td><td><code>viewmode_movies</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Default view for TV Shows</td><td><code>viewmode_tvshows</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Default view for Seasons</td><td><code>viewmode_seasons</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Default view for Episodes</td><td><code>viewmode_episodes</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Default view for menus in Movies</td><td><code>viewmode_menus_movies</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Default view for menus in TV Shows</td><td><code>viewmode_menus_tvshows</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Default view for movie genres</td><td><code>viewmode_menus_movies_genres</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Default view for TV show genres</td><td><code>viewmode_menus_tvshows_genres</code></td><td>number</td><td></td><td></td></tr>
+</tbody>
+</table>
+<h2>BitTorrent</h2>
+<table>
+<thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
+<tbody>
+<tr><th colspan="5">Pre-Play Buffering</th></tr>
+<tr><td>Beginning of file Buffer size, MB</td><td><code>buffer_size</code></td><td>number</td><td>20</td><td></td></tr>
+<tr><td>End of file Buffer size, MB</td><td><code>end_buffer_size</code></td><td>number</td><td>4</td><td></td></tr>
+<tr><td>Adjust buffer according to Kodi advancedsettings.xml, if set</td><td><code>auto_kodi_buffer_size</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Initial buffering timeout, seconds</td><td><code>buffer_timeout</code></td><td>slider</td><td>60</td><td>10 – 600</td></tr>
+<tr><th colspan="5">Speed limiting</th></tr>
+<tr><td>Max upload rate, kB/s</td><td><code>max_upload_rate</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Max download rate, kB/s</td><td><code>max_download_rate</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Limit rates after initial buffering only</td><td><code>limit_after_buffering</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><th colspan="5">Torrents autoload on addon startup</th></tr>
+<tr><td>Load torrents from torrents folder on startup</td><td><code>autoload_torrents</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Load torrents from torrents folder paused</td><td><code>autoload_torrents_paused</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><th colspan="5">Limits for connections</th></tr>
+<tr><td>Connections limit</td><td><code>connections_limit</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Automatic concurrent connections limit per second</td><td><code>conntracker_limit_auto</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Concurrent connections limit per second</td><td><code>conntracker_limit</code></td><td>number</td><td></td><td></td></tr>
+<tr><th colspan="5">Seeding</th></tr>
+<tr><td>Seed forever</td><td><code>seed_forever</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Share ratio limit, percentage</td><td><code>share_ratio_limit</code></td><td>number</td><td>200</td><td></td></tr>
+<tr><td>Seed time ratio limit, percentage</td><td><code>seed_time_ratio_limit</code></td><td>number</td><td>700</td><td></td></tr>
+<tr><td>Seed time limit, hours</td><td><code>seed_time_limit</code></td><td>number</td><td>24</td><td></td></tr>
+<tr><th colspan="5">Network</th></tr>
+<tr><td>Disable DHT</td><td><code>disable_dht</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Disable LSD</td><td><code>disable_lsd</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Disable TCP</td><td><code>disable_tcp</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Disable UTP</td><td><code>disable_utp</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Disable UPNP</td><td><code>disable_upnp</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Disable NATPMP</td><td><code>disable_natpmp</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Auto-assign network IP</td><td><code>listen_autodetect_ip</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Listen interfaces</td><td><code>listen_interfaces</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Select network interface</td><td><code>action_cmd_select_interface_listen</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Outgoing interfaces</td><td><code>outgoing_interfaces</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Select network interface</td><td><code>action_cmd_select_interface_outgoing</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Auto-assign network ports</td><td><code>listen_autodetect_port</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Listen port, min</td><td><code>listen_port_min</code></td><td>number</td><td>6891</td><td></td></tr>
+<tr><td>Listen port, max</td><td><code>listen_port_max</code></td><td>number</td><td>6899</td><td></td></tr>
+<tr><td>Magnet resolve timeout, seconds</td><td><code>magnet_resolve_timeout</code></td><td>slider</td><td>60</td><td>1 – 600</td></tr>
+<tr><th colspan="5">Storage</th></tr>
+<tr><td colspan="5"><em>Enable caching if using File storage and have speed problems. Will use more memory, but can improve the speed.</em></td></tr>
+<tr><td>Enable tuned storage settings</td><td><code>tuned_storage</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Cache size, MB</td><td><code>disk_cache_size</code></td><td>number</td><td>12</td><td></td></tr>
+<tr><th colspan="5">Miscellaneous</th></tr>
+<tr><td>Session saving frequency, seconds</td><td><code>session_save</code></td><td>slider</td><td>15</td><td>5 – 60</td></tr>
+<tr><td>Encryption policy</td><td><code>encryption_policy</code></td><td>enum</td><td>Enabled</td><td>Enabled / Disabled / Forced</td></tr>
+<tr><td>Spoof user agent (highly inadvisable)</td><td><code>spoof_user_agent</code></td><td>enum</td><td>Disabled</td><td>Disabled / Default advisable (acceptable) / libtorrent (Rasterbar) 1.1.0 / BitTorrent 7.5.0 / BitTorrent 7.9.9 / µTorrent 3.5.5 / µTorrent 3.6.0 / µTorrent 2.2.1 / Transmission 2.92 / Deluge 1.3.6 / Deluge 2.1.1 / Vuze 5.7.3.0 / Transmission 4.05 / qBittorrent 3.3.9 / qBittorrent 4.6.4</td></tr>
+<tr><td>Use libtorrent.config to override torrent engine settings</td><td><code>use_libtorrent_config</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td colspan="5"><em>Located at USERDATA/plugin.video.elementum/libtorrent.config file Settings apply automatically. Visit https://libtorrent.org for info.</em></td></tr>
+<tr><td>Remove original trackers from torrent</td><td><code>remove_original_trackers</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Add extra trackers</td><td><code>add_extra_trackers</code></td><td>enum</td><td>All known trackers</td><td>None / All known trackers / Best trackers / Minimum set</td></tr>
+<tr><td>Modify trackers in torrent</td><td><code>modify_trackers_strategy</code></td><td>enum</td><td>At the time of adding</td><td>At the time of adding / Every time</td></tr>
+<tr><td>Enable libtorrent logging</td><td><code>use_libtorrent_logging</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Libtorrent settings profile</td><td><code>libtorrent_profile</code></td><td>enum</td><td>Default</td><td>Default / Minimal memory / High speed</td></tr>
+<tr><td>Use libtorrent pause/resume trick for added torrents</td><td><code>use_libtorrent_pauseresume</code></td><td>bool</td><td>false</td><td></td></tr>
+</tbody>
+</table>
+<h2>Tracking</h2>
+<table>
+<thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
+<tbody>
+<tr><th colspan="5">Authorization</th></tr>
+<tr><td>Tracking service</td><td><code>tracker_provider</code></td><td>enum</td><td>Trakt</td><td>None / Trakt / Simkl / MDBList</td></tr>
+<tr><td>Authorize Elementum on Trakt.tv</td><td><code>action_trakt_authorize</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Cancel Authorization for Elementum on Trakt.tv</td><td><code>action_trakt_deauthorize</code></td><td>action</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>Username</em></td></tr>
+<tr><td>Authorize Elementum on Simkl</td><td><code>action_simkl_authorize</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Cancel authorization for Elementum on Simkl</td><td><code>action_simkl_deauthorize</code></td><td>action</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>Username</em></td></tr>
+<tr><td colspan="5"><em>Simkl has no collection: library additions go to Plan to Watch. Custom lists need Simkl PRO or VIP.</em></td></tr>
+<tr><td>Authorize Elementum on MDBList</td><td><code>action_mdblist_authorize</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Cancel authorization for Elementum on MDBList</td><td><code>action_mdblist_deauthorize</code></td><td>action</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>Username</em></td></tr>
+<tr><td>MDBList API key (optional, used instead of authorization)</td><td><code>mdblist_api_key</code></td><td>text</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>An API key from mdblist.com preferences can be used instead of authorization. Free accounts allow 1000 requests a day.</em></td></tr>
+<tr><th colspan="5">Appearance</th></tr>
+<tr><td>Use Trakt information in Trakt lists</td><td><code>force_use_trakt</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><th colspan="5">General</th></tr>
+<tr><td>Scrobble</td><td><code>trakt_scrobble</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Enable synchronization</td><td><code>trakt_sync_enabled</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Enable synchronization while playback</td><td><code>trakt_sync_playback_enabled</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Synchronization frequency, minutes</td><td><code>trakt_sync_frequency_min</code></td><td>slider</td><td>5</td><td>0 – 300</td></tr>
+<tr><td colspan="5"><em>Simkl and MDBList are synchronized at most every 15 minutes.</em></td></tr>
+<tr><td>Update from tracking service</td><td><code>action_trakt_update</code></td><td>action</td><td></td><td></td></tr>
+<tr><th colspan="5">Synchronization</th></tr>
+<tr><td>Sync items from collections into Kodi library</td><td><code>trakt_sync_collections</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Sync items from watchlist into Kodi library</td><td><code>trakt_sync_watchlist</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Sync items from user lists into Kodi library</td><td><code>trakt_sync_userlists</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Sync watched states from tracking service into Kodi library</td><td><code>trakt_sync_watched</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Sync back Kodi watched states into tracking service</td><td><code>trakt_sync_watchedback</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Sync playback progress into Kodi library</td><td><code>trakt_sync_playback_progress</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Sync hidden items</td><td><code>trakt_sync_hidden</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Add to tracking service, when movie is added to Kodi library</td><td><code>trakt_sync_added_movies</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Userlist for movies</td><td><code>trakt_sync_added_movies_location</code></td><td>enum</td><td>My Collection</td><td>My Collection / My Watchlist / Userlist</td></tr>
+<tr><td>Select userlist for movies</td><td><code>action_trakt_select_list_added_movies</code></td><td>action</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>Selected userlist for movies</em></td></tr>
+<tr><td>ID of selected userlist for movies</td><td><code>trakt_sync_added_movies_list</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Add to tracking service, when show is added to Kodi library</td><td><code>trakt_sync_added_shows</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Userlist for shows</td><td><code>trakt_sync_added_shows_location</code></td><td>enum</td><td>My Collection</td><td>My Collection / My Watchlist / Userlist</td></tr>
+<tr><td>Select userlist for shows</td><td><code>action_trakt_select_list_added_shows</code></td><td>action</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>Selected userlist for shows</em></td></tr>
+<tr><td>ID of selected userlist for shows</td><td><code>trakt_sync_added_shows_list</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Remove from Kodi library, when movie is deleted from tracking service</td><td><code>trakt_sync_removed_movies_back</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Remove from tracking service, when movie is deleted from Kodi library</td><td><code>trakt_sync_removed_movies</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Userlist for movies</td><td><code>trakt_sync_removed_movies_location</code></td><td>enum</td><td>My Collection</td><td>My Collection / My Watchlist / Userlist</td></tr>
+<tr><td>Select userlist for movies</td><td><code>action_trakt_select_list_removed_movies</code></td><td>action</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>Selected userlist for movies</em></td></tr>
+<tr><td>ID of selected userlist for movies</td><td><code>trakt_sync_removed_movies_list</code></td><td>number</td><td></td><td></td></tr>
+<tr><td>Remove from Kodi library, when show is deleted from tracking service</td><td><code>trakt_sync_removed_shows_back</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Remove from tracking service, when show is deleted from Kodi library</td><td><code>trakt_sync_removed_shows</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Userlist for shows</td><td><code>trakt_sync_removed_shows_location</code></td><td>enum</td><td>My Collection</td><td>My Collection / My Watchlist / Userlist</td></tr>
+<tr><td>Select userlist for shows</td><td><code>action_trakt_select_list_removed_shows</code></td><td>action</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>Selected userlist for shows</em></td></tr>
+<tr><td>ID of selected userlist for shows</td><td><code>trakt_sync_removed_shows_list</code></td><td>number</td><td></td><td></td></tr>
+<tr><th colspan="5">Progress</th></tr>
+<tr><td>Sort shows in the list</td><td><code>trakt_progress_sort</code></td><td>enum</td><td>By latest watched</td><td>By latest watched / By show name / By air date (newer) / By air date (older)</td></tr>
+<tr><td>Hide unaired episodes</td><td><code>trakt_progress_hide_unaired</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Use earliest release date for progress and calendars</td><td><code>trakt_use_lowest_release_date</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Color of an air date</td><td><code>trakt_progress_color_date</code></td><td>text</td><td>yellow</td><td></td></tr>
+<tr><td>Color of a show name</td><td><code>trakt_progress_color_show</code></td><td>text</td><td>none</td><td></td></tr>
+<tr><td>Color of an episode name</td><td><code>trakt_progress_color_episode</code></td><td>text</td><td>skyblue</td><td></td></tr>
+<tr><td>Color of an unaired episode name</td><td><code>trakt_progress_color_unaired</code></td><td>text</td><td>deeppink</td><td></td></tr>
+<tr><td>Date format</td><td><code>trakt_progress_date_format</code></td><td>text</td><td>yyyy-mm-dd</td><td></td></tr>
+<tr><th colspan="5">Calendars</th></tr>
+<tr><td>Hide watched</td><td><code>trakt_calendars_hide_watched</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Color of an air date</td><td><code>trakt_calendars_color_date</code></td><td>text</td><td>yellow</td><td></td></tr>
+<tr><td>Color of a show name</td><td><code>trakt_calendars_color_show</code></td><td>text</td><td>none</td><td></td></tr>
+<tr><td>Color of an episode name</td><td><code>trakt_calendars_color_episode</code></td><td>text</td><td>skyblue</td><td></td></tr>
+<tr><td>Color of an unaired episode name</td><td><code>trakt_calendars_color_unaired</code></td><td>text</td><td>deeppink</td><td></td></tr>
+<tr><td>Date format</td><td><code>trakt_calendars_date_format</code></td><td>text</td><td>yyyy-mm-dd</td><td></td></tr>
+</tbody>
+</table>
+<h2>Providers</h2>
+<table>
+<thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
+<tbody>
+<tr><th colspan="5">Searching</th></tr>
+<tr><td>Use earliest release date as basic for searching</td><td><code>provider_use_lowest_release_date</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><th colspan="5">Minimum file size</th></tr>
+<tr><td>Minimum file size for Movies, MB</td><td><code>min_candidate_size</code></td><td>slider</td><td>100</td><td>0 – 1000</td></tr>
+<tr><td>Minimum file size for Shows, MB per minute</td><td><code>min_candidate_show_size</code></td><td>slider</td><td>4</td><td>0 – 1000</td></tr>
+<tr><th colspan="5">Stream sorting</th></tr>
+<tr><td>Sorting mode for Movies</td><td><code>sorting_mode_movies</code></td><td>enum</td><td>Balanced</td><td>By seeders / By resolution / Balanced / By size</td></tr>
+<tr><td>Sorting mode for TV Shows</td><td><code>sorting_mode_shows</code></td><td>enum</td><td>Balanced</td><td>By seeders / By resolution / Balanced / By size</td></tr>
+<tr><td>Resolution preference for Movies</td><td><code>resolution_preference_movies</code></td><td>enum</td><td>1080p / 720p / 480p</td><td>1080p / 720p / 480p / 720p / 1080p / 480p / 720p / 480p / 1080p / 480p / 720p / 1080p</td></tr>
+<tr><td>Resolution preference for TV Shows</td><td><code>resolution_preference_shows</code></td><td>enum</td><td>1080p / 720p / 480p</td><td>1080p / 720p / 480p / 720p / 1080p / 480p / 720p / 480p / 1080p / 480p / 720p / 1080p</td></tr>
+<tr><td>Percentage of additional seeders required before choosing next resolution</td><td><code>percentage_additional_seeders</code></td><td>number</td><td>25</td><td></td></tr>
+<tr><th colspan="5">Caching</th></tr>
+<tr><td>Cache stream selection</td><td><code>use_cache_selection</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Cache stream search results</td><td><code>use_cache_search</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Cache search results duration, seconds</td><td><code>cache_search_duration</code></td><td>number</td><td>180</td><td></td></tr>
+<tr><th colspan="5">Providers</th></tr>
+<tr><td>Disable providers that failed health check</td><td><code>provider_disable_failing</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Allowed failures before provider is disabled</td><td><code>provider_allowed_failures</code></td><td>slider</td><td>3</td><td>0 – 10</td></tr>
+<tr><th colspan="5">Redefine providers timeout</th></tr>
+<tr><td>Enabled (might lead to slow speed)</td><td><code>custom_provider_timeout_enabled</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Timeout, seconds</td><td><code>custom_provider_timeout</code></td><td>slider</td><td>30</td><td>7 – 180</td></tr>
+</tbody>
+</table>
+<h2>Proxy</h2>
+<table>
+<thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
+<tbody>
+<tr><th colspan="5">Internal DNS client</th></tr>
+<tr><td>Use built-in DNS resolver</td><td><code>internal_dns_enabled</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td colspan="5"><em>Turn off if you use Tor addresses, or you want  to use DNS settings from OS</em></td></tr>
+<tr><td>Skip IPv6 addresses resolving</td><td><code>internal_dns_skip_ipv6</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>DNS over HTTPS Server</td><td><code>internal_dns_server</code></td><td>select</td><td>Cloudflare &#43; Google &#43; Quad9 &#43; OpenNameServer.org</td><td>Cloudflare &#43; Google &#43; Quad9 &#43; OpenNameServer.org / Cloudflare / Google / Quad9 / OpenNameServer.org / Custom</td></tr>
+<tr><td>Custom DNS over HTTPS Server</td><td><code>internal_dns_server_custom</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Use OpenNIC DNS Servers</td><td><code>internal_dns_opennic_use</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Use OpenNIC DNS Servers for regular domains</td><td><code>internal_dns_opennic_regular</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><th colspan="5">Proxy</th></tr>
+<tr><td>Enabled</td><td><code>proxy_enabled</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Proxy type</td><td><code>proxy_type</code></td><td>enum</td><td>SOCKS5</td><td>SOCKS4 / SOCKS5 / HTTP / i2p</td></tr>
+<tr><td>Host</td><td><code>proxy_host</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Port</td><td><code>proxy_port</code></td><td>number</td><td>1080</td><td></td></tr>
+<tr><td>Login</td><td><code>proxy_login</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Password</td><td><code>proxy_password</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Use Proxy for downloading .torrent files</td><td><code>use_proxy_http</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Use Proxy for trackers</td><td><code>use_proxy_tracker</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Use Proxy for torrent downloading</td><td><code>use_proxy_download</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Force to always use proxy, can break download in some cases</td><td><code>proxy_force</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Use Antizapret proxy (only for Russia)</td><td><code>antizapret_enabled</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Antizapret PAC file URL</td><td><code>antizapret_pac_url</code></td><td>text</td><td>https://p.thenewone.lol:8443/proxy.pac</td><td></td></tr>
+<tr><th colspan="5">Internal HTTP proxy</th></tr>
+<tr><td colspan="5"><em>Can be used by search providers or  for debugging</em></td></tr>
+<tr><td>Enable built-in HTTP proxy</td><td><code>internal_proxy_enabled</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Use built-in proxy for Elementum requests</td><td><code>internal_proxy_app_requests</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Log Internal proxy requests</td><td><code>internal_proxy_logging</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Log server&#39;s response body</td><td><code>internal_proxy_logging_body</code></td><td>bool</td><td>false</td><td></td></tr>
+</tbody>
+</table>
+<h2>Subtitles</h2>
+<table>
+<thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
+<tbody>
+<tr><th colspan="5">OpenSubtitles.com</th></tr>
+<tr><td>Username</td><td><code>opensubtitles_user</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Password</td><td><code>opensubtitles_pass</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Use Kodi language for subtitles search</td><td><code>osdb_auto_language</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Language code for subtitles (example: en, it, es)</td><td><code>osdb_language</code></td><td>text</td><td></td><td></td></tr>
+<tr><th colspan="5">Automatic Subtitles Search</th></tr>
+<tr><td>Automatically load first found subtitles</td><td><code>osdb_auto_load</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Number of subtitles to load automatically</td><td><code>osdb_auto_load_count</code></td><td>slider</td><td>1</td><td>1 – 20</td></tr>
+<tr><td>Delete autoloaded subtitles on player stop</td><td><code>osdb_auto_load_delete</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Disable if subtitles are available in player</td><td><code>osdb_auto_load_skipexists</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><th colspan="5">Subtitles included in torrent</th></tr>
+<tr><td>Enabled</td><td><code>osdb_included_enabled</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Disable if subtitles are available in player</td><td><code>osdb_included_skipexists</code></td><td>bool</td><td>true</td><td></td></tr>
+</tbody>
+</table>
+<h2>Addon Startup</h2>
+<table>
+<thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
+<tbody>
+<tr><th colspan="5">Addon Startup</th></tr>
+<tr><td>Restart Elementum addon</td><td><code>action_restart_2</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Do not start binary (client mode)</td><td><code>local_only_client</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Force start as a library</td><td><code>local_force_library</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><th colspan="5">Addon Connectivity</th></tr>
+<tr><td>Local port</td><td><code>local_port</code></td><td>number</td><td>65221</td><td></td></tr>
+<tr><td>Local host (empty - automatic)</td><td><code>local_host</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Remote host</td><td><code>remote_host</code></td><td>text</td><td>127.0.0.1</td><td></td></tr>
+<tr><td>Remote port</td><td><code>remote_port</code></td><td>number</td><td>65220</td><td></td></tr>
+<tr><th colspan="5">Authorization</th></tr>
+<tr><td>Remote host login</td><td><code>remote_login</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Remote host password</td><td><code>remote_password</code></td><td>text</td><td></td><td></td></tr>
+</tbody>
+</table>
+<h2>Advanced</h2>
+<table>
+<thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
+<tbody>
+<tr><th colspan="5">Download path</th></tr>
+<tr><td>Storage statistics</td><td><code>action_cmd_storage</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Clean up leftover files</td><td><code>action_cmd_leftovers</code></td><td>action</td><td></td><td></td></tr>
+<tr><th colspan="5">Database</th></tr>
+<tr><td>Show information</td><td><code>action_status</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Remove movies from Elementum database</td><td><code>action_cmd_database_clear_movies</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Remove shows from Elementum database</td><td><code>action_cmd_database_clear_shows</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Clear deleted movies</td><td><code>action_cmd_database_clear_deleted_movies</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Clear deleted shows</td><td><code>action_cmd_database_clear_deleted_shows</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Clear torrents history</td><td><code>action_cmd_database_clear_torrent_history</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Clear search history</td><td><code>action_cmd_database_clear_search_history</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Clear the database</td><td><code>action_cmd_database_clear_database</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Compact database</td><td><code>action_cmd_database_compact_database</code></td><td>action</td><td></td><td></td></tr>
+<tr><th colspan="5">Cache</th></tr>
+<tr><td>Clear TMDB cache</td><td><code>action_cmd_cache_clear_tmdb</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Clear Trakt cache</td><td><code>action_cmd_cache_clear_trakt</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Clear the cache</td><td><code>action_cmd_cache_clear_cache</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Compact cache database</td><td><code>action_cmd_cache_compact_cache</code></td><td>action</td><td></td><td></td></tr>
+<tr><th colspan="5">Logging</th></tr>
+<tr><td>Upload /debug/bundle (with kodi.log) to pastebin</td><td><code>action_cmd_paste_bundle</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Upload /debug/all (no kodi.log) to pastebin</td><td><code>action_cmd_paste_all</code></td><td>action</td><td></td><td></td></tr>
+<tr><td>Log level</td><td><code>log_level</code></td><td>enum</td><td>Info</td><td>None / Error / Info / Debug</td></tr>
+<tr><th colspan="5">TheMovieDB</th></tr>
+<tr><td>API key</td><td><code>tmdb_api_key</code></td><td>text</td><td></td><td></td></tr>
+</tbody>
+</table>
+
+
+
+
+    
+          <footer class=" footline" >
+	
+</footer>
+  </div>
+</div>
+
+<div id="navigation">
+<a class="nav nav-prev" href="/configuration/" title="Configuration"> <i class="fa fa-chevron-left"></i></a>
+    <a class="nav nav-next" href="/configuration/command-line/" title="Command-line options" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a></div>
+
+</section>
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+  <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>    
+
+<script src="/js/clipboard.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/html5shiv-printshiv.min.js"></script>
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/modernizr.custom.71422.js"></script>
+<script src="/js/docdock.js"></script>
+<script src="/theme-original/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

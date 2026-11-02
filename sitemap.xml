@@ -2,15 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/release-notes/elementum/</loc>
+  </url><url>
     <loc>/getting-started/</loc>
   </url><url>
     <loc>/burst/create/</loc>
   </url><url>
     <loc>/getting-started/installation/</loc>
   </url><url>
-    <loc>/getting-started/configuration/</loc>
+    <loc>/configuration/kodi-settings/</loc>
   </url><url>
-    <loc>/contribute/</loc>
+    <loc>/release-notes/burst/</loc>
+  </url><url>
+    <loc>/configuration/command-line/</loc>
+  </url><url>
+    <loc>/configuration/</loc>
   </url><url>
     <loc>/contribute/request-feature/</loc>
   </url><url>
@@ -20,6 +26,10 @@
   </url><url>
     <loc>/burst/</loc>
   </url><url>
+    <loc>/release-notes/context/</loc>
+  </url><url>
+    <loc>/burst/cookie-sync/</loc>
+  </url><url>
     <loc>/getting-started/platforms-page/</loc>
   </url><url>
     <loc>/contribute/log/</loc>
@@ -28,14 +38,15 @@
   </url><url>
     <loc>/getting-started/updating/</loc>
   </url><url>
-    <loc>/donate/</loc>
-  </url><url>
     <loc>/getting-started/faq/</loc>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2017-04-24T18:36:24+02:00</lastmod>
+    <loc>/release-notes/</loc>
   </url><url>
-    <loc>/_footer/</loc>
+    <loc>/contribute/</loc>
+  </url><url>
+    <loc>/donate/</loc>
+  </url><url>
+    <loc>/</loc>
     <lastmod>2017-04-24T18:36:24+02:00</lastmod>
   </url><url>
     <loc>/_header/</loc>
