@@ -5,29 +5,29 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.169.0">
     <meta name="generator" content="Relearn 9.4.0">
-    <meta name="description" content="Elementum: torrent streaming add-on for Kodi. Installation, configuration, help and release notes.">
+    <meta name="description" content="Elementum torrent streaming add-on for Kodi and the LT2http streaming engine: installation, configuration, help and release notes.">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Elementum">
-    <meta name="twitter:description" content="Elementum: torrent streaming add-on for Kodi. Installation, configuration, help and release notes.">
+    <meta name="twitter:description" content="Elementum torrent streaming add-on for Kodi and the LT2http streaming engine: installation, configuration, help and release notes.">
     <meta property="og:url" content="/index.html">
     <meta property="og:site_name" content="Elementum">
     <meta property="og:title" content="Elementum">
-    <meta property="og:description" content="Elementum: torrent streaming add-on for Kodi. Installation, configuration, help and release notes.">
+    <meta property="og:description" content="Elementum torrent streaming add-on for Kodi and the LT2http streaming engine: installation, configuration, help and release notes.">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Elementum">
-    <meta itemprop="description" content="Elementum: torrent streaming add-on for Kodi. Installation, configuration, help and release notes.">
-    <meta itemprop="wordCount" content="218">
+    <meta itemprop="description" content="Elementum torrent streaming add-on for Kodi and the LT2http streaming engine: installation, configuration, help and release notes.">
+    <meta itemprop="wordCount" content="292">
     <title>Elementum</title>
     <link href="/index.xml" rel="alternate" type="application/rss&#43;xml" title="Elementum">
-    <link href="/images/favicon.c2efc3e6cb9e4f191ec433a8866d7b1b7b2d72db35528dfa5dbbb2d15ede411e.png" rel="icon" type="image/png">
+    <link href="/images/favicon.7cb76684cc9cddb96694b4fb17112ab6822f5da3ecef44bd93470d2938a66ab7.png" rel="icon" type="image/png">
     <link href="/css/auto-complete/auto-complete.min.19b8eb7faa53e727a407aa2d781e21185a35cfc9330628acc11df190f919f003.css" rel="stylesheet">
     <script src="/js/auto-complete/auto-complete.min.ee095762d0ba22fe9c154ccbc9a1d92d5eae5ebaf7cedfbc9b9991710d739d05.js" defer></script>
     <script src="/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
     <script src="/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
     <script type="application/json" id="R-search-config">{
-      "indexFile": "searchindex.en.min.d1cb2a0afb06ae765c38dfc65262ea3d71074c90684f28b2cc68f9b4a8dc6446.js"
+      "indexFile": "searchindex.en.min.ade1e6e6451daad4c4239f8e1e1e0353ba36d503c99e843e9c06839c793c06c4.js"
     }</script>
     <script src="/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
     <script src="/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
@@ -201,7 +201,13 @@
                 <div class="topbar-content-wrapper" tabindex="-1">
 <nav class="TableOfContents" aria-label="Table of Contents">
   <ul>
-    <li><a href="#quick-start">Quick start</a></li>
+    <li><a href="#elementum">Elementum</a>
+      <ul>
+        <li><a href="#quick-start">Quick start</a></li>
+      </ul>
+    </li>
+    <li><a href="#lt2http">LT2http</a></li>
+    <li><a href="#all-projects">All projects</a></li>
   </ul>
 </nav>
                 </div>
@@ -245,9 +251,11 @@
 
 <h1 id="elementum">Elementum</h1>
 
-<p><strong>Stream torrents in Kodi.</strong> Elementum finds movies and TV shows with the <a href="/burst/index.html">Burst</a> search add-on,
-starts playing while the torrent downloads, keeps a virtual library in Kodi and syncs your watch history with Trakt, Simkl or MDBList.</p>
-<p>Latest releases: Elementum <strong>v0.1.116</strong> · Burst <strong>v0.0.101</strong> · Context <strong>v0.0.16</strong> · <a href="/lt2http/index.html">LT2http</a> <strong>v0.0.16</strong>. See <a href="/release-notes/index.html">what&rsquo;s new</a>.</p>
+<p><strong>Stream torrents in Kodi.</strong> Documentation of the ElementumOrg projects: the Elementum add-on and the LT2http streaming engine.</p>
+<h2 id="elementum">Elementum<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>Elementum finds movies and TV shows with the <a href="/burst/index.html">Burst</a> search add-on, starts playing while the torrent downloads,
+keeps a virtual library in Kodi and syncs your watch history with Trakt, Simkl or MDBList.
+Latest releases: Elementum <strong>v0.1.116</strong> · Burst <strong>v0.0.101</strong> · Context <strong>v0.0.16</strong>.</p>
 <ul class="card-container card-columnize card-columnize-3">
 <li>
   <article class="card card-popout" aria-labelledby="R-card-95b3bcac2e20196119198969d933dc72">
@@ -259,20 +267,6 @@ starts playing while the torrent downloads, keeps a virtual library in Kodi and 
       </div>
       <div class="card-content-text">
           Set up Elementum in Kodi in a few steps.
-      </div>
-    </div>
-  </article>
-</li>
-<li>
-  <article class="card card-popout" aria-labelledby="R-card-573af5a11688ee2dd8bc0267e69c08b0">
-    <div class="card-content">
-      <div class="card-title" id="R-card-573af5a11688ee2dd8bc0267e69c08b0">
-        <a href="/getting-started/platforms-page/index.html">
-        Downloads
-        </a>
-      </div>
-      <div class="card-content-text">
-          Zip files for every platform, the repository and the add-ons.
       </div>
     </div>
   </article>
@@ -292,73 +286,165 @@ starts playing while the torrent downloads, keeps a virtual library in Kodi and 
   </article>
 </li>
 <li>
-  <article class="card card-popout" aria-labelledby="R-card-91e8410fabbb376c1daab90d1e03680b">
+  <article class="card card-popout" aria-labelledby="R-card-4e42b3e43b3f6aea7eede117f30ce819">
     <div class="card-content">
-      <div class="card-title" id="R-card-91e8410fabbb376c1daab90d1e03680b">
-        <a href="/help/faq/index.html">
-        FAQ
+      <div class="card-title" id="R-card-4e42b3e43b3f6aea7eede117f30ce819">
+        <a href="/burst/index.html">
+        Burst
         </a>
       </div>
       <div class="card-content-text">
-          Answers to the most common questions.
+          Torrent search add-on: providers, private trackers, custom definitions.
       </div>
     </div>
   </article>
 </li>
 <li>
-  <article class="card card-popout" aria-labelledby="R-card-1243e730a6bf28dcd7ddf7e73098aa59">
+  <article class="card card-popout" aria-labelledby="R-card-c68f6648160a749518e249b4d6306b23">
     <div class="card-content">
-      <div class="card-title" id="R-card-1243e730a6bf28dcd7ddf7e73098aa59">
+      <div class="card-title" id="R-card-c68f6648160a749518e249b4d6306b23">
+        <a href="/context/index.html">
+        Context
+        </a>
+      </div>
+      <div class="card-content-text">
+          Play any movie or episode in Kodi with Elementum.
+      </div>
+    </div>
+  </article>
+</li>
+<li>
+  <article class="card card-popout" aria-labelledby="R-card-be1ca2c759257d6b80b0144e158f5807">
+    <div class="card-content">
+      <div class="card-title" id="R-card-be1ca2c759257d6b80b0144e158f5807">
         <a href="/help/index.html">
         Get help
         </a>
       </div>
       <div class="card-content-text">
-          Make a log file and report a problem.
+          FAQ, log files and reporting problems.
       </div>
     </div>
   </article>
 </li>
 <li>
-  <article class="card card-popout" aria-labelledby="R-card-6727581e3a79aa3e53852e2a5df4da3c">
+  <article class="card card-popout" aria-labelledby="R-card-5bf5c0a1ea5dc31d0cef1eaf2a0feccb">
     <div class="card-content">
-      <div class="card-title" id="R-card-6727581e3a79aa3e53852e2a5df4da3c">
-        <a href="/lt2http/index.html">
-        LT2http
-        </a>
-      </div>
-      <div class="card-content-text">
-          Torrent streaming engine with an HTTP API, for your own add-ons and players.
-      </div>
-    </div>
-  </article>
-</li>
-<li>
-  <article class="card card-popout" aria-labelledby="R-card-c437301ce855d2f55f5d6ad659d379c4">
-    <div class="card-content">
-      <div class="card-title" id="R-card-c437301ce855d2f55f5d6ad659d379c4">
-        <a href="/release-notes/index.html">
+      <div class="card-title" id="R-card-5bf5c0a1ea5dc31d0cef1eaf2a0feccb">
+        <a href="/release-notes/elementum/index.html">
         What&rsquo;s new
         </a>
       </div>
       <div class="card-content-text">
-          Changes in every release of Elementum, Burst, Context and LT2http.
+          Changes in every release of Elementum.
       </div>
     </div>
   </article>
 </li>
 </ul>
-<h2 id="quick-start">Quick start<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<h3 id="quick-start">Quick start<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
 <ol>
 <li>In Kodi, open <em>Settings → Services → Control</em> and enable both <strong>Application control</strong> options (remote control).</li>
 <li>Download the <strong>ElementumOrg repository</strong> zip from <a href="/getting-started/platforms-page/index.html">Downloads</a> and install it with <em>Add-ons → Install from zip file</em>.</li>
 <li>Open <em>Add-ons → Install from repository → ElementumOrg repository</em> and install <strong>Elementum</strong>, and <strong>Elementum Burst</strong> for searching.</li>
 </ol>
 <p>More details and screenshots are in <a href="/getting-started/installation/index.html">Installation</a>.</p>
+<h2 id="lt2http">LT2http<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>Separate torrent download and streaming engine with an HTTP API, for your own add-ons, scripts and players.
+Latest release: <strong>v0.0.16</strong>.</p>
+<ul class="card-container card-columnize card-columnize-3">
+<li>
+  <article class="card card-popout" aria-labelledby="R-card-1df4b6c8344eb0c9eb8ca64f316d27e5">
+    <div class="card-content">
+      <div class="card-title" id="R-card-1df4b6c8344eb0c9eb8ca64f316d27e5">
+        <a href="/lt2http/index.html">
+        About LT2http
+        </a>
+      </div>
+      <div class="card-content-text">
+          What it is, the Kodi add-on, storage and running it yourself.
+      </div>
+    </div>
+  </article>
+</li>
+<li>
+  <article class="card card-popout" aria-labelledby="R-card-57bd2bcb0b0c7b67745a2f478f83d090">
+    <div class="card-content">
+      <div class="card-title" id="R-card-57bd2bcb0b0c7b67745a2f478f83d090">
+        <a href="/lt2http/index.html#http-api">
+        HTTP API
+        </a>
+      </div>
+      <div class="card-content-text">
+          Add torrents, stream files and control the engine over HTTP.
+      </div>
+    </div>
+  </article>
+</li>
+<li>
+  <article class="card card-popout" aria-labelledby="R-card-2dc5a1168272ce1642e6dde70620edad">
+    <div class="card-content">
+      <div class="card-title" id="R-card-2dc5a1168272ce1642e6dde70620edad">
+        <a href="/release-notes/lt2http/index.html">
+        What&rsquo;s new
+        </a>
+      </div>
+      <div class="card-content-text">
+          Changes in every release of LT2http.
+      </div>
+    </div>
+  </article>
+</li>
+</ul>
+<h2 id="all-projects">All projects<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<ul class="card-container card-columnize card-columnize-3">
+<li>
+  <article class="card card-popout" aria-labelledby="R-card-3eea173e4105e24bfca151c1292b72be">
+    <div class="card-content">
+      <div class="card-title" id="R-card-3eea173e4105e24bfca151c1292b72be">
+        <a href="/getting-started/platforms-page/index.html">
+        Downloads
+        </a>
+      </div>
+      <div class="card-content-text">
+          Zip files of the repository and every add-on, for every platform.
+      </div>
+    </div>
+  </article>
+</li>
+<li>
+  <article class="card card-popout" aria-labelledby="R-card-0c3197b0cdd9e145e0cf89e22cb5f8de">
+    <div class="card-content">
+      <div class="card-title" id="R-card-0c3197b0cdd9e145e0cf89e22cb5f8de">
+        <a href="/release-notes/index.html">
+        Release notes
+        </a>
+      </div>
+      <div class="card-content-text">
+          Changes in Elementum, Burst, Context and LT2http.
+      </div>
+    </div>
+  </article>
+</li>
+<li>
+  <article class="card card-popout" aria-labelledby="R-card-3169aff1d562ebeb5d00d76d40790f58">
+    <div class="card-content">
+      <div class="card-title" id="R-card-3169aff1d562ebeb5d00d76d40790f58">
+        <a href="/contribute/index.html">
+        Contribute
+        </a>
+      </div>
+      <div class="card-content-text">
+          Source repositories, translations, docs and bug reports.
+      </div>
+    </div>
+  </article>
+</li>
+</ul>
 
 
-<div role="note" aria-labelledby="R-box-label-56a5f07438227c453b007104e76522eb" class="box cstyle callout note">
-  <div id="R-box-label-56a5f07438227c453b007104e76522eb" class="box-label">
+<div role="note" aria-labelledby="R-box-label-c7517cdb5934186844f2ce6db1800710" class="box cstyle callout note">
+  <div id="R-box-label-c7517cdb5934186844f2ce6db1800710" class="box-label">
     <i class="fa-fw fas fa-exclamation-circle" aria-hidden="true"></i> 
     Note
   </div>

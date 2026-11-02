@@ -3,7 +3,7 @@
   <channel>
     <title>Elementum</title>
     <link>/index.html</link>
-    <description>Elementum: torrent streaming add-on for Kodi. Installation, configuration, help and release notes.</description>
+    <description>Elementum torrent streaming add-on for Kodi and the LT2http streaming engine: installation, configuration, help and release notes.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
