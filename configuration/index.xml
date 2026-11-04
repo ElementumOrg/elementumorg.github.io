@@ -3,23 +3,30 @@
   <channel>
     <title>Configuration :: Elementum</title>
     <link>/configuration/index.html</link>
-    <description>How Elementum is configured</description>
+    <description>Settings of Elementum, Burst and LT2http</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="/configuration/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Kodi add-on settings</title>
-      <link>/configuration/kodi-settings/index.html</link>
+      <title>Elementum</title>
+      <link>/configuration/elementum/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/configuration/kodi-settings/index.html</guid>
-      <description>Every setting in Add-ons → Elementum → Configure</description>
+      <guid>/configuration/elementum/index.html</guid>
+      <description>Kodi add-on settings and the daemon&#39;s command-line options</description>
     </item>
     <item>
-      <title>Command-line options</title>
-      <link>/configuration/command-line/index.html</link>
+      <title>Burst</title>
+      <link>/configuration/burst/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/configuration/command-line/index.html</guid>
-      <description>Running the Elementum daemon yourself: flags, config file, client-server mode</description>
+      <guid>/configuration/burst/index.html</guid>
+      <description>Every setting in Add-ons → Elementum Burst → Configure</description>
+    </item>
+    <item>
+      <title>LT2http</title>
+      <link>/configuration/lt2http/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/configuration/lt2http/index.html</guid>
+      <description>Kodi add-on settings and the options of the standalone lt2http binary</description>
     </item>
   </channel>
 </rss>

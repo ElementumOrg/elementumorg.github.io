@@ -19,7 +19,7 @@
     <meta property="article:section" content="Release notes">
     <meta itemprop="name" content="Elementum">
     <meta itemprop="description" content="plugin.video.elementum, from whatsnew.txt">
-    <meta itemprop="wordCount" content="6524">
+    <meta itemprop="wordCount" content="6740">
     <title>Elementum</title>
     <link href="/images/favicon.17e21708ef9569adad529152502f51273b612ca56178a45a31665c6ecfbe90ef.png" rel="icon" type="image/png">
     <link href="/css/auto-complete/auto-complete.min.19b8eb7faa53e727a407aa2d781e21185a35cfc9330628acc11df190f919f003.css" rel="stylesheet">
@@ -27,7 +27,7 @@
     <script src="/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
     <script src="/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
     <script type="application/json" id="R-search-config">{
-      "indexFile": "searchindex.en.min.8c495ad480b15e0e911a8647085e7339aef0219049034f2411de0e6379eb2d0b.js"
+      "indexFile": "searchindex.en.min.12006fde81299d64efa5c9c3dda36a504c51b1c2b9fd979c5970b26b6c1ab657.js"
     }</script>
     <script src="/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
     <script src="/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
@@ -129,8 +129,13 @@
             <li class="" data-nav-id="/getting-started/platforms-page/index.html"><a class="padding" href="/getting-started/platforms-page/index.html">Downloads</a></li>
             <li class="" data-nav-id="/getting-started/updating/index.html"><a class="padding" href="/getting-started/updating/index.html">Updating</a></li></ul></li>
             <li class="" data-nav-id="/configuration/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Configuration</span></label><a class="padding default-animation" href="/configuration/index.html"><i class='fas fa-fw fa-sliders'></i> Configuration</a><ul class="collapsible-menu">
-            <li class="" data-nav-id="/configuration/kodi-settings/index.html"><a class="padding" href="/configuration/kodi-settings/index.html">Kodi add-on settings</a></li>
-            <li class="" data-nav-id="/configuration/command-line/index.html"><a class="padding" href="/configuration/command-line/index.html">Command-line options</a></li></ul></li>
+            <li class="alwaysopen " data-nav-id="/configuration/elementum/index.html"><label><input type="checkbox" checked><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Elementum</span></label><a class="padding default-animation" href="/configuration/elementum/index.html">Elementum</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/configuration/elementum/kodi-settings/index.html"><a class="padding" href="/configuration/elementum/kodi-settings/index.html">Kodi add-on settings</a></li>
+            <li class="" data-nav-id="/configuration/elementum/command-line/index.html"><a class="padding" href="/configuration/elementum/command-line/index.html">Command-line options</a></li></ul></li>
+            <li class="" data-nav-id="/configuration/burst/index.html"><a class="padding" href="/configuration/burst/index.html">Burst</a></li>
+            <li class="alwaysopen " data-nav-id="/configuration/lt2http/index.html"><label><input type="checkbox" checked><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu LT2http</span></label><a class="padding default-animation" href="/configuration/lt2http/index.html">LT2http</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/configuration/lt2http/kodi-settings/index.html"><a class="padding" href="/configuration/lt2http/kodi-settings/index.html">Kodi add-on settings</a></li>
+            <li class="" data-nav-id="/configuration/lt2http/command-line/index.html"><a class="padding" href="/configuration/lt2http/command-line/index.html">Command-line options</a></li></ul></li></ul></li>
             <li class="" data-nav-id="/help/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Help &amp; support</span></label><a class="padding default-animation" href="/help/index.html"><i class='fas fa-fw fa-life-ring'></i> Help &amp; support</a><ul class="collapsible-menu">
             <li class="" data-nav-id="/help/faq/index.html"><a class="padding" href="/help/faq/index.html">FAQ</a></li>
             <li class="" data-nav-id="/help/log/index.html"><a class="padding" href="/help/log/index.html">Making a log file</a></li>
@@ -240,7 +245,14 @@
 
 <h1 id="elementum">Elementum</h1>
 
-<h3 id="01117">0.1.117<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
+<h3 id="01118---2026-11-04">0.1.118 - 2026-11-04<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
+<ul>
+<li>Added Scrob (self-hosted tracker) as a tracking service. Choose it in &ldquo;Tracking&rdquo; settings, enter your Scrob server address and authorize Elementum, or paste a Scrob API key instead: watched history, playback progress, scrobbling, &ldquo;My Progress&rdquo; and lists sync with it. Scrob has no watchlist, so a list named &ldquo;Watchlist&rdquo; is created on your Scrob and used for it. Scrob collection is read-only: it is synced into the library, but items you add to collection go to the &ldquo;Watchlist&rdquo; list instead.</li>
+<li>Simkl &ldquo;My Lists&rdquo; now shows your library by status, like &ldquo;My Movies&rdquo; and &ldquo;My TV Shows&rdquo; on simkl.com: Watching, Plan to Watch, On Hold, Completed and Dropped, followed by custom lists for PRO and VIP accounts. These lists can also be selected for library sync. (#1198)</li>
+<li>Simkl now has &ldquo;My Collection&rdquo; in Movies and TV Shows: your whole Simkl library in every status together, like Trakt collection. It can be synced into the Kodi library with &ldquo;Sync items from collections into Kodi library&rdquo;. Adding to collection adds to Plan to Watch, removing from it is done on simkl.com. (#1198)</li>
+<li>Fixed Elementum not starting on systems with a slow or unresponsive DNS server (e.g. a broken IPv6 DNS from the router): built-in DNS-over-HTTPS providers no longer depend on system DNS to start.</li>
+</ul>
+<h3 id="01117---2026-11-02">0.1.117 - 2026-11-02<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
 <ul>
 <li>Added &ldquo;Random&rdquo; to Movies and TV Shows: a shuffled set of popular TMDB titles, different on every visit, to discover something you have not seen yet. (#802)</li>
 <li>Added &ldquo;Popular people&rdquo; to Movies and TV Shows: TMDB popular actors, open one to see their movies or shows (shows they have most episodes in come first, talk shows and other guest appearances are skipped). (#802)</li>

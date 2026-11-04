@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LT2http :: Elementum</title>
+    <link>/configuration/lt2http/index.html</link>
+    <description>Kodi add-on settings and the options of the standalone lt2http binary</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="/configuration/lt2http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kodi add-on settings</title>
+      <link>/configuration/lt2http/kodi-settings/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/configuration/lt2http/kodi-settings/index.html</guid>
+      <description>Every setting in Add-ons → LT2http → Configure</description>
+    </item>
+    <item>
+      <title>Command-line options</title>
+      <link>/configuration/lt2http/command-line/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/configuration/lt2http/command-line/index.html</guid>
+      <description>Running lt2http yourself: options and the JSON config file</description>
+    </item>
+  </channel>
+</rss>

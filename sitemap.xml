@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/configuration/elementum/index.html</loc>
+  </url>
+  <url>
     <loc>/release-notes/elementum/index.html</loc>
   </url>
   <url>
@@ -16,13 +19,22 @@
     <loc>/getting-started/installation/index.html</loc>
   </url>
   <url>
-    <loc>/configuration/kodi-settings/index.html</loc>
+    <loc>/configuration/elementum/kodi-settings/index.html</loc>
+  </url>
+  <url>
+    <loc>/configuration/lt2http/kodi-settings/index.html</loc>
+  </url>
+  <url>
+    <loc>/configuration/burst/index.html</loc>
   </url>
   <url>
     <loc>/release-notes/burst/index.html</loc>
   </url>
   <url>
-    <loc>/configuration/command-line/index.html</loc>
+    <loc>/configuration/elementum/command-line/index.html</loc>
+  </url>
+  <url>
+    <loc>/configuration/lt2http/command-line/index.html</loc>
   </url>
   <url>
     <loc>/configuration/index.html</loc>
@@ -44,6 +56,9 @@
   </url>
   <url>
     <loc>/burst/override/index.html</loc>
+  </url>
+  <url>
+    <loc>/configuration/lt2http/index.html</loc>
   </url>
   <url>
     <loc>/help/report-issue/index.html</loc>
