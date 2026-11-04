@@ -19,7 +19,7 @@
     <meta property="article:section" content="Release notes">
     <meta itemprop="name" content="LT2http :: Elementum">
     <meta itemprop="description" content="lt2http engine and service.lt2http, from the engine changelog">
-    <meta itemprop="wordCount" content="189">
+    <meta itemprop="wordCount" content="1098">
     <title>LT2http :: Elementum</title>
     <link href="/images/favicon.17e21708ef9569adad529152502f51273b612ca56178a45a31665c6ecfbe90ef.png" rel="icon" type="image/png">
     <link href="/css/auto-complete/auto-complete.min.19b8eb7faa53e727a407aa2d781e21185a35cfc9330628acc11df190f919f003.css" rel="stylesheet">
@@ -27,7 +27,7 @@
     <script src="/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
     <script src="/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
     <script type="application/json" id="R-search-config">{
-      "indexFile": "searchindex.en.min.12006fde81299d64efa5c9c3dda36a504c51b1c2b9fd979c5970b26b6c1ab657.js"
+      "indexFile": "searchindex.en.min.316d90ae5aa89f00ad56277deb19f927e9869d10b8831bab7a229512084634d4.js"
     }</script>
     <script src="/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
     <script src="/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
@@ -245,6 +245,54 @@
 
 <h1 id="lt2http">LT2http</h1>
 
+<h3 id="0017-2026-11-04">0.0.17 (2026-11-04)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
+<ul>
+<li>Downloading uses about 40% less CPU: libtorrent ran 4 disk threads per CPU core (64 on a 16-core machine), and woke them all for every block written. It now runs 4.</li>
+<li>Added a Web UI at <code>/web/</code> (<code>/</code> opens it), built into the binary: add torrents by magnet, link (with request headers after <code>|</code>) or upload, with a choice of storage and of the files to download, see and control torrents, files, trackers and pieces, copy file links, remove torrents with or without data and torrent information, see the settings, libtorrent settings and state, links to open lt2http from other devices, the listen sockets and the port mappings of NAT-PMP and UPnP, and this changelog.</li>
+<li>lt2http is translated into the 22 languages of Elementum: <code>/info</code>, the Web UI and the new <code>state_localized</code> of torrent status, picked with the <code>lang</code> parameter or the <code>language</code> setting. <code>state_string</code> stays the same in every language.</li>
+<li>Added <code>/torrents/{infoHash}/trackers</code>, <code>/torrents/{infoHash}/pieces</code>, <code>/settings/state</code> and <code>/languages</code>. Torrent status has <code>connections</code> and <code>connections_limit</code>, torrent info has <code>piece_length</code> and <code>download_path</code> (the folder of the files on disk), which the Web UI shows.</li>
+<li>Adding a torrent by link or upload reports when the data is not a torrent.</li>
+<li>Passwords are no longer written to the log at startup, and <code>/settings/state</code> hides them.</li>
+<li>JSON responses keep non-ASCII text and <code>/</code> as they are, instead of <code>\uXXXX</code> and <code>\/</code>.</li>
+<li>Add-on: translations for all languages of Elementum, Polish and Slovenian added. lt2http uses the language of Kodi.</li>
+<li>Torrent states are the same as in Elementum: Queued, Checking, Finding, Downloading, Finished, Seeding, Stalled, Paused, Buffering, Playing (and Error), with the same numbers.</li>
+<li>Added <code>/torrents/{infoHash}/meta_info</code>: any JSON set by a client is kept with the torrent (also after a restart), and returned in <code>/torrents</code> and <code>/torrents/{infoHash}/info</code>.</li>
+<li>Added <code>/torrents/{infoHash}/files/{index}/buffer</code> to download a part of a file first, from any position, with the end of the file.</li>
+<li>Added <code>/torrents/{infoHash}/files/download</code>, <code>/torrents/{infoHash}/files/stop</code> and <code>/torrents/{infoHash}/files/{index}/set_priority</code>.</li>
+<li>Added <code>/torrents/{infoHash}/players/add</code> and <code>/players/remove</code>: the number of players and of active stream connections is in torrent info, and of stream connections per file in file status. Players are removed after <code>player_timeout</code> seconds (default 60) without stream connections, so a crashed player does not stay forever.</li>
+<li>Torrent info has <code>is_paused</code>, <code>total_files</code>, <code>chosen_files</code> and the <code>memory_size</code> of memory storage, file info takes <code>?status=true</code>.</li>
+<li><code>/status</code> shows the lt2http version and commit, the libtorrent version and the user agent.</li>
+<li><code>/info</code> has actions for torrents and files (pause, resume, remove, download, stop, buffer, priority), shows one torrent with <code>?torrent=&lt;infoHash&gt;</code> and hides sections with <code>?files=false</code>, <code>?trackers=false</code>, <code>?pieces=false</code>. Trackers show their tier, status, scrape numbers and next announce, pieces show the ones in download and totals.</li>
+<li>Fixed file priority changes lost when lt2http stopped within 30 seconds of them: resume data is saved on shutdown.</li>
+<li>Fixed <code>limit_after_buffering</code> turning off the download and upload limits for good: limits now apply once buffering is done.</li>
+<li>Added lt2http as a shared library (<code>lt2http.so</code> / <code>lt2http.dll</code>), started with <code>startWithLogAndArgs()</code>.</li>
+<li>Added linux-armv7_softfp and darwin-arm64 (Apple Silicon) builds.</li>
+<li>NAT-PMP port forwarding works behind VPNs (like ProtonVPN): the gateways of the listen interfaces (all private addresses by default) are probed, libtorrent listens on the port the gateway maps, and the mapping is renewed while lt2http runs.</li>
+<li>Fixed <code>/settings/set</code> turning off DHT, LSD and UPnP until the next restart, and leaving the old port mappings on the router.</li>
+<li>Requests from localhost are always allowed without authentication.</li>
+<li>Torrent information and status come from a state kept up to date in the background, so requests are faster and <code>/info</code> no longer slows down on torrents with many pieces.</li>
+<li>The name of a magnet link is shown before its metadata is downloaded.</li>
+<li>Fixed torrents loaded at startup waiting for metadata again (&ldquo;Downloading metadata&rdquo;) after a restart.</li>
+<li>Fixed a torrent with an unreadable resume file not being loaded at all.</li>
+<li>Streaming answers a Range request with exactly the requested bytes instead of the rest of the file, and with 416 for a range outside the file.</li>
+<li>Fixed streaming that could send not yet downloaded data when a read covered more than one piece.</li>
+<li>Fixed <code>/torrents/{infoHash}/generate</code> returning a truncated torrent file.</li>
+<li>Fixed wrong <code>buffering_total</code> values in <code>/torrents/{infoHash}/files/{index}/status</code>.</li>
+<li>Fixed wrong numbers in log messages and in the file priorities of <code>/info</code>, mostly on 32-bit devices.</li>
+<li>Fixed possible crashes when torrents are added, removed or streamed at the same time (like removing a torrent that is still streaming), and when lt2http is stopped or started again.</li>
+<li>Fixed a missing config file being silently ignored: lt2http now stops with an error unless <code>--update</code> is given.</li>
+<li>Adding a torrent reports an error when the torrent file cannot be saved.</li>
+<li>Shutdown no longer waits up to 5 minutes when the trackers list cannot be downloaded.</li>
+<li><code>/changelog</code> returns plain text.</li>
+<li>Add-on: starts lt2http as a shared library when the binary cannot be started (Android 10+), or always with the &ldquo;Force start as a library&rdquo; setting.</li>
+<li>Add-on: detects darwin-arm64 and lists linux-armv7_softfp in the platform setting.</li>
+<li>Add-on: the port setting is used by lt2http (it was ignored), changing it restarts lt2http. Remote host and port settings are removed.</li>
+<li>Add-on: an lt2http left running by a crashed Kodi is stopped before a new one starts.</li>
+<li>Add-on: more reliable binary updates: the newest release is picked (v0.0.16 was taken as older than v0.0.9), and updates work when the Kodi data folder is not writable.</li>
+<li>Add-on: removes stale entries that piled up in the add-on settings.</li>
+<li>Add-on: translations are loaded on Kodi 19 (Matrix) and later.</li>
+<li>Add-on: updates come from the ElementumOrg repository (<code>repository.elementumorg</code>).</li>
+</ul>
 <h3 id="0016">0.0.16<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
 <ul>
 <li>Try to switch to original libtorrent repository.</li>

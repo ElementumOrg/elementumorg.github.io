@@ -19,7 +19,7 @@
     <meta property="article:section" content="Configuration">
     <meta itemprop="name" content="Command-line options :: Elementum">
     <meta itemprop="description" content="Running lt2http yourself: options and the JSON config file">
-    <meta itemprop="wordCount" content="953">
+    <meta itemprop="wordCount" content="992">
     <title>Command-line options :: Elementum</title>
     <link href="/images/favicon.17e21708ef9569adad529152502f51273b612ca56178a45a31665c6ecfbe90ef.png" rel="icon" type="image/png">
     <link href="/css/auto-complete/auto-complete.min.19b8eb7faa53e727a407aa2d781e21185a35cfc9330628acc11df190f919f003.css" rel="stylesheet">
@@ -27,7 +27,7 @@
     <script src="/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
     <script src="/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
     <script type="application/json" id="R-search-config">{
-      "indexFile": "searchindex.en.min.12006fde81299d64efa5c9c3dda36a504c51b1c2b9fd979c5970b26b6c1ab657.js"
+      "indexFile": "searchindex.en.min.316d90ae5aa89f00ad56277deb19f927e9869d10b8831bab7a229512084634d4.js"
     }</script>
     <script src="/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
     <script src="/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
@@ -263,7 +263,7 @@ Without options it listens on port <code>65225</code> on all interfaces and keep
 The list below is generated from the source of the latest release.
 <strong>In config file</strong> tells whether the option can be set in the JSON file too.</p>
 
-<p><em>From lt2http v0.0.16.</em></p>
+<p><em>From lt2http v0.0.17.</em></p>
 <table>
 <thead><tr><th>Option</th><th>Type</th><th>Default</th><th>Values</th><th>In config file</th><th>Description</th></tr></thead>
 <tbody>
@@ -286,7 +286,9 @@ The list below is generated from the source of the latest release.
 <tr><td><code>--readahead_percents</code></td><td>int</td><td>80</td><td></td><td>yes</td><td>Percentage to use for upcoming downloads. Rest is used for backward seek (Value: 1 to 100)</td></tr>
 <tr><td><code>--buffer_size</code></td><td>int</td><td>20</td><td></td><td>yes</td><td>Buffer size, to download before file is ready for playback (in MB)</td></tr>
 <tr><td><code>--end_buffer_size</code></td><td>int</td><td>4</td><td></td><td>yes</td><td>End-of-file buffer size, to download before file is ready for playback (in MB)</td></tr>
+<tr><td><code>--language</code></td><td>string</td><td>en_gb</td><td></td><td>yes</td><td>Language of /info and of state_localized in the API, like de_de</td></tr>
 <tr><td><code>--buffer_timeout</code></td><td>int</td><td>60</td><td></td><td>yes</td><td>Seconds to wait for buffer download (in seconds)</td></tr>
+<tr><td><code>--player_timeout</code></td><td>int</td><td>60</td><td></td><td>yes</td><td>Remove players of a torrent after it has no stream connections for this long (in seconds, 0 never removes them)</td></tr>
 <tr><td><code>--max_upload_rate</code></td><td>int</td><td>0</td><td></td><td>yes</td><td>Limit upload speed (in KB)</td></tr>
 <tr><td><code>--max_download_rate</code></td><td>int</td><td>0</td><td></td><td>yes</td><td>Limit download speed (in KB)</td></tr>
 <tr><td><code>--limit_after_buffering</code></td><td>bool</td><td>false</td><td>true / false</td><td>yes</td><td>Use speed limiting only after buffer is downloaded</td></tr>

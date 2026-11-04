@@ -19,7 +19,7 @@
     <meta property="article:section" content="Configuration">
     <meta itemprop="name" content="Kodi add-on settings :: Elementum">
     <meta itemprop="description" content="Every setting in Add-ons → LT2http → Configure">
-    <meta itemprop="wordCount" content="812">
+    <meta itemprop="wordCount" content="821">
     <title>Kodi add-on settings :: Elementum</title>
     <link href="/images/favicon.17e21708ef9569adad529152502f51273b612ca56178a45a31665c6ecfbe90ef.png" rel="icon" type="image/png">
     <link href="/css/auto-complete/auto-complete.min.19b8eb7faa53e727a407aa2d781e21185a35cfc9330628acc11df190f919f003.css" rel="stylesheet">
@@ -27,7 +27,7 @@
     <script src="/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
     <script src="/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
     <script type="application/json" id="R-search-config">{
-      "indexFile": "searchindex.en.min.12006fde81299d64efa5c9c3dda36a504c51b1c2b9fd979c5970b26b6c1ab657.js"
+      "indexFile": "searchindex.en.min.316d90ae5aa89f00ad56277deb19f927e9869d10b8831bab7a229512084634d4.js"
     }</script>
     <script src="/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
     <script src="/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
@@ -252,13 +252,15 @@
 <li><strong>Default</strong> and <strong>Values</strong> show the default and the allowed values (for sliders, the range).</li>
 <li>Rows in <em>italics</em> are hints Kodi shows inside the settings dialog.</li>
 </ul>
-<p><em>From service.lt2http v0.0.16.</em></p>
+<p><em>From service.lt2http v0.0.17.</em></p>
 <h2>General</h2>
 <table>
 <thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
 <tbody>
 <tr><th colspan="5">Addon Startup</th></tr>
-<tr><td>Application platform type</td><td><code>binary_platform</code></td><td>select</td><td>Auto</td><td>Auto / android-arm / android-arm64 / android-x86 / android-x64 / linux-armv6 / linux-armv7 / linux-arm64 / linux-x86 / linux-x64 / darwin-x86 / darwin-x64 / windows-x86 / windows-x64</td></tr>
+<tr><td>Application platform type</td><td><code>binary_platform</code></td><td>select</td><td>Auto</td><td>Auto / android-arm / android-arm64 / android-x86 / android-x64 / linux-armv6 / linux-armv7 / linux-armv7_softfp / linux-arm64 / linux-x86 / linux-x64 / darwin-x64 / darwin-arm64 / windows-x86 / windows-x64</td></tr>
+<tr><td>Force start as a library</td><td><code>local_force_library</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Do not start lt2http (client mode)</td><td><code>local_only_client</code></td><td>bool</td><td>false</td><td></td></tr>
 <tr><td>Restart lt2http addon</td><td><code></code></td><td>action</td><td></td><td></td></tr>
 <tr><th colspan="5">Pre-Play Buffering</th></tr>
 <tr><td>Beginning of file Buffer size (MB)</td><td><code>buffer_size</code></td><td>number</td><td>20</td><td></td></tr>
@@ -359,9 +361,7 @@
 <thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
 <tbody>
 <tr><th colspan="5">Plugin Connectivity</th></tr>
-<tr><td>Local port</td><td><code>local_port</code></td><td>number</td><td>65225</td><td></td></tr>
-<tr><td>Remote host</td><td><code>remote_host</code></td><td>text</td><td>127.0.0.1</td><td></td></tr>
-<tr><td>Remote port</td><td><code>remote_port</code></td><td>number</td><td>65225</td><td></td></tr>
+<tr><td>Local port</td><td><code>web_port</code></td><td>number</td><td>65225</td><td></td></tr>
 <tr><td>Authentication Login</td><td><code>web_login</code></td><td>text</td><td></td><td></td></tr>
 <tr><td>Authentication Password</td><td><code>web_password</code></td><td>text</td><td></td><td></td></tr>
 </tbody>
