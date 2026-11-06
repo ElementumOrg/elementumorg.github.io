@@ -19,7 +19,7 @@
     <meta property="article:section" content="Burst add-on">
     <meta itemprop="name" content="Cookie sync :: Elementum">
     <meta itemprop="description" content="Log in to trackers with cookies from your browser">
-    <meta itemprop="wordCount" content="336">
+    <meta itemprop="wordCount" content="729">
     <title>Cookie sync :: Elementum</title>
     <link href="/images/favicon.17e21708ef9569adad529152502f51273b612ca56178a45a31665c6ecfbe90ef.png" rel="icon" type="image/png">
     <link href="/css/auto-complete/auto-complete.min.19b8eb7faa53e727a407aa2d781e21185a35cfc9330628acc11df190f919f003.css" rel="stylesheet">
@@ -27,7 +27,7 @@
     <script src="/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
     <script src="/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
     <script type="application/json" id="R-search-config">{
-      "indexFile": "searchindex.en.min.316d90ae5aa89f00ad56277deb19f927e9869d10b8831bab7a229512084634d4.js"
+      "indexFile": "searchindex.en.min.9c4d325ef677e63c190bc4df5805f24400a89fdf17ec6129f1195b05760ac3fe.js"
     }</script>
     <script src="/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
     <script src="/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
@@ -145,7 +145,8 @@
             <li class="" data-nav-id="/burst/create/index.html"><a class="padding" href="/burst/create/index.html">How to add a provider</a></li>
             <li class="" data-nav-id="/burst/definition/index.html"><a class="padding" href="/burst/definition/index.html">Provider definition reference</a></li>
             <li class="" data-nav-id="/burst/override/index.html"><a class="padding" href="/burst/override/index.html">How to override a provider</a></li>
-            <li class="active " data-nav-id="/burst/cookie-sync/index.html"><a class="padding" href="/burst/cookie-sync/index.html" aria-current="page">Cookie sync</a></li></ul></li>
+            <li class="active " data-nav-id="/burst/cookie-sync/index.html"><a class="padding" href="/burst/cookie-sync/index.html" aria-current="page">Cookie sync</a></li>
+            <li class="" data-nav-id="/burst/cloudflare/index.html"><a class="padding" href="/burst/cloudflare/index.html">Cloudflare-protected trackers</a></li></ul></li>
             <li class="" data-nav-id="/context/index.html"><a class="padding" href="/context/index.html"><i class='fas fa-fw fa-list'></i> Context add-on</a></li>
             <li class="" data-nav-id="/lt2http/index.html"><a class="padding" href="/lt2http/index.html"><i class='fas fa-fw fa-server'></i> LT2http</a></li>
             <li class="" data-nav-id="/release-notes/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Release notes</span></label><a class="padding default-animation" href="/release-notes/index.html"><i class='fas fa-fw fa-bullhorn'></i> Release notes</a><ul class="collapsible-menu">
@@ -209,6 +210,7 @@
     <li><a href="#what-it-is">What it is</a></li>
     <li><a href="#browser">Browser</a></li>
     <li><a href="#kodi">Kodi</a></li>
+    <li><a href="#how-it-works">How it works</a></li>
     <li><a href="#troubleshooting">Troubleshooting</a></li>
   </ul>
 </nav>
@@ -230,7 +232,7 @@
 <span class="btn cstyle button link noborder notitle interactive"><a aria-label="How to override a provider (🡐)" href="/burst/override/index.html" title="How to override a provider (🡐)"><i class="fa-fw fas fa-chevron-left" aria-hidden="true"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Context add-on (🡒)" href="/context/index.html" title="Context add-on (🡒)"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Cloudflare-protected trackers (🡒)" href="/burst/cloudflare/index.html" title="Cloudflare-protected trackers (🡒)"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="More" aria-label="More" aria-expanded="false"><i class="fa-fw fas fa-ellipsis-v" aria-hidden="true"></i></button></span>
@@ -271,6 +273,18 @@ Turn on <strong>Auto Push</strong> for the site, so cookies are pushed again whe
 </ol>
 <h2 id="kodi">Kodi<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <p>In <em>Burst settings → Cookie sync</em>:</p>
+<ol>
+<li>Turn on <strong>Enable Cookie sync</strong> (on by default).</li>
+<li>If you set an encryption key in the extension, enter the same key in <strong>Encryption password</strong>.
+Leave <strong>File name</strong> as <code>kevast-gist-default.json</code> (the extension&rsquo;s default), unless you changed it in the extension.</li>
+<li>Click <strong>Connect GitHub and select Gist</strong>. Kodi shows a web address (<code>github.com/login/device</code>) and a code.
+Open that address on any device, like your phone or computer, sign in to <strong>the same GitHub account</strong> the extension uses, enter the code and authorize.
+Burst asks only for access to Gists. The code is valid for 15 minutes, Kodi waits until you authorize or click <em>Cancel</em>.</li>
+<li>Select the Gist with your cookies. Every Gist with the cookies file is listed with its ID, the number of cookies and sites in it, and when it was updated.
+The most recently updated Gist is preselected.</li>
+</ol>
+<p>The settings now show the <strong>GitHub user</strong> and the <strong>Active Gist</strong>. Click <strong>Select another Gist</strong> to change the Gist at any time.
+If no Gist is found, push cookies from the extension first: until a Gist is selected, Burst uses the most recently updated Gist with the cookies file.</p>
 <table>
   <thead>
     <tr>
@@ -284,34 +298,50 @@ Turn on <strong>Auto Push</strong> for the site, so cookies are pushed again whe
       <td>On (default)</td>
     </tr>
     <tr>
-      <td>Github Token</td>
-      <td>A GitHub <a href="https://github.com/settings/tokens" rel="external">personal access token</a> with the <code>gist</code> scope, from the same GitHub account.</td>
-    </tr>
-    <tr>
       <td>Encryption password (optional)</td>
       <td>The encryption key you set in the extension.</td>
-    </tr>
-    <tr>
-      <td>Gist ID (optional)</td>
-      <td>Leave empty: Burst finds the Gist and fills it in. Set it if you have several sync Gists.</td>
     </tr>
     <tr>
       <td>File name (optional)</td>
       <td><code>kevast-gist-default.json</code> (the extension&rsquo;s default).</td>
     </tr>
     <tr>
-      <td>File url (optional)</td>
-      <td>Leave empty, Burst fills it in.</td>
+      <td>Connect GitHub and select Gist</td>
+      <td>Authorizes Burst in GitHub and selects the Gist. Run it again to use another GitHub account.</td>
+    </tr>
+    <tr>
+      <td>GitHub user</td>
+      <td>The connected GitHub account, read only.</td>
+    </tr>
+    <tr>
+      <td>Select another Gist</td>
+      <td>Selects another Gist of the connected account.</td>
+    </tr>
+    <tr>
+      <td>Active Gist</td>
+      <td>The Gist Burst reads, with its ID and the number of cookies and sites, read only.</td>
     </tr>
   </tbody>
 </table>
-<p>Cookie sync is used only by providers that support it (they have <code>login_cookie</code> in their definition, see <a href="/burst/definition/index.html#login-private-trackers">Login</a>).
-For such a provider, when the cookie is there, Burst skips the login form.</p>
+<h2 id="how-it-works">How it works<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<ul>
+<li>Before each search, Burst reads the Gist and adds its cookies to its own cookie storage.
+It also uses the browser User-Agent saved in the Gist, and remembers it, so the cookies keep working when GitHub is not reachable.</li>
+<li>Cookie sync is used only by providers that support it (they have <code>login_cookie</code> in their definition, see <a href="/burst/definition/index.html#login-private-trackers">Login</a>).
+For such a provider, when the cookie is there, Burst skips the login form.</li>
+<li>Cookies that trackers change during a search are kept for the next searches, and pushed back to the Gist for the sites that came from the Gist.
+Turn on <strong>Auto Merge</strong> for these sites in the extension on your other browsers, to get them there too.</li>
+</ul>
+<p>For trackers behind Cloudflare checks, see <a href="/burst/cloudflare/index.html">Cloudflare-protected trackers</a>.</p>
 <h2 id="troubleshooting">Troubleshooting<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
 <ul>
+<li><strong>No Gists with &hellip; file found</strong>: the extension has not pushed any cookies yet, or Burst is connected to another GitHub account than the extension, or <strong>File name</strong> differs from the extension&rsquo;s file name.</li>
+<li><strong>Device code expired</strong>: the code was not entered in 15 minutes, click <strong>Connect GitHub and select Gist</strong> again.</li>
+<li>Cookies are not used, and the log has <em>&ldquo;Failed parsing cookies&rdquo;</em>: <strong>Encryption password</strong> differs from the extension&rsquo;s encryption key.</li>
 <li>Expired cookies are skipped. Burst then logs <em>&ldquo;Skipping expired cookie &hellip;, re-sync cookies in the browser&rdquo;</em>, and falls back to the login form if the provider has one. Log in in the browser again and push.</li>
-<li>Cookie sync and provider login errors are shown in the search notification and written to the log.</li>
-<li><em>Burst settings → Maintenance → Remove cookies</em> clears all cookies Burst has stored.</li>
+<li>Cookie sync and provider login errors are shown in the search notification and written to the <a href="/help/log/index.html">log</a>.</li>
+<li><em>Burst settings → Maintenance → Remove cookies</em> clears all cookies Burst has stored, the next search gets them from the Gist again.</li>
+<li>To disconnect Burst from GitHub, revoke its access in GitHub → <em>Settings → Applications → Authorized OAuth Apps</em>.</li>
 </ul>
   <footer class="footline">
   </footer>

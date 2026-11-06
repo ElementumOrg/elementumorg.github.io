@@ -19,7 +19,7 @@
     <meta property="article:section" content="Configuration">
     <meta itemprop="name" content="Burst :: Elementum">
     <meta itemprop="description" content="Every setting in Add-ons → Elementum Burst → Configure">
-    <meta itemprop="wordCount" content="1312">
+    <meta itemprop="wordCount" content="1335">
     <title>Burst :: Elementum</title>
     <link href="/images/favicon.17e21708ef9569adad529152502f51273b612ca56178a45a31665c6ecfbe90ef.png" rel="icon" type="image/png">
     <link href="/css/auto-complete/auto-complete.min.19b8eb7faa53e727a407aa2d781e21185a35cfc9330628acc11df190f919f003.css" rel="stylesheet">
@@ -27,7 +27,7 @@
     <script src="/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
     <script src="/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
     <script type="application/json" id="R-search-config">{
-      "indexFile": "searchindex.en.min.316d90ae5aa89f00ad56277deb19f927e9869d10b8831bab7a229512084634d4.js"
+      "indexFile": "searchindex.en.min.9c4d325ef677e63c190bc4df5805f24400a89fdf17ec6129f1195b05760ac3fe.js"
     }</script>
     <script src="/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
     <script src="/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
@@ -145,7 +145,8 @@
             <li class="" data-nav-id="/burst/create/index.html"><a class="padding" href="/burst/create/index.html">How to add a provider</a></li>
             <li class="" data-nav-id="/burst/definition/index.html"><a class="padding" href="/burst/definition/index.html">Provider definition reference</a></li>
             <li class="" data-nav-id="/burst/override/index.html"><a class="padding" href="/burst/override/index.html">How to override a provider</a></li>
-            <li class="" data-nav-id="/burst/cookie-sync/index.html"><a class="padding" href="/burst/cookie-sync/index.html">Cookie sync</a></li></ul></li>
+            <li class="" data-nav-id="/burst/cookie-sync/index.html"><a class="padding" href="/burst/cookie-sync/index.html">Cookie sync</a></li>
+            <li class="" data-nav-id="/burst/cloudflare/index.html"><a class="padding" href="/burst/cloudflare/index.html">Cloudflare-protected trackers</a></li></ul></li>
             <li class="" data-nav-id="/context/index.html"><a class="padding" href="/context/index.html"><i class='fas fa-fw fa-list'></i> Context add-on</a></li>
             <li class="" data-nav-id="/lt2http/index.html"><a class="padding" href="/lt2http/index.html"><i class='fas fa-fw fa-server'></i> LT2http</a></li>
             <li class="" data-nav-id="/release-notes/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Release notes</span></label><a class="padding default-animation" href="/release-notes/index.html"><i class='fas fa-fw fa-bullhorn'></i> Release notes</a><ul class="collapsible-menu">
@@ -260,7 +261,7 @@ not listed here to keep the page short:</p>
 <li><code>&lt;provider&gt;_contains</code>: use the provider only for movies, only for shows, or for all searches.</li>
 </ul>
 <p>Provider definitions themselves can be changed with <a href="/burst/override/index.html">overrides</a>.</p>
-<p><em>From script.elementum.burst v0.0.101.</em></p>
+<p><em>From script.elementum.burst v0.0.102.</em></p>
 <h2>General</h2>
 <table>
 <thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
@@ -280,6 +281,8 @@ not listed here to keep the page short:</p>
 <tr><td>Maximum size (GB)</td><td><code>max_size</code></td><td>slider</td><td>100</td><td>1 – 500</td></tr>
 <tr><td>Maximum results per provider</td><td><code>max_results</code></td><td>slider</td><td>10</td><td>1 – 25</td></tr>
 <tr><td>Sort returned results by</td><td><code>sort_by</code></td><td>enum</td><td>Balanced</td><td>Resolution / Seeds / Size / Balanced</td></tr>
+<tr><td>Select language priority</td><td><code></code></td><td>action</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>Language priority</em></td></tr>
 <tr><th colspan="5">Search timeout</th></tr>
 <tr><td>Automatically adjust timeout according to Elementum settings</td><td><code>auto_timeout</code></td><td>bool</td><td>true</td><td></td></tr>
 <tr><td>Search timeout (seconds)</td><td><code>timeout</code></td><td>slider</td><td>25</td><td>3 – 180</td></tr>
@@ -294,11 +297,12 @@ not listed here to keep the page short:</p>
 <thead><tr><th>Setting</th><th>ID</th><th>Type</th><th>Default</th><th>Values</th></tr></thead>
 <tbody>
 <tr><td>Enable Cookie sync</td><td><code>cookie_sync_enabled</code></td><td>bool</td><td>true</td><td></td></tr>
-<tr><td>Github Token</td><td><code>cookie_sync_token</code></td><td>text</td><td></td><td></td></tr>
 <tr><td>Encryption password (optional)</td><td><code>cookie_sync_password</code></td><td>text</td><td></td><td></td></tr>
-<tr><td>Gist ID (optional)</td><td><code>cookie_sync_gist_id</code></td><td>text</td><td></td><td></td></tr>
 <tr><td>File name (optional)</td><td><code>cookie_sync_filename</code></td><td>text</td><td>kevast-gist-default.json</td><td></td></tr>
-<tr><td>File url (optional)</td><td><code>cookie_sync_fileurl</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Connect GitHub and select Gist</td><td><code></code></td><td>action</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>GitHub user</em></td></tr>
+<tr><td>Select another Gist</td><td><code></code></td><td>action</td><td></td><td></td></tr>
+<tr><td colspan="5"><em>Active Gist</em></td></tr>
 </tbody>
 </table>
 <h2>Public trackers [A .. M]</h2>
@@ -415,6 +419,9 @@ not listed here to keep the page short:</p>
 <tr><td>RuTracker   [Russian]</td><td><code>use_rutracker</code></td><td>bool</td><td>false</td><td></td></tr>
 <tr><td>Username</td><td><code>rutracker_username</code></td><td>text</td><td></td><td></td></tr>
 <tr><td>Password</td><td><code>rutracker_password</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Seedpool   [English]</td><td><code>use_seedpool</code></td><td>bool</td><td>false</td><td></td></tr>
+<tr><td>Username</td><td><code>seedpool_username</code></td><td>text</td><td></td><td></td></tr>
+<tr><td>Passkey</td><td><code>seedpool_passkey</code></td><td>text</td><td></td><td></td></tr>
 <tr><td>Torrent.lt   [Lithuanian]</td><td><code>use_torrentlt</code></td><td>bool</td><td>false</td><td></td></tr>
 <tr><td>Username</td><td><code>torrentlt_username</code></td><td>text</td><td></td><td></td></tr>
 <tr><td>Password</td><td><code>torrentlt_password</code></td><td>text</td><td></td><td></td></tr>
@@ -453,6 +460,7 @@ not listed here to keep the page short:</p>
 <tr><td>Required keywords</td><td><code>require_keywords</code></td><td>bool</td><td>true</td><td></td></tr>
 <tr><td>Release type</td><td><code>require_release_type</code></td><td>bool</td><td>true</td><td></td></tr>
 <tr><td>Size</td><td><code>require_size</code></td><td>bool</td><td>true</td><td></td></tr>
+<tr><td>Season and episode</td><td><code>require_episode</code></td><td>bool</td><td>false</td><td></td></tr>
 <tr><td>Allow results without seeds</td><td><code>allow_noseeds</code></td><td>bool</td><td>false</td><td></td></tr>
 </tbody>
 </table>
