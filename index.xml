@@ -3,7 +3,7 @@
   <channel>
     <title>Elementum</title>
     <link>/index.html</link>
-    <description>Elementum torrent streaming add-on for Kodi and the LT2http streaming engine: installation, configuration, help and release notes.</description>
+    <description>Elementum, the torrent streaming application for Kodi, servers and apps, and the LT2http streaming engine: installation, configuration, integrations, help and release notes.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
@@ -22,18 +22,25 @@
       <description>Settings of Elementum, Burst and LT2http</description>
     </item>
     <item>
+      <title>Torrent search</title>
+      <link>/burst/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/burst/index.html</guid>
+      <description>The built-in search, the Burst add-on, providers and private trackers</description>
+    </item>
+    <item>
+      <title>Use Elementum from outside</title>
+      <link>/integrations/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/integrations/index.html</guid>
+      <description>The JSON API, the Web UI, servers and Docker, and how to keep it safe</description>
+    </item>
+    <item>
       <title>Help &amp; support</title>
       <link>/help/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/help/index.html</guid>
       <description>FAQ, log files and reporting problems</description>
-    </item>
-    <item>
-      <title>Burst add-on</title>
-      <link>/burst/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/burst/index.html</guid>
-      <description>Torrent search add-on used by Elementum</description>
     </item>
     <item>
       <title>Context add-on</title>

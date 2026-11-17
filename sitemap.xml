@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/burst/builtin/index.html</loc>
+  </url>
+  <url>
     <loc>/configuration/elementum/index.html</loc>
   </url>
   <url>
@@ -13,16 +16,19 @@
     <loc>/getting-started/index.html</loc>
   </url>
   <url>
-    <loc>/burst/create/index.html</loc>
+    <loc>/getting-started/installation/index.html</loc>
   </url>
   <url>
-    <loc>/getting-started/installation/index.html</loc>
+    <loc>/integrations/json-api/index.html</loc>
   </url>
   <url>
     <loc>/configuration/elementum/kodi-settings/index.html</loc>
   </url>
   <url>
     <loc>/configuration/lt2http/kodi-settings/index.html</loc>
+  </url>
+  <url>
+    <loc>/contribute/bundled-data/index.html</loc>
   </url>
   <url>
     <loc>/configuration/burst/index.html</loc>
@@ -40,10 +46,16 @@
     <loc>/configuration/index.html</loc>
   </url>
   <url>
+    <loc>/integrations/servers/index.html</loc>
+  </url>
+  <url>
+    <loc>/burst/create/index.html</loc>
+  </url>
+  <url>
     <loc>/help/log/index.html</loc>
   </url>
   <url>
-    <loc>/burst/definition/index.html</loc>
+    <loc>/getting-started/ways-to-run/index.html</loc>
   </url>
   <url>
     <loc>/release-notes/context/index.html</loc>
@@ -52,13 +64,10 @@
     <loc>/getting-started/platforms-page/index.html</loc>
   </url>
   <url>
-    <loc>/help/index.html</loc>
-  </url>
-  <url>
-    <loc>/burst/override/index.html</loc>
-  </url>
-  <url>
     <loc>/configuration/lt2http/index.html</loc>
+  </url>
+  <url>
+    <loc>/burst/definition/index.html</loc>
   </url>
   <url>
     <loc>/help/report-issue/index.html</loc>
@@ -67,7 +76,7 @@
     <loc>/burst/index.html</loc>
   </url>
   <url>
-    <loc>/burst/cookie-sync/index.html</loc>
+    <loc>/burst/override/index.html</loc>
   </url>
   <url>
     <loc>/release-notes/lt2http/index.html</loc>
@@ -77,6 +86,15 @@
   </url>
   <url>
     <loc>/getting-started/updating/index.html</loc>
+  </url>
+  <url>
+    <loc>/integrations/index.html</loc>
+  </url>
+  <url>
+    <loc>/burst/cookie-sync/index.html</loc>
+  </url>
+  <url>
+    <loc>/help/index.html</loc>
   </url>
   <url>
     <loc>/burst/cloudflare/index.html</loc>

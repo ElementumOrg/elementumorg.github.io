@@ -15,6 +15,13 @@
       <description>Install Elementum in Kodi</description>
     </item>
     <item>
+      <title>Ways to run Elementum</title>
+      <link>/getting-started/ways-to-run/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/getting-started/ways-to-run/index.html</guid>
+      <description>Kodi add-on, server for Kodi, standalone, Docker, and server for other apps</description>
+    </item>
+    <item>
       <title>Downloads</title>
       <link>/getting-started/platforms-page/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

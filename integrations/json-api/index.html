@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.169.0">
+    <meta name="generator" content="Relearn 9.4.0">
+    <meta name="description" content="Browse, search, play and manage Elementum from your own app or script">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="JSON API :: Elementum">
+    <meta name="twitter:description" content="Browse, search, play and manage Elementum from your own app or script">
+    <meta property="og:url" content="/integrations/json-api/index.html">
+    <meta property="og:site_name" content="Elementum">
+    <meta property="og:title" content="JSON API :: Elementum">
+    <meta property="og:description" content="Browse, search, play and manage Elementum from your own app or script">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Use Elementum from outside">
+    <meta itemprop="name" content="JSON API :: Elementum">
+    <meta itemprop="description" content="Browse, search, play and manage Elementum from your own app or script">
+    <meta itemprop="wordCount" content="983">
+    <title>JSON API :: Elementum</title>
+    <link href="/images/favicon.17e21708ef9569adad529152502f51273b612ca56178a45a31665c6ecfbe90ef.png" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.19b8eb7faa53e727a407aa2d781e21185a35cfc9330628acc11df190f919f003.css" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.ee095762d0ba22fe9c154ccbc9a1d92d5eae5ebaf7cedfbc9b9991710d739d05.js" defer></script>
+    <script src="/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
+    <script src="/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
+    <script type="application/json" id="R-search-config">{
+      "indexFile": "searchindex.en.min.5758f40031fa49fa3e8db0f2462498f669adc41d8bb1646781893593139afe48.js"
+    }</script>
+    <script src="/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
+    <script src="/js/lunr/lunr.multi.min.ffaee7f1e07179595fe8a4b7c469761f90999470e1f04dcb0a94dc2c1cb44f9c.js" defer></script>
+    <script src="/js/lunr/lunr.en.min.94d0a7cb1f111200e2f5be9dc32699cf266aaa29011e414bdcd36a18ea0fd5ee.js" defer></script>
+    <script type="application/json" id="R-search-lunr-config">{
+      "contentLangs": [
+        "en"
+      ]
+    }</script>
+    <link href="/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet" media="print" class="R-async-style"><noscript><link href="/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet"></noscript>
+    <link href="/css/theme.min.d32ff7f02dc6208f580465aef1e044e05474c6385ef25978e4655da573a0d7c0.css" rel="stylesheet">
+    <link href="/css/format-html.min.42c8d219b2661a532b243104920ce1fd3c0b36d907a1df2e04361a7957399674.css" rel="stylesheet" id="R-format-style">
+    <script type="application/json" id="R-theme-config">{
+      "disableInlineCopyToClipboard": false,
+      "enableBlockCodeWrap": true,
+      "path": "/integrations/json-api/index.html",
+      "relBasePath": "../..",
+      "relBaseUri": "../..",
+      "themevariants": [
+        "auto",
+        "elementum-light",
+        "elementum-dark"
+      ],
+      "translations": {
+        "Browser_unsupported_feature": "This browser doesn't support this feature",
+        "Change_sorting": "Change sorting",
+        "Close_graph": "Close enlarged graph",
+        "Copied_to_clipboard": "Text copied to clipboard!",
+        "Copy_to_clipboard": "Copy text to clipboard",
+        "Deleted_text_end": "End of deleted text",
+        "Deleted_text_start": "Start of deleted text",
+        "Enlarge_graph": "Enlarge graph",
+        "History_cleared": "History cleared",
+        "Inserted_text_end": "End of inserted text",
+        "Inserted_text_start": "Start of inserted text",
+        "Link_copied_to_clipboard": "Link copied to clipboard!",
+        "N_matches_on_page": "{1} matches for \"{0}\" on this page",
+        "N_results_found": "{1} results found for \"{0}\"",
+        "No_results_found": "No results found for \"{0}\"",
+        "Reset_sorting": "Reset sorting",
+        "Reset_view": "Reset view",
+        "Sort_key_ascending": "sorted at position {0}, ascending",
+        "Sort_key_descending": "sorted at position {0}, descending",
+        "Sortable_columns": "Column headers with buttons are sortable.",
+        "Sorted_by_ascending": "Sorted by \"{0}\", ascending",
+        "Sorted_by_descending": "Sorted by \"{0}\", descending",
+        "Sorting_reset": "Sorting reset!",
+        "Unsorted_by": "No longer sorted by \"{0}\"",
+        "View_reset": "View reset!"
+      }
+    }</script>
+    <script src="/js/theme-head.min.f7e473c3e5d5d7ea4c1ad508c6ae60b8d3c54f1c5f68e660f71087333cc95e5a.js"></script>
+  </head>
+  <body class="mobile-support html" data-origin="/integrations/json-api/index.html">
+    <a id="R-skip-link" href="#R-body-inner">Skip to main content</a>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default layout-sidebar-row" href="/index.html">
+          <span class="logo-image default-animation" data-r-logo-variant="elementum-dark elementum-light relearn-light">
+<img alt="" class="lazy rounded figure-image" height="285" loading="lazy" src="/images/logo.png" width="285">
+          </span>
+          <span class="logo-title default-animation">Elementum</span>
+        </a>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Open search page" aria-label="Open search page"><i class="fas fa-fw fa-search" aria-hidden="true"></i></button>
+            <input data-search-input name="search-by" class="search-by" type="search" aria-label="Search" placeholder="Search..." title="Search (CTRL+ALT+f)">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search" aria-label="Clear search"><i class="fas fa-fw fa-times" aria-hidden="true" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <nav id="R-content-wrapper" class="highlightable" aria-label="Menu" tabindex="-1">
+        <div id="R-scrollbar" aria-hidden="true"><div id="R-scrollbar-thumb"></div></div>
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/getting-started/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Getting started</span></label><a class="padding default-animation" href="/getting-started/index.html"><i class='fas fa-fw fa-rocket'></i> Getting started</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/getting-started/installation/index.html"><a class="padding" href="/getting-started/installation/index.html">Installation</a></li>
+            <li class="" data-nav-id="/getting-started/ways-to-run/index.html"><a class="padding" href="/getting-started/ways-to-run/index.html">Ways to run Elementum</a></li>
+            <li class="" data-nav-id="/getting-started/platforms-page/index.html"><a class="padding" href="/getting-started/platforms-page/index.html">Downloads</a></li>
+            <li class="" data-nav-id="/getting-started/updating/index.html"><a class="padding" href="/getting-started/updating/index.html">Updating</a></li></ul></li>
+            <li class="" data-nav-id="/configuration/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Configuration</span></label><a class="padding default-animation" href="/configuration/index.html"><i class='fas fa-fw fa-sliders'></i> Configuration</a><ul class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/configuration/elementum/index.html"><label><input type="checkbox" checked><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Elementum</span></label><a class="padding default-animation" href="/configuration/elementum/index.html">Elementum</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/configuration/elementum/kodi-settings/index.html"><a class="padding" href="/configuration/elementum/kodi-settings/index.html">Kodi add-on settings</a></li>
+            <li class="" data-nav-id="/configuration/elementum/command-line/index.html"><a class="padding" href="/configuration/elementum/command-line/index.html">Command-line options</a></li></ul></li>
+            <li class="" data-nav-id="/configuration/burst/index.html"><a class="padding" href="/configuration/burst/index.html">Burst</a></li>
+            <li class="alwaysopen " data-nav-id="/configuration/lt2http/index.html"><label><input type="checkbox" checked><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu LT2http</span></label><a class="padding default-animation" href="/configuration/lt2http/index.html">LT2http</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/configuration/lt2http/kodi-settings/index.html"><a class="padding" href="/configuration/lt2http/kodi-settings/index.html">Kodi add-on settings</a></li>
+            <li class="" data-nav-id="/configuration/lt2http/command-line/index.html"><a class="padding" href="/configuration/lt2http/command-line/index.html">Command-line options</a></li></ul></li></ul></li>
+            <li class="" data-nav-id="/burst/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Torrent search</span></label><a class="padding default-animation" href="/burst/index.html"><i class='fas fa-fw fa-magnifying-glass'></i> Torrent search</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/burst/builtin/index.html"><a class="padding" href="/burst/builtin/index.html">Built-in search</a></li>
+            <li class="" data-nav-id="/burst/create/index.html"><a class="padding" href="/burst/create/index.html">How to add a provider</a></li>
+            <li class="" data-nav-id="/burst/definition/index.html"><a class="padding" href="/burst/definition/index.html">Provider definition reference</a></li>
+            <li class="" data-nav-id="/burst/override/index.html"><a class="padding" href="/burst/override/index.html">How to override a provider</a></li>
+            <li class="" data-nav-id="/burst/cookie-sync/index.html"><a class="padding" href="/burst/cookie-sync/index.html">Cookie sync</a></li>
+            <li class="" data-nav-id="/burst/cloudflare/index.html"><a class="padding" href="/burst/cloudflare/index.html">Cloudflare-protected trackers</a></li></ul></li>
+            <li class="parent " data-nav-id="/integrations/index.html"><label><input type="checkbox" checked><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Use Elementum from outside</span></label><a class="padding default-animation" href="/integrations/index.html"><i class='fas fa-fw fa-plug'></i> Use Elementum from outside</a><ul class="collapsible-menu">
+            <li class="active " data-nav-id="/integrations/json-api/index.html"><a class="padding" href="/integrations/json-api/index.html" aria-current="page">JSON API</a></li>
+            <li class="" data-nav-id="/integrations/servers/index.html"><a class="padding" href="/integrations/servers/index.html">Docker and servers</a></li></ul></li>
+            <li class="" data-nav-id="/help/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Help &amp; support</span></label><a class="padding default-animation" href="/help/index.html"><i class='fas fa-fw fa-life-ring'></i> Help &amp; support</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/help/faq/index.html"><a class="padding" href="/help/faq/index.html">FAQ</a></li>
+            <li class="" data-nav-id="/help/log/index.html"><a class="padding" href="/help/log/index.html">Making a log file</a></li>
+            <li class="" data-nav-id="/help/report-issue/index.html"><a class="padding" href="/help/report-issue/index.html">Report an issue</a></li>
+            <li class="" data-nav-id="/help/request-feature/index.html"><a class="padding" href="/help/request-feature/index.html">Request a feature</a></li></ul></li>
+            <li class="" data-nav-id="/context/index.html"><a class="padding" href="/context/index.html"><i class='fas fa-fw fa-list'></i> Context add-on</a></li>
+            <li class="" data-nav-id="/lt2http/index.html"><a class="padding" href="/lt2http/index.html"><i class='fas fa-fw fa-server'></i> LT2http</a></li>
+            <li class="" data-nav-id="/release-notes/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Release notes</span></label><a class="padding default-animation" href="/release-notes/index.html"><i class='fas fa-fw fa-bullhorn'></i> Release notes</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/release-notes/elementum/index.html"><a class="padding" href="/release-notes/elementum/index.html">Elementum</a></li>
+            <li class="" data-nav-id="/release-notes/burst/index.html"><a class="padding" href="/release-notes/burst/index.html">Burst</a></li>
+            <li class="" data-nav-id="/release-notes/context/index.html"><a class="padding" href="/release-notes/context/index.html">Context</a></li>
+            <li class="" data-nav-id="/release-notes/lt2http/index.html"><a class="padding" href="/release-notes/lt2http/index.html">LT2http</a></li></ul></li>
+            <li class="" data-nav-id="/contribute/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Contribute</span></label><a class="padding default-animation" href="/contribute/index.html"><i class='fas fa-fw fa-code-branch'></i> Contribute</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/contribute/bundled-data/index.html"><a class="padding" href="/contribute/bundled-data/index.html">Providers, icons and translations</a></li></ul></li>
+            <li class="" data-nav-id="/donate/index.html"><a class="padding" href="/donate/index.html"><i class='fas fa-fw fa-mug-hot'></i> Donate</a></li>
+            <li class="" data-nav-id="/credits/index.html"><a class="padding" href="/credits/index.html">Credits</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/elgatito/plugin.video.elementum"><a class="padding" href="https://github.com/elgatito/plugin.video.elementum" rel="external"><i class='fab fa-fw fa-github'></i> Elementum on GitHub</a></li>
+            <li class="" data-nav-id="/help/report-issue/index.html"><a class="padding" href="/help/report-issue/index.html"><i class='fas fa-fw fa-bug'></i> Report an issue</a></li>
+            <li class="" data-nav-id="/credits/index.html"><a class="padding" href="/credits/index.html"><i class='fas fa-fw fa-heart'></i> Credits</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush" aria-hidden="true"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <select aria-label="Theme" autocomplete="off">
+                    <option value="auto" selected>Auto</option>
+                    <option value="elementum-light">Elementum Light</option>
+                    <option value="elementum-dark">Elementum Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart" aria-hidden="true"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </nav>
+    </aside>
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <header id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-nav" type="button" title="Menu (CTRL&#43;ALT&#43;n)" aria-label="Menu (CTRL&#43;ALT&#43;n)" aria-expanded="false"><i class="fa-fw fas fa-bars" aria-hidden="true"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)" aria-label="Table of Contents (CTRL&#43;ALT&#43;t)" aria-expanded="false"><i class="fa-fw fas fa-table-list" aria-hidden="true"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper" tabindex="-1">
+<nav class="TableOfContents" aria-label="Table of Contents">
+  <ul>
+    <li><a href="#requests">Requests</a></li>
+    <li><a href="#what-it-covers">What it covers</a></li>
+    <li><a href="#finding-a-torrent">Finding a torrent</a></li>
+    <li><a href="#playback">Playback</a></li>
+    <li><a href="#notifications-and-questions">Notifications and questions</a></li>
+    <li><a href="#linking-a-tracker-account">Linking a tracker account</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="topbar-area topbar-area-middle" data-area="middle">
+            <nav class="topbar-breadcrumbs breadcrumbs highlightable" aria-label="Breadcrumbs" data-overflow-title="Elementum &gt;  Use Elementum from outside &gt;  JSON API">
+              <ol itemscope itemtype="http://schema.org/BreadcrumbList"><li class="topbar-breadcrumbs-divider" aria-hidden="true">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Elementum</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/integrations/index.html"><span itemprop="name">Use Elementum from outside</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="" aria-current="page"><span itemprop="name">JSON API</span><meta itemprop="position" content="3"></li>
+              </ol>
+            </nav>
+          </div>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Edit (CTRL&#43;ALT&#43;w)" href="https://github.com/elgatito/elementum-surge/edit/master/src/content/integrations/json-api.md" rel="external" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen" aria-hidden="true"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Use Elementum from outside (🡐)" href="/integrations/index.html" title="Use Elementum from outside (🡐)"><i class="fa-fw fas fa-chevron-left" aria-hidden="true"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Docker and servers (🡒)" href="/integrations/servers/index.html" title="Docker and servers (🡒)"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="More" aria-label="More" aria-expanded="false"><i class="fa-fw fas fa-ellipsis-v" aria-hidden="true"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper" tabindex="-1">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable integrations" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="json-api">JSON API</h1>
+
+<p>The JSON API is how apps talk to Elementum: the Samsung TV app uses it, and so can your scripts and tools.
+It is part of Elementum 0.1.120 and later, on the same port as everything else (<code>65220</code> by default).</p>
+<ul>
+<li><strong>Base URL:</strong> <code>http://&lt;elementum address&gt;:65220/api</code></li>
+<li><strong>Contract:</strong> <code>/api/openapi.yaml</code> (OpenAPI 3). Every request and response is described there, with examples.</li>
+<li><strong>Try it:</strong> <code>/api/docs</code> is a Swagger UI on that contract, in your browser.</li>
+</ul>
+<p>There is one contract, without versions in the URL. Clients are updated together with Elementum;
+<code>GET /api/system/info</code> tells the version a client talks to.</p>
+<h2 id="requests">Requests<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<ul>
+<li><strong>Login:</strong> HTTP Basic, with Elementum&rsquo;s login, when one is set (see <a href="/integrations/index.html#logging-in">Logging in</a>).
+<code>GET /api/system/info</code> says whether one is needed (<code>auth_required</code>) and works as a &ldquo;test connection&rdquo; call.</li>
+<li><strong>Errors:</strong> every error has the same body, <code>{&quot;error&quot;: {&quot;code&quot;: &quot;...&quot;, &quot;message&quot;: &quot;...&quot;}}</code>.
+Branch on <code>code</code>; <code>message</code> is for people. Codes: <code>bad_request</code>, <code>unauthorized</code>, <code>forbidden</code>, <code>not_found</code>,
+<code>tracker_not_authorized</code>, <code>tracker_unsupported</code>, <code>already_in_library</code>, <code>providers_unavailable</code>, <code>playback_failed</code>,
+<code>ui_request_expired</code>, <code>not_implemented</code>, <code>internal_error</code>.</li>
+<li><strong>Pages:</strong> lists take <code>page</code> (from 1) and <code>limit</code> (1 to 100, Elementum&rsquo;s &ldquo;results per page&rdquo; by default),
+and answer <code>{&quot;items&quot;: [...], &quot;page&quot;, &quot;limit&quot;, &quot;total_pages&quot;, &quot;total_results&quot;}</code>.</li>
+<li><strong>Language:</strong> <code>lang=de</code> or <code>lang=de-DE</code> gives titles, overviews, images and texts in that language; Elementum&rsquo;s language by default.</li>
+<li><strong>Browsers:</strong> every origin may call the API (CORS), and <code>X-UI-Epoch</code> can be read from responses.</li>
+</ul>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl -u user:secret http://192.168.1.10:65220/api/system/info</span></span></code></pre></div>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{<span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;0.1.120&#34;</span>, <span style="color:#f92672">&#34;auth_required&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#f92672">&#34;language&#34;</span>: <span style="color:#e6db74">&#34;en&#34;</span>, <span style="color:#f92672">&#34;kodi_connected&#34;</span>: <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">&#34;settings_source&#34;</span>: <span style="color:#e6db74">&#34;file&#34;</span>, <span style="color:#f92672">&#34;tracker&#34;</span>: {<span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;trakt&#34;</span>, <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Trakt&#34;</span>, <span style="color:#f92672">&#34;authorized&#34;</span>: <span style="color:#66d9ef">true</span>, <span style="color:#f92672">&#34;logins&#34;</span>: <span style="color:#ae81ff">0</span>}}</span></span></code></pre></div>
+<h2 id="what-it-covers">What it covers<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<table>
+  <thead>
+    <tr>
+      <th>Group</th>
+      <th>Paths</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>System</td>
+      <td><code>GET /system/info</code>: version, login, language, linked tracker, whether Kodi is connected, where settings come from.</td>
+    </tr>
+    <tr>
+      <td>Movies and shows</td>
+      <td><code>/movies/lists/{list}</code> (<code>popular</code>, <code>trending</code>, <code>top_rated</code>, <code>now_playing</code>, <code>upcoming</code>, <code>by_genre</code>), <code>/movies/genres</code>, <code>/movies/{tmdb_id}</code>, the same under <code>/shows</code> (<code>on_the_air</code> instead of <code>now_playing</code>/<code>upcoming</code>), <code>/shows/{tmdb_id}/seasons/{season}</code>, <code>/search?query=&amp;type=movie|show</code>, <code>/people/{tmdb_id}</code>, <code>/people/{tmdb_id}/credits</code>.</td>
+    </tr>
+    <tr>
+      <td>Torrent search</td>
+      <td><code>/movies/{tmdb_id}/streams</code>, <code>/shows/{tmdb_id}/seasons/{season}/episodes/{episode}/streams</code>.</td>
+    </tr>
+    <tr>
+      <td>Playback</td>
+      <td><code>POST /playback</code>, <code>GET</code> and <code>DELETE /playback/{id}</code>, <code>POST /playback/{id}/progress</code>, <code>/stream/{id}/{file_index}</code>.</td>
+    </tr>
+    <tr>
+      <td>Library and watched</td>
+      <td><code>/library/movies</code>, <code>/library/shows</code>, <code>POST</code> and <code>DELETE /library/{movies|shows}/{tmdb_id}</code>, <code>POST</code> and <code>DELETE /watched/{movie|show|season|episode}</code>.</td>
+    </tr>
+    <tr>
+      <td>Trackers</td>
+      <td><code>/trakt/{media}/lists/{list}</code> (public Trakt charts), <code>/tracker/{media}/watchlist</code>, <code>/tracker/{media}/collection</code>, <code>/tracker/shows/progress</code>, <code>/tracker/lists</code>, <code>/tracker/lists/{list_id}/items</code>, <code>POST /tracker/authorize</code>.</td>
+    </tr>
+    <tr>
+      <td>Torrents</td>
+      <td><code>/torrents</code>, <code>POST /torrents/{info_hash}/pause</code> and <code>/resume</code>, <code>DELETE /torrents/{info_hash}?delete_files=</code>.</td>
+    </tr>
+    <tr>
+      <td>Built-in search</td>
+      <td><code>/providers</code>, <code>PUT /providers/{id}</code>, <code>/providers/options</code>, <code>PUT /providers/options/{id}</code>, <code>POST /providers/cookie-sync/login</code>, <code>/providers/cookie-sync/gists</code>. See <a href="/burst/builtin/index.html#settings-over-the-api">Built-in search</a>.</td>
+    </tr>
+    <tr>
+      <td>Dialogs</td>
+      <td><code>/ui/events</code> and <code>POST /ui/requests/{id}</code>: Elementum&rsquo;s notifications and questions, see <a href="/integrations/json-api/index.html#notifications-and-questions">below</a>.</td>
+    </tr>
+  </tbody>
+</table>
+<p>Lists, details and search results carry the item&rsquo;s state where Elementum knows it: in the library, watched, in the watchlist or collection, and the resume point.</p>
+<h2 id="finding-a-torrent">Finding a torrent<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl -u user:secret http://192.168.1.10:65220/api/movies/603/streams</span></span></code></pre></div>
+<p>The answer is a list of streams, best first: <code>uri</code> (magnet or torrent link), <code>name</code>, <code>provider</code>, <code>seeds</code>, <code>peers</code>, <code>size_bytes</code>,
+and what Elementum read from the name (<code>resolution</code>, <code>rip</code>, <code>codec</code>, <code>audio</code>, <code>language</code>).</p>
+<ul>
+<li>Elementum searches with its <a href="/burst/builtin/index.html">built-in search</a>, or with Kodi provider add-ons, as its settings say
+(<a href="/burst/index.html#which-search-is-used">which search is used</a>).
+<code>502 providers_unavailable</code> means it has nothing to search with: the built-in search is off and no Kodi is reachable.</li>
+<li>A search takes up to the provider timeout (40 seconds, or <em>Custom provider timeout</em> in the settings); give the request a longer timeout.</li>
+<li>Results are cached like Kodi&rsquo;s searches, so asking again is fast.</li>
+</ul>
+<h2 id="playback">Playback<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>Playback goes through a <strong>session</strong>: Elementum adds the torrent, buffers the file, and gives a link your player opens.
+One session is active at a time; starting another one stops the previous one.</p>
+<ol>
+<li>
+<p><strong>Start:</strong> <code>POST /api/playback</code> with the stream you chose:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{<span style="color:#f92672">&#34;uri&#34;</span>: <span style="color:#e6db74">&#34;magnet:?xt=urn:btih:...&#34;</span>, <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;episode&#34;</span>, <span style="color:#f92672">&#34;tmdb_id&#34;</span>: <span style="color:#ae81ff">1396</span>, <span style="color:#f92672">&#34;season&#34;</span>: <span style="color:#ae81ff">1</span>, <span style="color:#f92672">&#34;episode&#34;</span>: <span style="color:#ae81ff">1</span>}</span></span></code></pre></div>
+<p><code>tmdb_id</code> is the movie&rsquo;s or the <strong>show&rsquo;s</strong> id. The <code>uri</code> must be one Elementum found (from the streams above), a magnet,
+or a <code>.torrent</code> Elementum saved; other links are refused. The answer is the session, with its <code>id</code>.</p>
+</li>
+<li>
+<p><strong>Poll</strong> <code>GET /api/playback/{id}</code> about once a second. Its <code>state</code> goes through:</p>
+<table>
+  <thead>
+    <tr>
+      <th>State</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>resolving</code></td>
+      <td>Getting the torrent&rsquo;s metadata.</td>
+    </tr>
+    <tr>
+      <td><code>buffering</code></td>
+      <td>Downloading the start of the file; <code>buffer_progress</code> (0–100), <code>download_rate</code>, <code>seeds</code>, <code>peers</code> show how it goes.</td>
+    </tr>
+    <tr>
+      <td><code>choosing_file</code></td>
+      <td>Elementum could not choose the file. <code>files</code> lists the candidates: start again with <code>&quot;file_index&quot;</code> set to one of them.</td>
+    </tr>
+    <tr>
+      <td><code>ready</code></td>
+      <td>Play <code>stream_url</code>. <code>resume_s</code> is where to start, in seconds, when there is a resume point.</td>
+    </tr>
+    <tr>
+      <td><code>error</code></td>
+      <td>The torrent could not be played; <code>error</code> says why.</td>
+    </tr>
+    <tr>
+      <td><code>stopped</code></td>
+      <td>Stopped by you, by a new session, or because it was idle.</td>
+    </tr>
+  </tbody>
+</table>
+<p>A session without a poll or a progress report for <strong>60 seconds</strong> is stopped.</p>
+</li>
+<li>
+<p><strong>Play</strong> <code>stream_url</code>. It is a signed link to <code>/api/stream/{id}/{file_index}</code>, valid for 12 hours, that needs no login and supports <code>HEAD</code> and Range requests.</p>
+</li>
+<li>
+<p><strong>Report progress</strong> while playing, every 10 seconds or so: <code>POST /api/playback/{id}/progress</code> with <code>{&quot;position_s&quot;: 615, &quot;duration_s&quot;: 7342, &quot;paused&quot;: false}</code>.
+This keeps the session, stores the resume point and scrobbles to the linked tracker.</p>
+</li>
+<li>
+<p><strong>Stop:</strong> <code>DELETE /api/playback/{id}</code>. The torrent is removed or kept as Elementum&rsquo;s settings say.</p>
+</li>
+</ol>
+<h2 id="notifications-and-questions">Notifications and questions<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>Elementum sometimes has something to say or to ask: a notification, &ldquo;which file?&rdquo;, a confirmation, a progress bar.
+In Kodi these are dialogs. An app gets them by long-polling:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>curl -u user:secret <span style="color:#e6db74">&#34;http://192.168.1.10:65220/api/ui/events?client_id=tv-livingroom&amp;wait=25&amp;lang=en&#34;</span></span></span></code></pre></div>
+<ul>
+<li><code>client_id</code>: a name for your app instance (letters, digits, <code>-</code>, <code>_</code>). While a client polls, Elementum counts it as connected
+and asks it its questions; Kodi is asked only when no app is connected.</li>
+<li>The call returns as soon as there is an event, or with <code>204</code> after <code>wait</code> seconds (0–60). Pass the last <code>seq</code> you handled as <code>since</code>
+on the next call, and the <code>X-UI-Epoch</code> header as <code>epoch</code>: a different epoch means Elementum restarted.</li>
+<li><code>kind</code> is <code>notify</code>, <code>confirm</code>, <code>select</code>, <code>input</code>, <code>text</code>, <code>progress</code>, or <code>cancelled</code> (close the dialog with that <code>id</code>: answered elsewhere or expired).
+Texts are already translated into <code>lang</code>.</li>
+<li>Answer with <code>POST /api/ui/requests/{id}</code> and <code>{&quot;client_id&quot;: &quot;...&quot;, &quot;yes&quot;: true}</code>, <code>{&quot;selected&quot;: [2]}</code>, <code>{&quot;text&quot;: &quot;...&quot;}</code>, or <code>{&quot;cancel&quot;: true}</code>.
+The first answer wins; later ones get <code>410 ui_request_expired</code>.</li>
+</ul>
+<h2 id="linking-a-tracker-account">Linking a tracker account<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p><code>POST /api/tracker/authorize</code> starts the login of the tracker selected in Elementum&rsquo;s settings (Trakt, Simkl, MDBList or Scrob)
+and answers with <code>user_code</code> and <code>verification_url</code> to show to the user. Elementum waits for the approval itself;
+<code>GET /api/system/info</code> shows the account as <code>authorized</code>, and <code>tracker.logins</code> goes up by one when a login has finished.
+It needs a JSON settings file or Kodi to keep the token.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/theme.min.96b966188f27166ddab5db2863a58101dd099db40ab5513f97556f286504ff8a.js" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

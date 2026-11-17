@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Use Elementum from outside :: Elementum</title>
+    <link>/integrations/index.html</link>
+    <description>The JSON API, the Web UI, servers and Docker, and how to keep it safe</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="/integrations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JSON API</title>
+      <link>/integrations/json-api/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/integrations/json-api/index.html</guid>
+      <description>Browse, search, play and manage Elementum from your own app or script</description>
+    </item>
+    <item>
+      <title>Docker and servers</title>
+      <link>/integrations/servers/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/integrations/servers/index.html</guid>
+      <description>Run Elementum in Docker, as a Linux daemon or a Windows service, for Kodi or on its own</description>
+    </item>
+  </channel>
+</rss>
