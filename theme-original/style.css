@@ -1061,6 +1061,7 @@ td {
   background-color: #f8efd1; }
 
 .clippy-icon {
+  width: 24px; /* border-box (nucleus.css): 14px icon + 10px padding */
   padding-left: 6px;
   padding-right: 4px;
   padding-bottom: 1px;
