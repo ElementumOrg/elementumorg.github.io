@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en-us" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.169.0">
+    <meta name="generator" content="Relearn 9.4.0">
+    <meta name="description" content="Elementum on Samsung and LG TVs: install, connect, use the remote">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="TV app :: Elementum">
+    <meta name="twitter:description" content="Elementum on Samsung and LG TVs: install, connect, use the remote">
+    <meta property="og:url" content="/integrations/tv-app/index.html">
+    <meta property="og:site_name" content="Elementum">
+    <meta property="og:title" content="TV app :: Elementum">
+    <meta property="og:description" content="Elementum on Samsung and LG TVs: install, connect, use the remote">
+    <meta property="og:locale" content="en_us">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Use Elementum from outside">
+    <meta itemprop="name" content="TV app :: Elementum">
+    <meta itemprop="description" content="Elementum on Samsung and LG TVs: install, connect, use the remote">
+    <meta itemprop="wordCount" content="873">
+    <title>TV app :: Elementum</title>
+    <link href="/images/favicon.17e21708ef9569adad529152502f51273b612ca56178a45a31665c6ecfbe90ef.png" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.19b8eb7faa53e727a407aa2d781e21185a35cfc9330628acc11df190f919f003.css" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.ee095762d0ba22fe9c154ccbc9a1d92d5eae5ebaf7cedfbc9b9991710d739d05.js" defer></script>
+    <script src="/js/search-lunr.min.9897ffe790e716e8b90e4a9e200dce63c2603e69a9eec9bbdce6a483811ea180.js" defer></script>
+    <script src="/js/search.min.4bcf60afa00d9f5c3adf08ff55811ce4cc679bd6d4b5747d674667994ee1debb.js" defer></script>
+    <script type="application/json" id="R-search-config">{
+      "indexFile": "searchindex.en.min.159e131fbc7f740f7b4ab7b295e1f4d9b2d9e67aaf8f1da46c11533cc29e0179.js"
+    }</script>
+    <script src="/js/lunr/lunr.min.75e90b6cec204a54a07060b42ec82f3816430c63ffd689d1e9771f469dc493dd.js" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.5ff7b6bd53462911fc1311c09f654085b748338aced249e719c0b16fda0b90fb.js" defer></script>
+    <script src="/js/lunr/lunr.multi.min.ffaee7f1e07179595fe8a4b7c469761f90999470e1f04dcb0a94dc2c1cb44f9c.js" defer></script>
+    <script src="/js/lunr/lunr.en.min.94d0a7cb1f111200e2f5be9dc32699cf266aaa29011e414bdcd36a18ea0fd5ee.js" defer></script>
+    <script type="application/json" id="R-search-lunr-config">{
+      "contentLangs": [
+        "en"
+      ]
+    }</script>
+    <link href="/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet" media="print" class="R-async-style"><noscript><link href="/fonts/fontawesome/css/all.min.e0b69df26e19596d4b81bf7eb0c54b6047e7221ec18d5d4d40c11eefd3ef8a4b.css" rel="stylesheet"></noscript>
+    <link href="/css/theme.min.d32ff7f02dc6208f580465aef1e044e05474c6385ef25978e4655da573a0d7c0.css" rel="stylesheet">
+    <link href="/css/format-html.min.42c8d219b2661a532b243104920ce1fd3c0b36d907a1df2e04361a7957399674.css" rel="stylesheet" id="R-format-style">
+    <script type="application/json" id="R-theme-config">{
+      "disableInlineCopyToClipboard": false,
+      "enableBlockCodeWrap": true,
+      "path": "/integrations/tv-app/index.html",
+      "relBasePath": "../..",
+      "relBaseUri": "../..",
+      "themevariants": [
+        "auto",
+        "elementum-light",
+        "elementum-dark"
+      ],
+      "translations": {
+        "Browser_unsupported_feature": "This browser doesn't support this feature",
+        "Change_sorting": "Change sorting",
+        "Close_graph": "Close enlarged graph",
+        "Copied_to_clipboard": "Text copied to clipboard!",
+        "Copy_to_clipboard": "Copy text to clipboard",
+        "Deleted_text_end": "End of deleted text",
+        "Deleted_text_start": "Start of deleted text",
+        "Enlarge_graph": "Enlarge graph",
+        "History_cleared": "History cleared",
+        "Inserted_text_end": "End of inserted text",
+        "Inserted_text_start": "Start of inserted text",
+        "Link_copied_to_clipboard": "Link copied to clipboard!",
+        "N_matches_on_page": "{1} matches for \"{0}\" on this page",
+        "N_results_found": "{1} results found for \"{0}\"",
+        "No_results_found": "No results found for \"{0}\"",
+        "Reset_sorting": "Reset sorting",
+        "Reset_view": "Reset view",
+        "Sort_key_ascending": "sorted at position {0}, ascending",
+        "Sort_key_descending": "sorted at position {0}, descending",
+        "Sortable_columns": "Column headers with buttons are sortable.",
+        "Sorted_by_ascending": "Sorted by \"{0}\", ascending",
+        "Sorted_by_descending": "Sorted by \"{0}\", descending",
+        "Sorting_reset": "Sorting reset!",
+        "Unsorted_by": "No longer sorted by \"{0}\"",
+        "View_reset": "View reset!"
+      }
+    }</script>
+    <script src="/js/theme-head.min.f7e473c3e5d5d7ea4c1ad508c6ae60b8d3c54f1c5f68e660f71087333cc95e5a.js"></script>
+  </head>
+  <body class="mobile-support html" data-origin="/integrations/tv-app/index.html">
+    <a id="R-skip-link" href="#R-body-inner">Skip to main content</a>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default layout-sidebar-row" href="/index.html">
+          <span class="logo-image default-animation" data-r-logo-variant="elementum-dark elementum-light relearn-light">
+<img alt="" class="lazy rounded figure-image" height="285" loading="lazy" src="/images/logo.png" width="285">
+          </span>
+          <span class="logo-title default-animation">Elementum</span>
+        </a>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Open search page" aria-label="Open search page"><i class="fas fa-fw fa-search" aria-hidden="true"></i></button>
+            <input data-search-input name="search-by" class="search-by" type="search" aria-label="Search" placeholder="Search..." title="Search (CTRL+ALT+f)">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search" aria-label="Clear search"><i class="fas fa-fw fa-times" aria-hidden="true" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <nav id="R-content-wrapper" class="highlightable" aria-label="Menu" tabindex="-1">
+        <div id="R-scrollbar" aria-hidden="true"><div id="R-scrollbar-thumb"></div></div>
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/getting-started/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Getting started</span></label><a class="padding default-animation" href="/getting-started/index.html"><i class='fas fa-fw fa-rocket'></i> Getting started</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/getting-started/installation/index.html"><a class="padding" href="/getting-started/installation/index.html">Installation</a></li>
+            <li class="" data-nav-id="/getting-started/ways-to-run/index.html"><a class="padding" href="/getting-started/ways-to-run/index.html">Ways to run Elementum</a></li>
+            <li class="" data-nav-id="/getting-started/platforms-page/index.html"><a class="padding" href="/getting-started/platforms-page/index.html">Downloads</a></li>
+            <li class="" data-nav-id="/getting-started/updating/index.html"><a class="padding" href="/getting-started/updating/index.html">Updating</a></li></ul></li>
+            <li class="" data-nav-id="/configuration/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Configuration</span></label><a class="padding default-animation" href="/configuration/index.html"><i class='fas fa-fw fa-sliders'></i> Configuration</a><ul class="collapsible-menu">
+            <li class="alwaysopen " data-nav-id="/configuration/elementum/index.html"><label><input type="checkbox" checked><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Elementum</span></label><a class="padding default-animation" href="/configuration/elementum/index.html">Elementum</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/configuration/elementum/kodi-settings/index.html"><a class="padding" href="/configuration/elementum/kodi-settings/index.html">Kodi add-on settings</a></li>
+            <li class="" data-nav-id="/configuration/elementum/command-line/index.html"><a class="padding" href="/configuration/elementum/command-line/index.html">Command-line options</a></li></ul></li>
+            <li class="" data-nav-id="/configuration/burst/index.html"><a class="padding" href="/configuration/burst/index.html">Burst</a></li>
+            <li class="alwaysopen " data-nav-id="/configuration/lt2http/index.html"><label><input type="checkbox" checked><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu LT2http</span></label><a class="padding default-animation" href="/configuration/lt2http/index.html">LT2http</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/configuration/lt2http/kodi-settings/index.html"><a class="padding" href="/configuration/lt2http/kodi-settings/index.html">Kodi add-on settings</a></li>
+            <li class="" data-nav-id="/configuration/lt2http/command-line/index.html"><a class="padding" href="/configuration/lt2http/command-line/index.html">Command-line options</a></li></ul></li></ul></li>
+            <li class="" data-nav-id="/burst/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Torrent search</span></label><a class="padding default-animation" href="/burst/index.html"><i class='fas fa-fw fa-magnifying-glass'></i> Torrent search</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/burst/builtin/index.html"><a class="padding" href="/burst/builtin/index.html">Built-in search</a></li>
+            <li class="" data-nav-id="/burst/create/index.html"><a class="padding" href="/burst/create/index.html">How to add a provider</a></li>
+            <li class="" data-nav-id="/burst/definition/index.html"><a class="padding" href="/burst/definition/index.html">Provider definition reference</a></li>
+            <li class="" data-nav-id="/burst/override/index.html"><a class="padding" href="/burst/override/index.html">How to override a provider</a></li>
+            <li class="" data-nav-id="/burst/cookie-sync/index.html"><a class="padding" href="/burst/cookie-sync/index.html">Cookie sync</a></li>
+            <li class="" data-nav-id="/burst/cloudflare/index.html"><a class="padding" href="/burst/cloudflare/index.html">Cloudflare-protected trackers</a></li></ul></li>
+            <li class="parent " data-nav-id="/integrations/index.html"><label><input type="checkbox" checked><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Use Elementum from outside</span></label><a class="padding default-animation" href="/integrations/index.html"><i class='fas fa-fw fa-plug'></i> Use Elementum from outside</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/integrations/json-api/index.html"><a class="padding" href="/integrations/json-api/index.html">JSON API</a></li>
+            <li class="" data-nav-id="/integrations/servers/index.html"><a class="padding" href="/integrations/servers/index.html">Docker and servers</a></li>
+            <li class="active " data-nav-id="/integrations/tv-app/index.html"><a class="padding" href="/integrations/tv-app/index.html" aria-current="page">TV app</a></li></ul></li>
+            <li class="" data-nav-id="/help/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Help &amp; support</span></label><a class="padding default-animation" href="/help/index.html"><i class='fas fa-fw fa-life-ring'></i> Help &amp; support</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/help/faq/index.html"><a class="padding" href="/help/faq/index.html">FAQ</a></li>
+            <li class="" data-nav-id="/help/log/index.html"><a class="padding" href="/help/log/index.html">Making a log file</a></li>
+            <li class="" data-nav-id="/help/report-issue/index.html"><a class="padding" href="/help/report-issue/index.html">Report an issue</a></li>
+            <li class="" data-nav-id="/help/request-feature/index.html"><a class="padding" href="/help/request-feature/index.html">Request a feature</a></li></ul></li>
+            <li class="" data-nav-id="/context/index.html"><a class="padding" href="/context/index.html"><i class='fas fa-fw fa-list'></i> Context add-on</a></li>
+            <li class="" data-nav-id="/lt2http/index.html"><a class="padding" href="/lt2http/index.html"><i class='fas fa-fw fa-server'></i> LT2http</a></li>
+            <li class="" data-nav-id="/release-notes/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Release notes</span></label><a class="padding default-animation" href="/release-notes/index.html"><i class='fas fa-fw fa-bullhorn'></i> Release notes</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/release-notes/elementum/index.html"><a class="padding" href="/release-notes/elementum/index.html">Elementum</a></li>
+            <li class="" data-nav-id="/release-notes/burst/index.html"><a class="padding" href="/release-notes/burst/index.html">Burst</a></li>
+            <li class="" data-nav-id="/release-notes/context/index.html"><a class="padding" href="/release-notes/context/index.html">Context</a></li>
+            <li class="" data-nav-id="/release-notes/lt2http/index.html"><a class="padding" href="/release-notes/lt2http/index.html">LT2http</a></li></ul></li>
+            <li class="" data-nav-id="/contribute/index.html"><label><input type="checkbox"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i><span class="a11y-only">Submenu Contribute</span></label><a class="padding default-animation" href="/contribute/index.html"><i class='fas fa-fw fa-code-branch'></i> Contribute</a><ul class="collapsible-menu">
+            <li class="" data-nav-id="/contribute/bundled-data/index.html"><a class="padding" href="/contribute/bundled-data/index.html">Providers, icons and translations</a></li></ul></li>
+            <li class="" data-nav-id="/donate/index.html"><a class="padding" href="/donate/index.html"><i class='fas fa-fw fa-mug-hot'></i> Donate</a></li>
+            <li class="" data-nav-id="/credits/index.html"><a class="padding" href="/credits/index.html">Credits</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <div class="nav-title padding">More</div>
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="https://github.com/elgatito/plugin.video.elementum"><a class="padding" href="https://github.com/elgatito/plugin.video.elementum" rel="external"><i class='fab fa-fw fa-github'></i> Elementum on GitHub</a></li>
+            <li class="" data-nav-id="/help/report-issue/index.html"><a class="padding" href="/help/report-issue/index.html"><i class='fas fa-fw fa-bug'></i> Report an issue</a></li>
+            <li class="" data-nav-id="/credits/index.html"><a class="padding" href="/credits/index.html"><i class='fas fa-fw fa-heart'></i> Credits</a></li>
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+            <li class="R-variantswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-paint-brush" aria-hidden="true"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <select aria-label="Theme" autocomplete="off">
+                    <option value="auto" selected>Auto</option>
+                    <option value="elementum-light">Elementum Light</option>
+                    <option value="elementum-dark">Elementum Dark</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart" aria-hidden="true"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </nav>
+    </aside>
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <header id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-nav" type="button" title="Menu (CTRL&#43;ALT&#43;n)" aria-label="Menu (CTRL&#43;ALT&#43;n)" aria-expanded="false"><i class="fa-fw fas fa-bars" aria-hidden="true"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)" aria-label="Table of Contents (CTRL&#43;ALT&#43;t)" aria-expanded="false"><i class="fa-fw fas fa-table-list" aria-hidden="true"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper" tabindex="-1">
+<nav class="TableOfContents" aria-label="Table of Contents">
+  <ul>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#install">Install</a>
+      <ul>
+        <li><a href="#samsung">Samsung</a></li>
+        <li><a href="#lg">LG</a></li>
+      </ul>
+    </li>
+    <li><a href="#first-start">First start</a></li>
+    <li><a href="#what-it-does">What it does</a></li>
+    <li><a href="#remote-control">Remote control</a></li>
+    <li><a href="#limitations">Limitations</a></li>
+    <li><a href="#security">Security</a></li>
+    <li><a href="#updating">Updating</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#reporting-problems">Reporting problems</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="topbar-area topbar-area-middle" data-area="middle">
+            <nav class="topbar-breadcrumbs breadcrumbs highlightable" aria-label="Breadcrumbs" data-overflow-title="Elementum &gt;  Use Elementum from outside &gt;  TV app">
+              <ol itemscope itemtype="http://schema.org/BreadcrumbList"><li class="topbar-breadcrumbs-divider" aria-hidden="true">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Elementum</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/integrations/index.html"><span itemprop="name">Use Elementum from outside</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class="" aria-current="page"><span itemprop="name">TV app</span><meta itemprop="position" content="3"></li>
+              </ol>
+            </nav>
+          </div>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-edit default-animation" data-content-empty="disable" data-width-s="area-more" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Edit (CTRL&#43;ALT&#43;w)" href="https://github.com/elgatito/elementum-surge/edit/master/src/content/integrations/tv-app.md" rel="external" title="Edit (CTRL&#43;ALT&#43;w)"><i class="fa-fw fas fa-pen" aria-hidden="true"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Docker and servers (🡐)" href="/integrations/servers/index.html" title="Docker and servers (🡐)"><i class="fa-fw fas fa-chevron-left" aria-hidden="true"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a aria-label="Help &amp; support (🡒)" href="/help/index.html" title="Help &amp; support (🡒)"><i class="fa-fw fas fa-chevron-right" aria-hidden="true"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button data-button-action="toggle-flyout" type="button" title="More" aria-label="More" aria-expanded="false"><i class="fa-fw fas fa-ellipsis-v" aria-hidden="true"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper" tabindex="-1">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable integrations" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="tv-app">TV app</h1>
+
+<p>The Elementum TV app is a front-end you control with the TV remote. Browse movies and shows, search, pick a stream and play it on the TV.
+It does not run Elementum itself: it talks to an Elementum on your network through the <a href="/integrations/json-api/index.html">JSON API</a>.
+The app is a separate project: <a href="https://github.com/ElementumOrg/elementum-tizen" rel="external">ElementumOrg/elementum-tizen</a>.</p>
+
+
+<div role="note" aria-labelledby="R-box-label-42d13be40aeb94e273fabaefca8814e2" class="box cstyle callout warning">
+  <div id="R-box-label-42d13be40aeb94e273fabaefca8814e2" class="box-label">
+    <i class="fa-fw fas fa-exclamation-triangle" aria-hidden="true"></i> 
+    Warning
+  </div>
+  <div class="box-content">
+<p><strong>LG (webOS) support is experimental.</strong> Nobody has tested it on a real LG TV yet. If you try it, please
+<a href="https://github.com/ElementumOrg/elementum-tizen/issues/new/choose" rel="external">report how it went</a> (see <a href="/integrations/tv-app/index.html#reporting-problems">Reporting problems</a>).</p>
+  </div>
+</div>
+<h2 id="requirements">Requirements<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<ul>
+<li><strong>Elementum 0.1.120 or newer</strong> with its JSON API (port <code>65220</code> by default). Older releases have no API and the app cannot connect.
+Elementum can run as the Kodi add-on, on a server or in <a href="/integrations/servers/index.html">Docker</a>, as long as the TV can reach it on the local network.</li>
+<li><strong>Kodi is optional.</strong> Without it, Elementum uses its <a href="/burst/builtin/index.html">built-in search</a>, which you set up from the TV
+(<em>Settings → Built-in search settings</em>).</li>
+<li>A TV model of one of these:</li>
+</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>TV</th>
+      <th>Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Samsung (Tizen)</td>
+      <td>Tizen 4.0 or newer (2018 models and later)</td>
+      <td><code>.wgt</code></td>
+    </tr>
+    <tr>
+      <td>LG (webOS)</td>
+      <td>webOS 4.0 or newer (2018 models and later). <strong>Experimental.</strong></td>
+      <td><code>.ipk</code></td>
+    </tr>
+  </tbody>
+</table>
+<p>Both packages are on <a href="https://github.com/ElementumOrg/elementum-tizen/releases/latest" rel="external">GitHub Releases</a>.
+The app is in no TV store, so you install it yourself (&ldquo;sideload&rdquo;).</p>
+<h2 id="install">Install<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>The step-by-step guide is <a href="https://github.com/ElementumOrg/elementum-tizen/blob/main/INSTALL.md" rel="external">INSTALL.md</a> in the app&rsquo;s repository. In short:</p>
+<h3 id="samsung">Samsung<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
+<p>Turn on Developer Mode on the TV, then install the <code>.wgt</code> with <strong>Apps2Samsung</strong> (recommended) or the Tizen CLI.</p>
+<h3 id="lg">LG<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h3>
+<p>Install the <code>.ipk</code> with <a href="https://github.com/webosbrew/dev-manager-desktop" rel="external">webOS Dev Manager</a> (recommended; it also manages rooted TVs with Homebrew Channel) or the <code>ares-*</code> tools.
+With Developer Mode the session expires and the TV then removes the app: extend it from time to time (the TV must be online). Rooted TVs don&rsquo;t need Developer Mode.</p>
+<h2 id="first-start">First start<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>The app asks where Elementum is:</p>
+<ul>
+<li><strong>Address</strong> and <strong>port</strong> of the machine that runs Elementum (<code>65220</code> by default).</li>
+<li><strong>Login</strong> and <strong>password</strong>, if you set a login in Elementum. See <a href="/integrations/index.html#logging-in">Logging in</a>.</li>
+</ul>
+<p>You can change them later in <em>Settings</em>.</p>
+<h2 id="what-it-does">What it does<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<ul>
+<li>Home rows (next up, trending, watchlist) and a library screen.</li>
+<li>Browse movies and shows, search, details, seasons and episodes.</li>
+<li>Posters show badges (library, collection, watchlist, watched) and progress.</li>
+<li>Trakt and other tracker lists, actor pages.</li>
+<li>A stream list with quality, codec, audio, size, seeds and provider.</li>
+<li>A player with seek and resume, and audio and subtitle switching.</li>
+<li>A torrents screen: progress, speed and peers, pause, resume, remove.</li>
+<li>Elementum&rsquo;s own notifications and questions appear on the TV.</li>
+<li>Settings for the server, the language and the <a href="/burst/builtin/index.html">built-in search</a> (providers, logins of private trackers, filters, cookie sync).</li>
+<li>22 languages. All but English are machine-drafted.</li>
+</ul>
+<h2 id="remote-control">Remote control<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<table>
+  <thead>
+    <tr>
+      <th>Key</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Arrows</td>
+      <td>Move the focus</td>
+    </tr>
+    <tr>
+      <td>OK</td>
+      <td>Open or press</td>
+    </tr>
+    <tr>
+      <td>Long-press OK</td>
+      <td>Menu of a movie, show or episode: add to or remove from the library (movies and shows), mark watched or unwatched (needs a linked tracker such as Trakt)</td>
+    </tr>
+    <tr>
+      <td>Back</td>
+      <td>Go back; at the home screen, asks to exit. Closes the player too.</td>
+    </tr>
+    <tr>
+      <td>Play, Pause</td>
+      <td>Play or pause</td>
+    </tr>
+    <tr>
+      <td>Stop</td>
+      <td>Close the player</td>
+    </tr>
+    <tr>
+      <td>Fast forward, Rewind</td>
+      <td>Seek 60 seconds forward or back</td>
+    </tr>
+    <tr>
+      <td>Left, Right on the progress bar</td>
+      <td>Seek 10 seconds back or forward (Up from the buttons selects the bar)</td>
+    </tr>
+    <tr>
+      <td>Green (player)</td>
+      <td>Next audio track</td>
+    </tr>
+    <tr>
+      <td>Yellow (player)</td>
+      <td>Next subtitle track, or off</td>
+    </tr>
+    <tr>
+      <td>Magic Remote pointer (LG)</td>
+      <td>Click presses. Hovering highlights buttons, sidebar entries and text fields.</td>
+    </tr>
+  </tbody>
+</table>
+<p>While the on-screen player controls are hidden, the first arrow or OK press only shows them.</p>
+<h2 id="limitations">Limitations<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<ul>
+<li><strong>LG is untested on real TVs.</strong> Whether subtitles and audio switching work on LG depends on what the TV makes available to the app. DTS audio may not play.</li>
+<li><strong>Samsung:</strong> which video and audio codecs play depends on the TV model.</li>
+<li>The app is only a remote for Elementum: searching, downloading and storing happen on the Elementum machine.</li>
+</ul>
+<h2 id="security">Security<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<ul>
+<li>Elementum&rsquo;s login is <strong>off by default</strong>, so anyone on your network can use its API. <a href="/integrations/index.html#logging-in">Set a login</a> and enter it in the app.</li>
+<li>The app stores the Elementum <strong>password in plain text</strong> on the TV.</li>
+<li>Logins of private trackers are sent to Elementum and stored there, not on the TV.</li>
+<li>Notifications on the TV can show file paths and error messages from the Elementum machine.</li>
+<li>Use it only on a network you trust and never expose the port to the internet. See <a href="/integrations/index.html#security">Security</a>.</li>
+</ul>
+<h2 id="updating">Updating<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>Install the newer release the same way as the first time. Settings are kept.
+Update Elementum and the TV app together: a new app may need a newer Elementum.</p>
+<h2 id="troubleshooting">Troubleshooting<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<ul>
+<li><strong>Cannot connect:</strong> the TV and the Elementum machine must be on the same network. Check the address and port, that a firewall does not block the port,
+and that Elementum is 0.1.120 or newer. Opening <code>http://&lt;address&gt;:65220/api/docs</code> in a browser on another device shows Elementum&rsquo;s API page (no login needed) if the API is reachable.</li>
+<li><strong>Login rejected:</strong> enter the same login and password as in Elementum&rsquo;s settings.</li>
+<li><strong>No search results:</strong> set up the <a href="/burst/builtin/index.html">built-in search</a> in the app&rsquo;s settings, or choose it in Elementum.</li>
+<li><strong>The app vanished from an LG TV:</strong> the Developer Mode session expired. Turn it on again, install the app again and extend the session.</li>
+</ul>
+<h2 id="reporting-problems">Reporting problems<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard" aria-label="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg" aria-hidden="true"></i></button></span></h2>
+<p>Open an issue in <a href="https://github.com/ElementumOrg/elementum-tizen/issues/new/choose" rel="external">elementum-tizen</a>.
+LG users: use the <strong>LG webOS report</strong> template and say which TV model and webOS version you have and what worked.</p>
+
+  <footer class="footline">
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <script src="/js/theme.min.96b966188f27166ddab5db2863a58101dd099db40ab5513f97556f286504ff8a.js" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

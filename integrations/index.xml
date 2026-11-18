@@ -3,7 +3,7 @@
   <channel>
     <title>Use Elementum from outside :: Elementum</title>
     <link>/integrations/index.html</link>
-    <description>The JSON API, the Web UI, servers and Docker, and how to keep it safe</description>
+    <description>The JSON API, the TV app, the Web UI, servers and Docker, and how to keep it safe</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="/integrations/index.xml" rel="self" type="application/rss+xml" />
@@ -20,6 +20,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/integrations/servers/index.html</guid>
       <description>Run Elementum in Docker, as a Linux daemon or a Windows service, for Kodi or on its own</description>
+    </item>
+    <item>
+      <title>TV app</title>
+      <link>/integrations/tv-app/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/integrations/tv-app/index.html</guid>
+      <description>Elementum on Samsung and LG TVs: install, connect, use the remote</description>
     </item>
   </channel>
 </rss>
